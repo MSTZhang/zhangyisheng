@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+  #side_nav ul{display:none;}
+  #side_nav ul li{list-style-type:none;}
+  #side_nav ul span{list-style-type:none;}
+  </style>
+ </head>
+ <body>
+  <ul id="side_nav">
+    <li>
+      <span id="menu1" onclick="clicks('menu1');" style="width:200px;height:35px;background:#00ffcc;">菜单1</span>
+	  <ul id="zimenu1">
+	    <li><a href="#">波斯猫</a></li>
+		<li><a href="#">田园猫</a></li>
+		<li><a href="#">秋田猫</a></li>
+	  </ul>
+	</li>
+	<li>
+      <span id="menu2" onclick="clicks('menu2');" style="width:200px;height:35px;background:#00ffcc;">菜单1</span>
+	  <ul id="zimenu2">
+	    <li>波斯猫</li>
+		<li>田园猫</li>
+		<li>秋田猫</li>
+	  </ul>
+	</li>
+	<li>
+      <span id="menu3" onclick="clicks('menu3');" style="width:200px;height:35px;background:#00ffcc;">菜单1</span>
+	  <ul id="zimenu3">
+	    <li>波斯猫</li>
+		<li>田园猫</li>
+		<li>秋田猫</li>
+	  </ul>
+	</li>
+  </ul>
+  <script type="text/javascript">
+    var sidenav=document.getElementById('side_nav');
+	var sn=sidenav.getElementsByTagName('ul');
+	for(var i=0;i<sn.length;i++)
+	{
+		sn[i].style.display="none";
+	}
+    function clicks(as)
+	{
+		var lowmenu="zi"+as;
+		var nav=document.getElementById(lowmenu);
+		if(nav.style.display=="none")
+		{
+			nav.style.display="block";
+		}
+		else
+		{
+			nav.style.display="none";
+		}
+	}
+  </script>
+ </body>
+</html>

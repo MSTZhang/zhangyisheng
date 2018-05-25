@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <div style="position:relative;width:776px;height:20px;background:-moz-linear-gradient(top,#ffffff,#ff3333);z-index:2;margin-left:20px;">
+     <div style="position:absolute;width:100px;height:35px;z-index:3;background:#ffffff;margin-left:20px;font-size:15px;border-radius:3px;" align="center">资质证书</div>
+  </div>
+  <div style="width:776px;height:30px;border:1px dashed #cccccc;margin-left:20px;margin-top:15px;">
+     <p style="margin-top:1px;font-size:13px;margin-left:20px;">当前位置：添加商家证书</p>
+  </div>
+  <div style="position:absolute;margin-left:328px;margin-top:150px;"><!--验证码-->
+    <p style="color:blue;" onclick="clicks();">看不清?换一张<p>
+  <canvas id="mycanvas" width="200px" height="100px">
+  
+  </canvas>
+  </div>
+  <div style="border:1px dashed #cccccc;width:776px;height:1px;margin-left:20px;margin-top:30px;"></div>
+  <p style="margin-left:44px;">*证书名称<input type="text" name="shopkinds" style="margin-left:20px;"></p>
+  <p style="margin-left:44px;">*发证单位<input type="text" name="shopkinds" style="margin-left:20px;"></p>
+  <p style="margin-left:44px;">*有效期<input type="time" name="shopkinds" style="margin-left:35px;"></p>
+  <p style="margin-left:44px;">
+     *证书图片<input type="file" style="margin-left:20px;">
+  </p>
+  <p style="margin-left:44px;">*验证码<input type="text" name="shopkinds" style="margin-left:35px;"></p>
+  <input type="button" value="提交查询内容" style="margin-left:131px;">
+  <script type="text/javascript">
+   var s1="";
+   function yzm(canvas1)
+   {
+   var colors=new Array("#ffcc00","#ff0000","#990099","#00ff33","#333333","#6600ff","#ccff00","#ff66cc","#0000ff");
+   //var canvas1=document.getElementById('mycanvas');
+   var ctx=canvas1.getContext('2d');
+   ctx.clearRect(0,0,canvas1.width,canvas1.height);
+   ctx.font="25px Courier New";
+   
+   for(var i=0;i<5;i++)
+   {
+       var m=Math.floor(Math.random()*10);
+	   s1=s1+m;
+	   var color=colors[Math.floor(Math.random()*10)];
+	   ctx.fillStyle=color;
+	   ctx.fillText(m,40*i,40+Math.floor(Math.random()*10));
+   }
+   /*for(var j=0;j<15;j++)
+   {
+      ctx.strokeStyle=colors[Math.floor(Math.random()*10)];
+	  ctx.moveTo(40*Math.floor(Math.random()*10),25);
+	  ctx.lineTo(40*Math.floor(Math.random()*10),60);
+	  ctx.lineWidth=1;
+	  ctx.stroke();
+   }*/
+   }
+   function clicks()
+   {     s1="";
+         var canvas1=document.getElementById('mycanvas');
+         yzm(canvas1);
+		 //alert(s1);
+   }
+   clicks();
+  </script>
+ </body>
+</html>

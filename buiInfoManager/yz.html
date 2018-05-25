@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <div style="margin-left:300px;" onclick="clicks();">
+    <canvas id="mycanvas" width="200px" height="200px" style="border:1px solid red;">
+	
+	</canvas>
+  </div>
+  <script type="text/javascript">
+   var s1="";
+   function yzm(canvas1,s)
+   {
+   var colors=new Array("#ffcc00","#ff0000","#990099","#00ff33","#333333","#6600ff","#ccff00","#ff66cc","#0000ff");
+   //var canvas1=document.getElementById('mycanvas');
+   var ctx=canvas1.getContext('2d');
+   ctx.clearRect(0,0,canvas1.width,canvas1.height);
+   ctx.font="25px Courier New";
+   
+   for(var i=0;i<5;i++)
+   {
+       var m=Math.floor(Math.random()*10);
+	   s1=s1+m;
+	   var color=colors[Math.floor(Math.random()*10)];
+	   ctx.fillStyle=color;
+	   ctx.fillText(m,40*i,40+Math.floor(Math.random()*10));
+   }
+   /*for(var j=0;j<15;j++)
+   {
+      ctx.strokeStyle=colors[Math.floor(Math.random()*10)];
+	  ctx.moveTo(40*Math.floor(Math.random()*10),25);
+	  ctx.lineTo(40*Math.floor(Math.random()*10),60);
+	  ctx.lineWidth=1;
+	  ctx.stroke();
+   }*/
+   }
+   function clicks()
+   {     s1="";
+         var canvas1=document.getElementById('mycanvas');
+         yzm(canvas1,s1);
+		 alert(s1);
+   }
+   //yzm();
+  </script>
+ </body>
+</html>
