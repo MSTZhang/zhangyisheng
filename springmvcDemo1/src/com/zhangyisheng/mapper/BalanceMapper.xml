@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyisheng.dao.BalanceDao">
+   <!--查询全部  -->
+   <select id="select" resultMap="balanceMap">
+   		select * from balance
+   </select>
+   <!--查询全部的结果映射集 -->
+   <resultMap type="com.zhangyisheng.entity.Balance" id="balanceMap">
+   		<result column="balance_num" property="balanceNumber"/>
+   		<result column="check_num" property="checkNumber"/>
+   		<result column="days" property="realDays"/>
+   		<result column="price" property="price"/>
+   		<result column="b_time" property="balanceTime"/>
+   </resultMap>
+   <!--根据预定id查找结束单号  -->
+   <select id="findByCheckNum" parameterType="String" resultMap="balanceMap">
+   		select b.balance_num,b.check_num,b.days,b.price,b.b_time from checkin as c left join balance as b on c.check_number=b.check_num where c.check_number=#{checkNum}
+   </select>
+   <!--添加  -->
+ 	<insert id="add" parameterType="com.zhangyisheng.entity.Balance">
+ 		insert into balance(balance_num,check_num,days,price,b_time) values(#{balanceNumber},#{checkNumber},#{realDays},#{price},#{balanceTime})
+ 	</insert>
+   <!--更新  -->
+   <update id="update" parameterType="com.zhangyisheng.entity.Balance">
+   		update balance set days=#{realDays},price=#{price},b_time=#{balanceTime}
+   </update>
+   <delete id="delete" parameterType="string">
+   		delete * from balance where balance_num=#{balanceNumber}
+   </delete>
+</mapper>

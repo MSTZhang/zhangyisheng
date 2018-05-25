@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/com/zhangyisheng/annotation/IgnoreSecurity.java=UTF-8
+encoding//src/com/zhangyisheng/aspect/ExceptionAspect.java=UTF-8
+encoding//src/com/zhangyisheng/exception/TokenException.java=UTF-8
+encoding//src/com/zhangyisheng/response/Response.java=UTF-8
+encoding//src/com/zhangyisheng/utlity/CodecUtil.java=UTF-8
+encoding//src/com/zhangyisheng/utlity/CollectionUtil.java=UTF-8
+encoding//src/com/zhangyisheng/utlity/Constants.java=UTF-8
+encoding//src/com/zhangyisheng/utlity/StringUtil.java=UTF-8
+encoding//src/com/zhangyisheng/utlity/WebContextUtil.java=UTF-8

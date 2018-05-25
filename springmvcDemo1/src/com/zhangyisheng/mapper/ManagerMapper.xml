@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyisheng.dao.ManagerDao">
+   <!--查询全部  -->
+   <select id="select" resultMap="members">
+   		select * from manager
+   </select>
+   <!--查询全部的结果映射集 -->
+   <resultMap type="com.zhangyisheng.entity.Manager" id="members">
+   		<result column="id" property="id"/>
+   		<result column="userCount" property="userCount"/>
+   		<result column="pwd" property="pwd"/>
+   		<result column="tel" property="tel"/>
+   		<result column="m_level" property="mLevel"/>
+   </resultMap>
+   <!-- 根据账号和密码查询 -->
+   <select id="findByNum"  parameterType="com.zhangyisheng.entity.Manager" resultMap="members">
+   		select * from manager where userCount=#{userCount} and pwd=#{pwd}
+   </select>
+   <!--跟新密码  -->
+   <update id="alertPwd"  parameterType="com.zhangyisheng.entity.Manager">
+   	update manager set pwd=#{pwd} where userCount=#{userCount}
+   </update>
+   <!-- 更新用户信息 -->
+   <update id="update" parameterType="com.zhangyisheng.entity.Manager">
+   	update member set
+   	<if test="${custName}!=null">cust_name='${custName}'</if>
+   	<if test="${pwd}!=null">pwd='${pwd}'</if>
+   	<if test="${tel}!=null">tel='${tel}'</if>
+   	<if test="${email}!=null">email='${email}'</if>
+   	<if test="#{cmLevel}!=null">cm_level=#{cmLevel}</if>
+   	<if test="#{discount}!=null">discount=#{discount}</if>
+   	<if test="#{status}!=null">status=#{status}</if>
+   	where tel='${tel}' or email='${email}'
+   </update>
+   <!-- 添加用户 -->
+   <insert id="add" parameterType="com.zhangyisheng.entity.Manager">
+   	insert into member(custom_name,pwd,tel,email,cm_level,discount,isAble) values(#{customName},#{pwd},#{tel},#{email},#{cmLevel},#{discount},#{isAble})
+   </insert>
+   <!--删除  -->
+   <delete id="delete" parameterType="String">
+   	delete from member where tel='${tel}' or email='${email}'
+   </delete>
+</mapper>

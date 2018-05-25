@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyisheng.dao.CheckInDao">
+   <!--查询全部  -->
+   <select id="select" resultMap="members">
+   		select a.check_number,a.user_id,a.rm_id,a.rty_id,a.cmLevel,a.custom_name,a.sex,a.paper_type,a.paper_number,a.adress,a.num,a.check_time,a.data_num,a.leav_time,a.foregift,a.ckStatus,a.balance_num,a.operator,a.floor,a.rm_status,rt.rty_name,rt.bed_type,rt.bed_num,rt.area,rt.img_url,rt.price from (select ci.check_number,ci.user_id,ci.rm_id,ci.rty_id,ci.cmLevel,ci.custom_name,ci.sex,ci.paper_type,ci.paper_number,ci.adress,ci.num,ci.check_time,ci.data_num,ci.leav_time,ci.foregift,ci.ckStatus,ci.balance_num,ci.operator,rm.floor,rm.rm_status from checkin as ci left join room as rm on ci.rm_id=rm.rm_id) as a left join roomtype as rt on a.rty_id=rt.rty_id
+   </select>
+   <!--查询全部的结果映射集 -->
+   <resultMap type="com.zhangyisheng.entity.CheckIn" id="members">
+   		<result column="check_number" property="checkNumber"/>
+   		<result column="user_id" property="userId"/>
+   		<result column="rm_id" property="rmId"/>
+   		<result column="rty_id" property="rtyId"/>
+   		<result column="cm_level" property="cmLevel"/>
+   		<result column="custom_name" property="customName"/>
+   		<result column="sex" property="sex"/>
+   		<result column="paper_type" property="paperType"/>
+   		<result column="paper_number" property="paperNumber"/>
+   		<result column="adress" property="adress"/>
+   		<result column="num" property="num"/>
+   		<result column="check_time" property="checkTime"/>
+   		<result column="data_num" property="days"/>
+   		<result column="leav_time" property="leaveTime"/>
+   		<result column="foregift" property="forgift"/>
+   		<result column="ckStatus" property="status"/>
+   		<result column="balance_num" property="balanceNumber"/>
+   		<result column="operator" property="operatorId"/>
+   </resultMap>
+   <!--根据房间id查找  -->
+   <select id="findByRmId" parameterType="int" resultMap="members">
+   		select a.check_number,a.user_id,a.rm_id,a.rty_id,a.cmLevel,a.custom_name,a.sex,a.paper_type,a.paper_number,a.adress,a.num,a.check_time,a.data_num,a.leav_time,a.foregift,a.ckStatus,a.balance_num,a.operator,a.floor,a.rm_status,rt.rty_name,rt.bed_type,rt.bed_num,rt.area,rt.img_url,rt.price from (select ci.check_number,ci.user_id,ci.rm_id,ci.rty_id,ci.cmLevel,ci.custom_name,ci.sex,ci.paper_type,ci.paper_number,ci.adress,ci.num,ci.check_time,ci.data_num,ci.leav_time,ci.foregift,ci.ckStatus,ci.balance_num,ci.operator,rm.floor,rm.rm_status from checkin as ci left join room as rm on ci.rm_id=rm.rm_id where ci.rm_id=#{roomId} and ci.ckStatus=1) as a left join roomtype as rt on a.rty_id=rt.rty_id
+   </select>
+   <!-- 根据入住id查找 -->
+   <select id="findByCId" parameterType="String" resultMap="members">
+   		select a.check_number,a.user_id,a.rm_id,a.rty_id,a.cmLevel,a.custom_name,a.sex,a.paper_type,a.paper_number,a.adress,a.num,a.check_time,a.data_num,a.leav_time,a.foregift,a.ckStatus,a.balance_num,a.operator,a.floor,a.rm_status,rt.rty_name,rt.bed_type,rt.bed_num,rt.area,rt.img_url,rt.price from (select ci.check_number,ci.user_id,ci.rm_id,ci.rty_id,ci.cmLevel,ci.custom_name,ci.sex,ci.paper_type,ci.paper_number,ci.adress,ci.num,ci.check_time,ci.data_num,ci.leav_time,ci.foregift,ci.ckStatus,ci.balance_num,ci.operator,rm.floor,rm.rm_status from checkin as ci left join room as rm on ci.rm_id=rm.rm_id where ci.check_number=#{checkNumber}) as a left join roomtype as rt on a.rty_id=rt.rty_id
+   </select>
+   <!-- 更新订单 -->
+   <update id="update" parameterType="com.zhangyisheng.entity.CheckIn">
+   		update checkin set
+   		<if test="#{rmId}!=null">rm_id=#{rmId},</if>
+   		<if test="#{rtyId}!=null">rty_id=#{rtyId},</if>
+   		<if test="#{customName}!=null">custom_name=#{customName},</if>
+   		<if test="#{sex}!=null">sex=#{sex},</if>
+   		<if test="#{paperType}!=null">paper_type=#{paperType},</if>
+   		<if test="#{paperNumber}!=null">paper_number=#{paperNumber},</if>
+   		<if test="#{adress}!=null">adress=#{adress},</if>
+   		<if test="#{num}!=null">num=#{num},</if>
+   		<if test="#{checkTime}!=null">check_time=#{checkTime},</if>
+   		<if test="#{days}!=null">data_num=#{days},</if>
+   		<if test="#{leaveTime}!=null">leav_time=#{leaveTime},</if>
+   		<if test="#{forgift}!=null">foregift=#{forgift},</if>
+   		<if test="#{balanceNumber}!=null">balance_num=#{balanceNumber},</if>
+   		<if test="#{operatorId}!=null">operator=#{operatorId}</if>
+   		where check_number =#{checkNumber}
+   </update>
+   <!--更新入信息状态  -->
+   <update id="updateStatus" parameterType="com.zhangyisheng.entity.CheckIn">
+   		update checkin set ckStatus=#{status} where check_number =#{checkNumber}
+   </update>
+   <!--删除  -->
+   <delete id="delete" parameterType="String">
+   		delete from checkin where check_number=#{checkNumber}
+   </delete>
+   <!-- 添加 -->
+   <insert id="add" parameterType="com.zhangyisheng.entity.CheckIn">
+   		insert into checkin(check_number,user_id,rm_id,rty_id,custom_name,sex,paper_type,paper_number,adress,num,check_time,data_num,leav_time,foregift,ckStatus,balance_num,operator) values(#{checkNumber},#{userId},#{rmId},#{rtyId},#{customName},#{sex},#{paperType},#{paperNumber},#{adress},#{num},#{checkTime},#{days},#{leaveTime},#{forgift},#{status},#{balanceNumber},#{operatorId})
+   </insert>
+</mapper>

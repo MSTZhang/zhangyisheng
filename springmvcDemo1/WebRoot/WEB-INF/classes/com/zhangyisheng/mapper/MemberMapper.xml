@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyisheng.dao.MemberDao">
+   <!--查询全部  -->
+   <select id="select" resultMap="members">
+   		select * from member
+   </select>
+   <!--查询全部的结果映射集 -->
+   <resultMap type="com.zhangyisheng.entity.Member" id="members">
+   		<result column="id" property="id"/>
+   		<result column="custom_name" property="customName"/>
+   		<result column="pwd" property="pwd"/>
+   		<result column="tel" property="tel"/>
+   		<result column="email" property="email"/>
+   		<result column="cm_level" property="cmLevel"/>
+   		<result column="discount" property="discount"/>
+   		<result column="isAble" property="isAble"/>
+   </resultMap>
+   
+   <!-- 根据tel或密码查询 -->
+   <select id="findByTelOrEmail"  parameterType="com.zhangyisheng.entity.Member" resultMap="members">
+   	select * from member where (pwd=#{pwd} and tel=#{tel}) or (pwd=#{pwd} and email=#{email})
+   </select>
+   
+   <!--根据userId查找  -->
+   <select id="findById" parameterType="int" resultMap="members">
+   		select * from member where id = #{userId}
+   </select>
+   
+   <!--根据电话查找  -->
+   <select id="findByTel" parameterType="string" resultMap="members">
+   	select * from member where tel = #{tel}
+   </select>
+   <!--跟新密码  -->
+   <update id="updatePwd"  parameterType="com.zhangyisheng.entity.Member">
+   	update member set pwd='${pwd}' where tel='${tel}' or email='${email}'
+   </update>
+   <!-- 更新用户信息 -->
+   <update id="updateMember"  parameterType="com.zhangyisheng.entity.Member">
+   	update member set
+   	<if test="${custName}!=null">cust_name='${custName}'</if>
+   	<if test="${pwd}!=null">pwd='${pwd}'</if>
+   	<if test="${tel}!=null">tel='${tel}'</if>
+   	<if test="${email}!=null">email='${email}'</if>
+   	<if test="#{cmLevel}!=null">cm_level=#{cmLevel}</if>
+   	<if test="#{discount}!=null">discount=#{discount}</if>
+   	<if test="#{status}!=null">status=#{status}</if>
+   	where tel='${tel}' or email='${email}'
+   </update>
+   <!-- 添加用户 -->
+   <insert id="add">
+   	insert into member(custom_name,pwd,tel,email,cm_level,discount,isAble) values(#{customName},#{pwd},#{tel},#{email},#{cmLevel},#{discount},#{isAble})
+   </insert>
+   <!--删除  -->
+   <delete id="deleteMember">
+   	delete from member where tel='${tel}' or email='${email}'
+   </delete>
+</mapper>

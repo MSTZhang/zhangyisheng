@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyisheng.dao.RoomTypeDao">
+   <!--根据id查询  -->
+   <select id="select" resultMap="rooms">
+    select rt.rty_id,rt.rty_name,rt.bed_type,rt.bed_num,rt.area,rt.img_url,rt.price,rm.rm_id,rm.floor,rm.rm_status,fb.ac_id,fb.ac_name,fb.ac_url,fb.img_url,fb.ac_price from roomtype as rt left join RtyAcRm as rar on rt.rty_id=rar.rty_id left join room as rm on rm.rm_id=rar.rm_id and rm.rm_status=1 left join flexible as fb on fb.ac_id=rar.ac_id
+   </select>
+   <resultMap type="com.zhangyisheng.entity.RoomType" id="rooms">
+     <result column="rty_id" property="roomTypeId"/>
+     <result column="rty_name" property="roomTypeName"/>
+     <result column="bed_type" property="bedType"/>
+     <result column="bed_num" property="bedNum"/>
+     <result column="area" property="area"/>
+     <result column="img_url" property="imgUrl"/> 
+     <result column="price" property="price"/>
+     <collection property="flexibles" column="rty_id" ofType="com.zhangyisheng.entity.Flexible">
+     	<result column="ac_id" property="acId"/>
+     	<result column="ac_name" property="acName"/>
+     	<result column="ac_url" property="acUrl"/>
+     	<result column="img_url" property="imgUrl"/>
+     	<result column="ac_price" property="acPrice"/>
+     	<collection property="rooms" column="ac_id" ofType="com.zhangyisheng.entity.Room">
+     		<result column="rm_id" property="roomId"/>
+     		<result column="rty_id" property="roomTypeId"/>
+     		<result column="ac_id" property="acId"/>
+     		<result column="floor" property="floor"/>
+     		<result column="rm_status" property="rmStatus"/>
+     	</collection>
+     </collection>
+   </resultMap>
+   <!--根据房间类型id和优惠活动id查询 -->
+   <select id="" parameterType="com.zhangyisheng.entity.RoomType" resultMap="rooms">
+	select * from roomType as rt left join activity as a on rt.rty_id=a.rty_id and rt.rty_id=#{roomTypeId}
+	<if test="#{activitys}!=null">
+		and ac
+	</if>
+   </select>
+   <!--添加  -->
+   <insert id="add" parameterType="com.zhangyisheng.entity.RoomType">
+   insert into roomtype(rty_id,rty_name,bed_type,bed_num,area,img_url,price) values(#{roomTypeId},#{roomTypeName},#{bedType},#{bedNum},#{area},#{imgUrl},#{price})
+   </insert>
+   <!--更新  -->
+   <update id="update" parameterType="com.zhangyisheng.entity.RoomType">
+   	update roomtype set rty_name=#{roomTypeName},bed_type=#{bedType},bed_num=#{bedNum},area=#{area},img_url=#{imgUrl},price=#{price} where rty_id=#{roomTypeId}
+   </update>
+   <delete id="delete" parameterType="int">
+   	delete	from roomtype where rty_id=#{roomTypeId}
+   </delete>
+</mapper>

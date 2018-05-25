@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyisheng.dao.OrderDao">
+    <!--查询全部  -->
+    <select id="select" resultMap="orderMap">
+   		select a.orderId,a.custom_name,a.custom_tel,a.rty_id,a.rm_id,a.checkInTime,a.endTime,a.pnum,a.days,a.bookTime,a.ordStatus,a.isApply,a.remark,a.totalPrice,a.rty_name,a.bed_type,a.bed_num,a.area,a.img_url,a.price,mb.cm_level,mb.email from (select o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice,rty.rty_name,rty.bed_type,rty.bed_num,rty.area,rty.img_url,rty.price from order1 as o left join roomtype as rty on o.rty_id=rty.rty_id) as a left join member as mb on a.custom_tel=mb.tel
+    </select>
+    
+  	<resultMap type="com.zhangyisheng.entity.Order" id="orderMap">
+  		<result column="orderId" property="orderId"/>
+  		<result column="custom_name" property="customName"/>
+  		<result column="custom_tel" property="customTel"/>
+  		<result column="rty_id" property="rtyId"/>
+  		<result column="rm_id" property="rmId"/>
+  		<result column="checkInTime" property="checkTime"/>
+  		<result column="endTime" property="leaveTime"/>
+  		<result column="pnum" property="num"/>
+  		<result column="days" property="days"/>
+  		<result column="bookTime" property="bookTime"/>
+  		<result column="ordStatus" property="odStatus"/>
+  		<result column="isApply" property="isApply"/>
+  		<result column="remark" property="remark"/>
+  		<result column="totalPrice" property="totalPrice"/>
+		<association property="roomType" column="orderId" javaType="com.zhangyisheng.entity.RoomType">
+			<result column="rty_id" property="roomTypeId"/>
+			<result column="rty_name" property="roomTypeName"/>
+			<result column="bed_type" property="bedType"/>
+			<result column="bed_num" property="bedNum"/>
+			<result column="area" property="area"/>
+			<result column="img_url" property="imgUrl"/>
+			<result column="price" property="price"/>
+		</association>
+		<association property="member" column="orderId" javaType="com.zhangyisheng.entity.Member">
+			<result column="cm_level" property="cmLevel"/>
+			<result column="email" property="email"/>
+		</association> 	
+  	</resultMap>
+  	<!--根据房间id查找  -->
+  	<select id="findByRoomId" parameterType="int" resultMap="orderMap">
+  		select a.orderId,a.custom_name,a.custom_tel,a.rty_id,a.rm_id,a.checkInTime,a.endTime,a.pnum,a.days,a.bookTime,a.ordStatus,a.isApply,a.remark,a.totalPrice,a.rty_name,a.bed_type,a.bed_num,a.area,a.img_url,a.price,mb.cm_level,mb.email from (select o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice,rty.rty_name,rty.bed_type,rty.bed_num,rty.area,rty.img_url,rty.price from order1 as o left join roomtype as rty on o.rty_id=rty.rty_id where o.rm_id=#{rmId}) as a left join member as mb on a.custom_tel=mb.tel
+  	</select>
+  	<!--根据订单id查找  -->
+  	<select id="findById" parameterType="string" resultMap="orderMap">
+  		select a.orderId,a.custom_name,a.custom_tel,a.rty_id,a.rm_id,a.checkInTime,a.endTime,a.pnum,a.days,a.bookTime,a.ordStatus,a.isApply,a.remark,a.totalPrice,a.rty_name,a.bed_type,a.bed_num,a.area,a.img_url,a.price,mb.cm_level,mb.email from (select o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice,rty.rty_name,rty.bed_type,rty.bed_num,rty.area,rty.img_url,rty.price from order1 as o left join roomtype as rty on o.rty_id=rty.rty_id where o.orderId=#{orderId}) as a left join member as mb on a.custom_tel=mb.tel
+  	</select>
+  	<!-- 根据电话未入住的订单查找 -->
+  	<select id="findByTel" parameterType="string" resultMap="orderMap">
+  		select a.orderId,a.custom_name,a.custom_tel,a.rty_id,a.rm_id,a.checkInTime,a.endTime,a.pnum,a.days,a.bookTime,a.ordStatus,a.remark,a.totalPrice,a.rty_name,a.bed_type,a.bed_num,a.area,a.img_url,a.price,mb.cm_level,mb.email from (select o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.remark,o.totalPrice,rty.rty_name,rty.bed_type,rty.bed_num,rty.area,rty.img_url,rty.price from order1 as o left join roomtype as rty on o.rty_id=rty.rty_id where o.custom_tel=#{customTel}) as a left join member as mb on a.custom_tel=mb.tel
+  	</select>
+  	<select id="selecUnCheck" parameterType="string" resultMap="orderMap">
+  		select a.orderId,a.custom_name,a.custom_tel,a.rty_id,a.rm_id,a.checkInTime,a.endTime,a.pnum,a.days,a.bookTime,a.ordStatus,a.isApply,a.remark,a.totalPrice,a.rty_name,a.bed_type,a.bed_num,a.area,a.img_url,a.price,mb.cm_level,mb.email from (select o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice,rty.rty_name,rty.bed_type,rty.bed_num,rty.area,rty.img_url,rty.price from order1 as o left join roomtype as rty on o.rty_id=rty.rty_id where o.custom_tel=#{customTel} and o.ordStatus=1) as a left join member as mb on a.custom_tel=mb.tel
+  	</select>
+  	<select id="selectHisCheck" parameterType="string" resultMap="orderMap">
+  		select a.orderId,a.custom_name,a.custom_tel,a.rty_id,a.rm_id,a.checkInTime,a.endTime,a.pnum,a.days,a.bookTime,a.ordStatus,a.isApply,a.remark,a.totalPrice,a.rty_name,a.bed_type,a.bed_num,a.area,a.img_url,a.price,mb.cm_level,mb.email from (select o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice,rty.rty_name,rty.bed_type,rty.bed_num,rty.area,rty.img_url,rty.price from order1 as o left join roomtype as rty on o.rty_id=rty.rty_id where o.custom_tel=#{customTel} and (o.ordStatus=2 or o.ordStatus=3)) as a left join member as mb on a.custom_tel=mb.tel
+  	</select>
+  	<!-- 更新订单状态 -->
+  	<update id="updateStatus" parameterType="com.zhangyisheng.entity.Order">
+  		update order1 set ordStatus=#{odStatus} where orderId=#{orderId}
+  	</update>
+  	<!--更新订单的支付状态  -->
+  	<update id="updateIsApply" parameterType="com.zhangyisheng.entity.Order">
+  		update order1 set isApply=#{isApply} where orderId=#{orderId}
+  	</update>
+  	<!-- 添加预订单信息 -->
+  	<insert id="add" parameterType="com.zhangyisheng.entity.Order">
+  		insert into order1(orderId,custom_name,custom_tel,rty_id,rm_id,checkInTime,endTime,pnum,days,bookTime,ordStatus,isApply,remark,totalPrice) values(#{orderId},#{customName},#{customTel},#{rtyId},#{rmId},#{checkTime},#{leaveTime},#{num},#{days},#{bookTime},#{odStatus},#{isApply},#{remark},#{totalPrice})
+  	</insert>
+  	<!--判断当前预定日期是否和已有订单冲突  -->
+  	<!--
+  		select c.rm_id from checkin as c where c.rm_id=#{rmId} and ((#{checkTime}&gt;=c.check_time and #{checkTime}&lt;=c.leav_time) or (#{checkTime}&gt;=c.leav_time and #{leaveTime}&lt;=c.leav_time))
+  		select o.rm_id from order as o where o.rm_id=#{rmId} and ((#{checkTime}&gt;=o.checkInTime and #{checkTime}&lt;=o.endTime) or (#{checkTime}&gt;=o.endTime and #{leaveTime}&lt;=o.endTime)) 
+  	  -->
+  	<select id="isBook" parameterType="com.zhangyisheng.entity.Order" resultType="com.zhangyisheng.entity.OrderEx">
+  		select k.rm_id as ckRmId,g.rm_id as orRmId from (select c.rm_id from checkin as c where c.rm_id=#{rmId} and ((#{checkTime}&gt;=c.check_time and #{checkTime}&lt;=c.leav_time) or (#{checkTime}&gt;=c.leav_time and #{leaveTime}&lt;=c.leav_time))) as k,(select o.rm_id from order1 as o where o.rm_id=#{rmId} and ((#{checkTime}&gt;=o.checkInTime and #{checkTime}&lt;=o.endTime) or (#{checkTime}&gt;=o.endTime and #{leaveTime}&lt;=o.endTime)) ) as g
+  	</select>
+  	<select id="findByRmIdCh" parameterType="com.zhangyisheng.entity.Order" resultMap="orderMap">
+  		select a.orderId,a.custom_name,a.custom_tel,a.rty_id,a.rm_id,a.checkInTime,a.endTime,a.pnum,a.days,a.bookTime,a.ordStatus,a.isApply,a.remark,a.totalPrice,a.rty_name,a.bed_type,a.bed_num,a.area,a.img_url,a.price,mb.cm_level,mb.email from (select o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice,rty.rty_name,rty.bed_type,rty.bed_num,rty.area,rty.img_url,rty.price from order1 as o left join roomtype as rty on o.rty_id=rty.rty_id where o.rm_id=#{rmId} and o.checkInTime=#{checkTime} and o.endTime=#{leaveTime} and ordStatus=#{odStatus}) as a left join member as mb on a.custom_tel=mb.tel
+  	</select>
+  	<!--分页查询  -->
+  	<select id="selectByPage" parameterType="int" resultMap="orderMap">
+  		select a.orderId,a.custom_name,a.custom_tel,a.rty_id,a.rm_id,a.checkInTime,a.endTime,a.pnum,a.days,a.bookTime,a.ordStatus,a.isApply,a.remark,a.totalPrice,a.rty_name,a.bed_type,a.bed_num,a.area,a.img_url,a.price,mb.cm_level,mb.email from (select o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice,rty.rty_name,rty.bed_type,rty.bed_num,rty.area,rty.img_url,rty.price from order1 as o left join roomtype as rty on o.rty_id=rty.rty_id limit 0,20) as a left join member as mb on a.custom_tel=mb.tel
+  	</select>
+  	<!--查询总记录数  -->
+  	<select id="count" resultType="int">
+  	    select count(*) from order1
+  	</select>
+</mapper>

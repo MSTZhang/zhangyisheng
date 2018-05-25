@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyisheng.dao.RoomDao">
+   <!--查询全部房间  -->
+   <select id="select" resultMap="roomResult">
+   	select c.rm_id,c.floor,c.rm_status,c.rty_id,c.ac_id,c.rty_name,c.bed_type,c.bed_num,c.area,c.img_url,c.price,fb.ac_name,fb.ac_url,fb.img_url,fb.ac_price from (select a.rm_id,a.floor,a.rm_status,a.rty_id,a.ac_id,rt.rty_name,rt.bed_type,rt.bed_num,rt.area,rt.img_url,rt.price from (select rm.rm_id,rm.floor,rm.rm_status,rm.rty_id,rar.ac_id from room as rm left join rtyacrm as rar on rm.rm_id=rar.rm_id) as a left join roomtype as rt on a.rty_id=rt.rty_id) as c left join flexible as fb on c.ac_id=fb.ac_id
+   </select>
+   <!--结果集映射 -->
+   <resultMap type="com.zhangyisheng.entity.Room" id="roomResult">
+   		<result column="rm_id" property="roomId"/>
+   		<result column="ac_id" property="acId"/>
+   		<result column="rty_id" property="roomTypeId"/>
+   		<result column="floor" property="floor"/>
+   		<result column="rm_status" property="rmStatus"/>
+	   <association property="roomType" column="rm_id" javaType="com.zhangyisheng.entity.RoomType">
+	   	 <result column="rty_id" property="roomTypeId"/>
+	     <result column="rty_name" property="roomTypeName"/>
+	     <result column="bed_type" property="bedType"/>
+	     <result column="bed_num" property="bedNum"/>
+	     <result column="area" property="area"/>
+	     <result column="img_url" property="imgUrl"/> 
+	     <result column="price" property="price"/>
+	   </association>
+	   <association property="flexible" column="rm_id" javaType="com.zhangyisheng.entity.Flexible">
+	   	 <result column="ac_id" property="acId"/>
+     	 <result column="ac_name" property="acName"/>
+     	 <result column="ac_url" property="acUrl"/>
+     	 <result column="img_url" property="imgUrl"/>
+     	 <result column="ac_price" property="acPrice"/>
+	   </association>
+   </resultMap>
+   <!--根据房间类型id查询 -->
+   <select id="findRtp" parameterType="com.zhangyisheng.entity.Room" resultMap="roomResult">
+      select * from roomtype as rt left join room as rm on rt.rty_id=rm.rty_id and rt.rty_id=#{roomType.roomTypId} left join activity as ac on rm.ac_id=ac.ac_id 
+   </select>
+   <!--根据房间id查询  -->
+   <select id="findById" parameterType="int" resultMap="roomResult">
+   		select c.rm_id,c.floor,c.rm_status,c.rty_id,c.ac_id,c.rty_name,c.bed_type,c.bed_num,c.area,c.img_url,c.price,fb.ac_name,fb.ac_url,fb.img_url,fb.ac_price from (select a.rm_id,a.floor,a.rm_status,a.rty_id,a.ac_id,rt.rty_name,rt.bed_type,rt.bed_num,rt.area,rt.img_url,rt.price from (select rm.rm_id,rm.floor,rm.rm_status,rm.rty_id,rar.ac_id from room as rm left join rtyacrm as rar on rm.rm_id=rar.rm_id where rm.rm_id=#{roomId}) as a left join roomtype as rt on a.rty_id=rt.rty_id) as c left join flexible as fb on c.ac_id=fb.ac_id
+   </select>
+   <!--更新房间信息 -->
+   <update id="update" parameterType="com.zhangyisheng.entity.Room">
+   	update room set ac_id=acId,rty_id=roomTypeId,floor=floor,rm_status=rmStatus where rm_id=#{roomId}
+   </update>
+   <!-- 修改房间状态 -->
+   <update id="alertStatus" parameterType="com.zhangyisheng.entity.Room">
+   	update room set rm_status=#{rmStatus} where rm_id=#{roomId}
+   </update>
+   <!--添加房间  -->
+   <insert id="add" parameterType="com.zhangyisheng.entity.Room">
+   	insert into room(rm_id,rty_id,ac_id,floor,rm_status) values(#{roomId},#{roomTypeId},#{acId},#{floor},#{rmStatus})
+   </insert>
+   <!--删除 根据房间id-->
+   <delete id="delete" parameterType="int">
+   	delete from room where rm_id=#{roomId}
+   </delete>
+   <select id="selectByRyAc" parameterType="com.zhangyisheng.entity.Room" resultMap="roomMap">
+   	 select rm.rm_id,rm.rty_id,rm.floor,rm.rm_status from rtyacrm as rar left join room as rm on rar.rm_id=rm.rm_id where rar.ac_id=#{acId} and rar.rty_id=#{roomTypeId}
+   </select>
+   <resultMap type="com.zhangyisheng.entity.Room" id="roomMap">
+   	<result column="rm_id" property="roomId"/>
+	<result column="ac_id" property="acId"/>
+	<result column="rty_id" property="roomTypeId"/>
+	<result column="floor" property="floor"/>
+	<result column="rm_status" property="rmStatus"/>
+   </resultMap>
+</mapper>

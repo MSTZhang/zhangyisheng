@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyisheng.dao.AccessibleDao">
+   <!--查询全部  -->
+   <select id="select" resultMap="accessibleMap">
+   		select a.acc_num,a.check_num,a.order_Id,a.custom_id,a.custom_name,a.asiStatus,a.evt_index,a.clean_index,a.ft_index,a.server_index,a.content,a.acc_time,a.tel,a.email,a.cm_level,o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice from (select ac.acc_num,ac.check_num,ac.order_Id,ac.custom_id,ac.custom_name,ac.asiStatus,ac.evt_index,ac.clean_index,ac.ft_index,ac.server_index,ac.content,ac.acc_time,mb.tel,mb.email,mb.cm_level from accessible1 as ac left join member as mb on ac.custom_id=mb.id) as a left join order1 as o on o.orderId=a.order_Id
+   </select>
+  	<resultMap type="com.zhangyisheng.entity.Accessible" id="accessibleMap">
+  		<result column="acc_num" property="accNumber"/>
+  		<result column="check_num" property="checkNum"/>
+  		<result column="order_Id" property="orderId"/>
+  		<result column="custom_id" property="customId"/>
+  		<result column="custom_name" property="customName"/>
+  		<result column="asiStatus" property="status"/>
+  		<result column="evt_index" property="evtIndex"/>
+  		<result column="clean_index" property="cleanIndex"/>
+  		<result column="ft_index" property="ftIndex"/>
+  		<result column="server_index" property="serverIndex"/>
+  		<result column="content" property="content"/>
+  		<result column="acc_time" property="accTime"/>
+  		<association property="member" column="acc_num" javaType="com.zhangyisheng.entity.Member">
+  			<result column="custom_id" property="id"/>
+	  		<result column="custom_name" property="customName"/>
+	  		<result column="tel" property="tel"/>
+	  		<result column="email" property="email"/>
+	  		<result column="cm_level" property="cmLevel"/>
+  		</association>
+  		<association property="order" column="acc_num" javaType="com.zhangyisheng.entity.Order">
+  			<result column="orderId" property="orderId"/>
+	  		<result column="custom_name" property="customName"/>
+	  		<result column="custom_tel" property="customTel"/>
+	  		<result column="rty_id" property="rtyId"/>
+	  		<result column="rm_id" property="rmId"/>
+	  		<result column="checkInTime" property="checkTime"/>
+	  		<result column="endTime" property="leaveTime"/>
+	  		<result column="pnum" property="num"/>
+	  		<result column="days" property="days"/>
+	  		<result column="bookTime" property="bookTime"/>
+	  		<result column="ordStatus" property="odStatus"/>
+	  		<result column="isApply" property="isApply"/>
+	  		<result column="remark" property="remark"/>
+	  		<result column="totalPrice" property="totalPrice"/>
+  		</association>
+  	</resultMap>
+  	<!--根据会员id查询点评的信息  -->
+  	<select id="findByUId" parameterType="com.zhangyisheng.entity.Accessible" resultMap="accessibleMap">
+  		select a.acc_num,a.check_num,a.order_Id,a.custom_id,a.custom_name,a.asiStatus,a.evt_index,a.clean_index,a.ft_index,a.server_index,a.content,a.acc_time,a.tel,a.email,a.cm_level,o.orderId,o.custom_name,o.custom_tel,o.rty_id,o.rm_id,o.checkInTime,o.endTime,o.pnum,o.days,o.bookTime,o.ordStatus,o.isApply,o.remark,o.totalPrice from (select ac.acc_num,ac.check_num,ac.order_Id,ac.custom_id,ac.custom_name,ac.asiStatus,ac.evt_index,ac.clean_index,ac.ft_index,ac.server_index,ac.content,ac.acc_time,mb.tel,mb.email,mb.cm_level from accessible1 as ac left join member as mb on ac.custom_id=mb.id where ac.custom_id=#{customId} and ac.asiStatus=#{status}) as a left join order1 as o on o.orderId=a.order_Id
+  	</select>
+  	<!--添加  -->
+  	<insert id="add" parameterType="com.zhangyisheng.entity.Accessible">
+  		insert into accessible1(check_num,order_Id,custom_id,asiStatus) values(#{checkNum},#{orderId},#{customId},#{status})
+  	</insert>
+  	<!--更新  -->
+  	<update id="update" parameterType="com.zhangyisheng.entity.Accessible">
+  		update accessible1 set asiStatus=#{status},evt_index=#{evtIndex},clean_index=#{cleanIndex},ft_index=#{ftIndex},server_index=#{serverIndex},content=#{content},acc_time=#{accTime} where acc_num=#{accNumber}
+  	</update>
+  	<!--删除  -->
+  	<delete id="delete" parameterType="int">
+  		delete from accessible1 where acc_num=#{accNumber}
+  	</delete>
+	<!--查询全部已评价的  -->  	
+  	<select id="selectAccEd" resultType="com.zhangyisheng.entity.AccessExclu">
+  		select a.acc_num as accNum,m.tel as customTel,a.content,a.acc_time as accTime,(a.evt_index+a.clean_index+a.ft_index+a.server_index)/4 as totalScore from accessible1 as a left join member as m on m.id=a.custom_id where asiStatus = 2
+  	</select>
+  	<!--查询总的各项综合评分  -->
+  	<select id="findGoodRate" resultType="com.zhangyisheng.entity.AccessGoodRate">
+  		select k.goodRate,h.num,h.evtScore,h.cleanScore,h.ftScore,h.serverScore,h.totalScore from (select FORMAT(g.goodNum/c.Num,2) as goodRate from (select count(*) as num from accessible1 where asiStatus=2) as c,(select count(*) as goodNum from accessible1 as a where ((a.evt_index+a.clean_index+a.ft_index+a.server_index)/4)>3 and asiStatus=2) as g) as k,(select count(evt_index) as num,FORMAT(sum(evt_index)/count(evt_index),1) as evtScore,FORMAT(sum(clean_index)/count(evt_index),1) as cleanScore,FORMAT(sum(ft_index)/count(evt_index),1) as ftScore,FORMAT(sum(server_index)/count(evt_index),1) as serverScore,FORMAT(sum(evt_index+clean_index+ft_index+server_index)/(count(evt_index)*4),1) as totalScore from accessible1 where asiStatus=2) as h
+  	</select>
+</mapper>
