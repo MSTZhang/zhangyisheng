@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../foresystem/css/clear.css"/>
+		<script src="js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="bgBox">
+				<ul class="clearfix">
+					<li class="login_info">
+						<img src="img/noLogin.png"/>
+						<span><strong>在线</strong></span>
+					</li>
+					<li class="logoText">
+						<span class="titleChinese"><strong>阳光酒店后台管理系统</strong></span>
+						<br/>
+						<span class="titleEnglish">Yang&nbsp;Guang&nbsp;Jiu&nbsp;Dian&nbsp;Manager&nbsp;System</span>
+					</li>
+					<li class="homeNav topNavSys">
+							<img src="img/home.png"/><br/>
+							<span><strong>欢迎页面</strong></span>
+					</li>
+					<li class="topNavSys">
+							<img src="img/guest.png"/><br/>
+							<span><strong>入住管理</strong></span>
+							<ul class="insM" style="height:150px;">
+								<li onclick="menuClick('checkInManager.html')">入住查询</li>
+								<li onclick="menuClick('reserveManager.html')">预定管理</li>
+								<li onclick="menuClick('checkIn.html')">入住登记</li>
+								<li>客房预定</li>
+							</ul>
+					</li>
+					<li class="topNavSys">
+							<img src="img/select.png"/><br/>
+							<span><strong>信息查询</strong></span>
+							<ul class="insM" style="height:90px;">
+								<li onclick="menuClick('personInfo.html')">我的信息</li>
+								<li onclick="menuClick('hotelInfo.html')">酒店信息</li>
+							</ul>
+					</li>
+					<li class="topNavSys">
+							<img src="img/system.png"/><br/>
+							<span><strong>系统设置</strong></span>
+							<ul class="insM" style="height:150px;">
+								<li>修改密码</li>
+								<li>退出系统</li>
+								<li>切换用户</li>
+								<li>关于我们</li>
+							</ul>
+					</li>
+					<li class="timer">
+						<b>22:41</b>
+					</li>
+					<li class="date1" class="clearfix">
+						<div><img src="img/weather.png" width="35px" height="35px"/></div>
+						星期四
+						<br>
+						<span style="color:#d79a1c;font-size:15px;">2018年3月20号</span>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="leftMenu">
+			<div class="left_top">
+				<img class="topMenu" src="img/menu.png" width="25px" height="25px" style="vertical-align: middle;"/>
+				菜单栏
+			</div>
+			<div class="left_menu1">
+				<div class="frequentMenu sysMenu">
+					<div class="menuType">
+						<span class=""><strong>常用菜单</strong></span>
+						<img class="menuControl clearfix" src="img/add.png" width="18px" height="18px"/>
+					</div>
+					<div class="second_level">
+						<div style="height:10px;border-top:1px solid #808080;"></div>
+						<div class="sl" onclick="menuClick1('cashier.html')"><span>收银<span></div>
+						<div class="sl"><span>空闲客房</span></div>
+						<div class="sl"><span>入住登记</span></div>
+						<div class="sl"><span>统计报表</span></div>
+						<div class="sl"><span>房间预定</span></div>
+					</div>
+				</div>
+				<div class="frequentMenu sysMenu secondMn">
+					<div class="menuType">
+						<span class=""><strong>客户管理</strong></span>
+						<img class="menuControl clearfix" src="img/add.png" width="18px" height="18px"/>
+					</div>
+					<div class="second_level">
+						<div style="height:10px;border-top:1px solid #808080;"></div>
+						<div class="sl" onclick="menuClick1('userManager.html')"><span>客户信息</span></div>
+						<div class="sl" onclick="menuClick1('userAdd.html')"><span>新增客户</span></div>
+					</div>
+				</div>
+				<div class="frequentMenu sysMenu secondMn">
+					<div class="menuType">
+						<span class=""><strong>客房管理</strong></span>
+						<img class="menuControl clearfix" src="img/add.png" width="18px" height="18px"/>
+					</div>
+					<div class="second_level">
+						<div style="height:10px;border-top:1px solid #808080;"></div>
+						<div class="sl" onclick="menuClick1('houseShow.html')"><span>全部客房</span></div>
+						<div class="sl"><span>空闲客房</span></div>
+						<div class="sl"><span>已用客房</span></div>
+						<div class="sl"><span>新增客房</span></div>
+					</div>
+				</div>
+				<div class="frequentMenu sysMenu secondMn">
+					<div class="menuType">
+						<span class=""><strong>系统设置</strong></span>
+						<img class="menuControl clearfix" src="img/add.png" width="18px" height="18px"/>
+					</div>
+					<div class="second_level">
+						<div style="height:10px;border-top:1px solid #808080;"></div>
+						<div class="sl" onclick="menuClick1('hotelInfo.html')"><span>酒店信息</span></div>
+						<div class="sl" onclick="menuClick1('newsList.html')"><span>酒店新闻</span></div>
+						<div class="sl" onclick="menuClick1('userMessage.html')"><span>用户留言</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rightMain">
+			<iframe id="mainFr" src="checkIn.html" frameborder="0" width="1040px" height="450px"></iframe>
+		</div>
+		<!--底部-->
+		<div class="Bottom">
+			<div class="newRecive">
+				<img src="img/words.png" width="25" height="25px" style="vertical-align: middle;margin-left:20px;"/>
+				<span><a href="" style="color:white;text-decoration: none;"><b>用户留言(<span style="color:red;">1</span>)</b></span></a>
+			</div>
+			<!--版权信息-->
+			<div class="copyRight">
+				版权所有 © 2017 Mozilla Firefox. 北京谋智火狐信息技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;京ICP备11011334号 
+			</div>
+		</div>
+		<script src="../foresystem/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/menuClick.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.bgBox{
+	width:100%;
+	height:120px;
+	background: #2ca39c;
+	position: absolute;
+}
+.login_info{
+	width:60px;
+	border:120px;
+	text-align: center;
+	margin-left:60px;
+	margin-top:30px;
+}
+.login_info img{
+	width:60px;
+	height:60px;
+	vertical-align:bottom;
+}
+.login_info span{
+	color:#e8f9f8;
+	font-size:15px;
+}

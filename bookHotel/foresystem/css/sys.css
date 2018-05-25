@@ -1,0 +1,12 @@
+.sysTitle{
+	background: url("../img/yzco_03.png") 0 0 no-repeat;
+	color: #f3b347;
+	width: 150px;
+	height: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 35px;
+	margin-top: -8px;
+	margin-left: 20px;
+}

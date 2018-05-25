@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>客户信息</title>
+		<link rel="stylesheet" type="text/css" href="css/clear.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userAlter.css"/>
+	</head>
+	<body>
+		<div class="houseTitleBox">
+			<span style="margin-left:10px;"><b>当前位置>></b></span>
+			<span style="font-size:13px;">用户留言>用户添加</span>
+			<a href="javascript:void(0)" title="锁定系统" class="lockSystem"><img src="img/lock2.png" style="margin-left:700px;width:30px;height:25px;vertical-align: middle;"/></a>
+		</div>
+		<p><b>添加客户</b></p>
+		<form>
+		<table style="margin-left:300px;" class="clearfix">
+			<tr>
+				<td class="userTitle">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</td>
+				<td><input type="text" name="" id="" value="" style="width:80px;"/></td>
+			</tr>
+			<!--证件类型-->
+			<tr>
+				<td class="userTitle">证件类型:</td>
+				<td>
+					<select name="" style="width:80px;">
+						<option value="1">身份证</option>
+						<option value="2">护照</option>
+						<option value="3">其他</option>
+					</select>
+				</td>
+			</tr>
+			<!--用户身份-->
+			<tr>
+				<td class="userTitle">房客身份:</td>
+				<td>
+					<select name="" style="width:80px;">
+						<option value="1">vip</option>
+						<option value="2">熟客</option>
+						<option value="3">散客</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="userTitle">账户状态:</td>
+				<td>
+					<select name="" style="width:80px;">
+						<option value="1">未激活</option>
+						<option value="2">已激活</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="userTitle">账户余额:</td>
+				<td><input type="text" name="" id="" value="0￥" style="width:80px;" readonly="readonly"/></td>
+			</tr>
+			
+		</table>
+		<table style="margin-left:50px;" class="clearfix">
+			<tr>
+				<td class="userTitle">email:</td>
+				<td><input type="text" name="" id="" value="" style="width:150px;"/></td>
+			</tr>
+			<!--登录密码-->
+			<tr>
+				<td class="userTitle">登录密码:</td>
+				<td><input type="text" name="" id="" value="" style="width:150px;"/></td>
+			</tr>
+			<!--证件号码-->
+			<tr>
+				<td class="userTitle">证件类型:</td>
+				<td><input type="text" name="" id="" value="" style="width:150px;"/></td>
+			</tr>
+			<tr>
+				<td class="userTitle">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</td>
+				<td class="userSex"><input type="radio" name="sex" id="" value="1" checked="checked"/><label>男</label>&nbsp;&nbsp;&nbsp;<input type="radio" value="2" name="sex"/><label>女</label></td>
+			</tr>
+			<tr>
+				<td class="userTitle">联系电话:</td>
+				<td><input type="text" name="" id="" value="" style="width:150px;"/></td>
+			</tr>
+		</table>
+		<input type="submit" value="保存" style="margin-left:550px;width:65px;height: 27px;cursor: pointer;margin-top:15px;border: none;background: gray;color: white;border-radius: 2px;"/>
+		</form>
+	</body>
+</html>

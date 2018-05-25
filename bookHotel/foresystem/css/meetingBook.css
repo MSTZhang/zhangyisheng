@@ -1,0 +1,39 @@
+.meetingBox{
+	width:714px;
+	height:730px;
+	background-color:#201b17;
+	border: #9b5702 1px solid;
+	margin-left:-8px;
+	margin-top:10px;
+}
+.meetingBox1{
+	width:644px;
+	height:338px;
+	background-color: #EBBF62;
+	margin-top:20px;
+	margin-left: 40px;
+	position: absolute;
+}
+.meetingInputSys{
+	font-size: 12px;
+	color: #673502;
+	line-height: 30px;
+}
+.meetingInputSys input{
+	width:204px;
+	border:1px solid #673502;
+}
+.cityBox{
+	margin-left:50px;
+	margin-top:40px;
+}
+.detailIntroduce{
+	width:406px;
+	height:100px;
+	background-color: #673502;
+	border: 1px solid #E8C77A;
+	line-height: 25px;
+}
+.detailText{
+	margin-top:-20px;
+}

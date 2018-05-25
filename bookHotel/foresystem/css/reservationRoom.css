@@ -1,0 +1,112 @@
+.reservationBox{
+	width:714px;
+	height:800px;
+	background-color:#201b17;
+	border: #9b5702 1px solid;
+	margin-left:-8px;
+	margin-top:10px;
+}
+.roomTitle tr td{
+	height: 26px;
+	color: #c87000;
+	font-size: 12px;
+	line-height: 26px;
+}
+.roomList{
+	width:694px;
+	height:;
+	border:1px solid #6d5050;
+	border-top:2px solid #6d5050;
+	font-size:13px;
+	margin-left:10px;
+	margin-top:20px;
+}
+.roomIntroduce{
+	width:692px;
+	height:101px;
+	background: #3b342c;
+	position: absolute;
+	margin-left:-1px;
+	margin-top:30px;
+	display: none;
+}
+.room_arrow{
+	margin-top: -7px;
+	margin-left: 30px;
+	width:13px;
+	height:7px;
+	background: url("../img/icon_room.gif") 0px -750px no-repeat;
+	overflow: hidden;
+}
+.room_arrow1{
+	margin-top: -7px;
+	margin-left: 210px;
+	width:13px;
+	height:7px;
+	background: url("../img/icon_room.gif") 0px -750px no-repeat;
+	overflow: hidden;
+}
+.roomIntroduce p{
+	margin-left:20px;
+	line-height: 22px;
+	font-size:12px;
+	color: #777;;
+}
+.roomList tr .roomName a{
+	float: left;
+    padding-left: 20px;
+    background: url("../img/icon_room.gif") 4px -143px no-repeat;
+    text-decoration: none;
+    color: #baa271;
+    line-height: 22px;
+}
+.roomList tr td{
+	border-bottom:1px solid #a48b6f;
+	height:37px;
+}
+.roomList tr .roomName a:hover{
+	color:white;
+}
+.roomList tr td{
+	color:#baa271;
+}
+.assureBox{
+	width:30px;
+	height:30px;
+	background: url("../img/icon_room.gif") 0 -243px no-repeat;
+	margin: 0;
+	padding: 0;
+	float:left;
+	margin-left:25px;
+}
+.assureBox:hover{
+	cursor: pointer;
+}
+.assureText{
+	position: absolute;
+	width:300px;
+	height:86px;
+	background: white;
+	margin-left:-180px;
+	margin-top:40px;
+	font-size: 12px;
+	color:black;
+	display: none;
+}
+.priceBox{
+	float:left;
+	margin-top:4px;
+	margin-left:3px;
+	cursor: pointer;
+}
+.priceBox input{
+	width: 50px;
+	height: 22px;
+	border: none;
+	background: url("../img/icon_room.gif") 0 -500px no-repeat;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+	font-weight: bold;
+	line-height: 17px;
+}

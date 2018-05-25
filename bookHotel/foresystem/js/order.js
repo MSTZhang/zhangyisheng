@@ -1,0 +1,12 @@
+$(".generousProblem").mouseenter(
+	function(){
+		$(".gPbanser").css("display","block");
+		$(".gPbanser").css("z-index","3");
+	}
+);
+$(".generousProblem").mouseleave(
+	function(){
+		$(".gPbanser").css("display","none");
+		$(".gPbanser").css("z-index","1");
+	}
+);

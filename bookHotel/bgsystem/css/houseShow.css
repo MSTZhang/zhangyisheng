@@ -1,0 +1,103 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.houseHead{
+	width:100%;
+	height:35px;
+	background: #fef8f3;
+}
+.houseHead ul{
+	margin-left:103px ;
+}
+.houseHead ul li{
+	font-size: 13px;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	width:100px;
+	font-weight: bold;
+	list-style: none;
+	float:left;
+}
+.houseHead ul li:hover{
+	cursor: pointer;
+}
+.houseHead ul .currentLi{
+	color:white;
+	background: #009933;
+}
+.roomFloor{
+	width:100px;
+	height:400px;
+	background: #fef8f3;
+	float: left;
+}
+.roomFloor div{
+	width:100%;
+	height:50px;
+	line-height: 40px;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+}
+.roomFloor div:hover{
+	cursor: pointer;
+}
+.roomFloor .selectedFloor{
+	background: orange;
+	color:white;
+	border: 1px solid #ca9e2d;
+}
+.roomInfo{
+	width:919px;
+	height:415px;
+	float: left;
+	margin-left:4px;
+}
+.roomInfo .roomBx{
+	width:100px;
+	height:90px;
+	background: #f7b599;
+	border: 1px solid gray;
+	margin-top: 2px;
+	float: left;
+	margin-left:3px;
+}
+.roomInfo .roomBx .roomNumber{
+	width:100%;
+	height:23px;
+	background: #da7e41;
+	color:white;
+	font-size: 14px;
+	line-height: 23px;
+}
+.roomInfo .roomBx .roomNumber span{
+	font-size:12px ;
+	margin-left:35px;
+}
+.roomInfo .roomBx .roomTp{
+	color: #2e8f79;
+	font-size: 13px;
+	font-weight: bold;
+	margin-top:5px;
+}
+.roomInfo .roomBx .roomTp1{
+	font-size: 11px;
+	font-weight:bold ;
+	color:#818181;
+}
+.roomStatus1{
+	float: left;
+	font-size: 10px;
+	margin-top:10px;
+	color:#0f8c79;
+}
+.roomStatus2{
+	float: right;
+	border: 1px solid red;
+	color: red;
+	font-size: 10px;
+	margin-top:10px;
+	margin-right: 2px;
+}

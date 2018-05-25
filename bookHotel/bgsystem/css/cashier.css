@@ -1,0 +1,63 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.houseTitleBox{
+	width:100%;
+	height:35px;
+	line-height: 35px;
+	color:white;
+	font-size:15px;
+	background-color:#3e3e3e;
+}
+.houseFilter{
+	width:100%;
+	height:35px;
+	font-size:15px;
+	line-height: 35px;
+}
+.houseStatus li{
+	width:128px;
+	height:60px;
+	text-align: center;
+	list-style: none;
+	border-bottom: 3px solid #fdc51a;
+	float: left;
+}
+.houseStatus li a{
+	font-size: 18px;
+	text-decoration: none;
+	color:#3e3e3e;
+}
+.submit{
+	height:35px;
+	line-height: 35px;
+	width:100%;
+	background: #d4d4d4;
+	margin-top: 5px;
+	font-size:13px;
+}
+.submit .submitSelect{
+	margin-left:20px;
+}
+.submit select{
+	width:100px;
+}
+.submit form{
+	display: inline;
+}
+.table1 .thead3 td{
+	width:150px;
+	height:30px;
+	background:#3e3e3e ;
+	color:white;
+	text-align: center;
+	font-size:13px;
+}
+.table2 .tbody3 td{
+	width:150px;
+	height:30px;
+	text-align: center;
+	font-size: 13px;
+	border-bottom: 1px dashed darkgray;
+}

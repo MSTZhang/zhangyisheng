@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户管理</title>
+		<link rel="stylesheet" type="text/css" href="css/userManager.css"/>
+		<link rel="stylesheet" type="text/css" href="css/exportSys.css"/>
+		<script src="js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.table2excel.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="houseTitleBox">
+			<span style="margin-left:10px;"><b>当前位置>></b></span>
+			<span style="font-size:13px;">用户管理</span>
+			<a href="javascript:void(0)" title="锁定系统" class="lockSystem"><img src="img/lock2.png" style="margin-left:830px;width:30px;height:25px;vertical-align: middle;"/></a>
+		</div>
+		<!--导出-->
+		<table class="exportTable">
+			<tr>
+				<td width="130px">
+					<div style="width:120px;height:30px;border: 1px solid #d2d2d2;line-height: 30px;border-radius:3px ;" class="exportBtn">
+						<img src="img/export.png" width="18px" height="18px" style="vertical-align: middle;margin-left:10px;"/>
+						<span style="font-size:13px;margin-left:10px;color:2c2c2c;">导出文件</span>
+					</div>
+				</td>
+				<td>
+					<div style="width:80px;height:30px;border: 1px solid #d2d2d2;line-height: 30px;border-radius:3px ;" class="exportBtn">
+						<img src="img/print1.png" width="18px" height="18px" style="vertical-align: middle;margin-left:10px;"/>
+						<span style="font-size:13px;margin-left:10px;color:2c2c2c;">pdf</span>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<!--条件过滤-->
+		<div class="houseFilter">
+				<div class="submit">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span>房客身份:
+						<select name="">
+							<option value="">全部</option>
+							<option value="">vip</option>
+							<option value="">熟客</option>
+							<option value="">散客</option>
+						</select>
+					</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<form action="" method="">
+					<span>房客姓名:<input type="" name="" id="" value="" style="width:120px;border: 1px solid white;background: rgba(1,1,1,0);"/>
+					</span>
+					<input type="submit" name="" id="" value="查询" style="background: #669900;color: white;height:22px;border: none;width:80px;cursor: pointer;"/>
+					</form>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<form action="" method="">
+					<span>证件号码:<input type="" name="" id="" value="" style="width:120px;border: 1px solid white;background: rgba(1,1,1,0);"/><span>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="" id="" value="查询" style="background: #669900;color: white;height:22px;border: none;width:80px;cursor: pointer;"/>
+					</form>
+				</div>
+		</div>
+		<table class="userTable messageTable" cellpadding="0" cellspacing="0">
+			<thead>
+				<tr>
+					<td>用户姓名</td>
+					<td>联系电话</td>
+					<td>email</td>
+					<td class="IDNumber">证件号码</td>
+					<td>用户身份</td>
+					<td>激活状态</td>
+					<td>注册日期</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>姜涛</td>
+					<td>17865932956</td>
+					<td>1120349098@qq.com</td>
+					<td>522427199401170071</td>
+					<td>vip</td>
+					<td>已激活</td>
+					<td>2017-8-29</td>
+					<td class="operator3">
+						<a href="" class="delete1"><img src="img/delete.png" style="width:15px;height:15px;vertical-align: middle;"/>删除</a>
+					&nbsp;
+					<a href="userAlter.html" class="alert1"><img src="img/change.png" style="width:16px;height:18px;vertical-align: middle;"/>编辑</a>
+					</td>
+				</tr>
+				<tr>
+					<td>姜涛</td>
+					<td>17865932956</td>
+					<td>1120349098@qq.com</td>
+					<td>522427199401170071</td>
+					<td>散客</td>
+					<td>已激活</td>
+					<td>2017-8-29</td>
+					<td class="operator3">
+						<a href="" class="delete1"><img src="img/delete.png" style="width:15px;height:15px;vertical-align: middle;"/>删除</a>
+					&nbsp;
+					<a href="userAlter.html" class="alert1"><img src="img/change.png" style="width:16px;height:18px;vertical-align: middle;"/>编辑</a>
+					</td>
+				</tr>
+				<tr>
+					<td>姜涛</td>
+					<td>17865932956</td>
+					<td>1120349098@qq.com</td>
+					<td>522427199401170071</td>
+					<td>熟客</td>
+					<td>已激活</td>
+					<td>2017-8-29</td>
+					<td class="operator3">
+						<a href="" class="delete1"><img src="img/delete.png" style="width:15px;height:15px;vertical-align: middle;"/>删除</a>
+					&nbsp;
+					<a href="userAlter.html" class="alert1"><img src="img/change.png" style="width:16px;height:18px;vertical-align: middle;"/>编辑</a>
+					</td>
+				</tr>
+				<tr>
+					<td>姜涛</td>
+					<td>17865932956</td>
+					<td>1120349098@qq.com</td>
+					<td>522427199401170071</td>
+					<td>散客</td>
+					<td>未激活</td>
+					<td>2017-8-29</td>
+					<td class="operator3">
+						<a href="" class="delete1"><img src="img/delete.png" style="width:15px;height:15px;vertical-align: middle;"/>删除</a>
+					&nbsp;
+					<a href="userAlter.html" class="alert1"><img src="img/change.png" style="width:16px;height:18px;vertical-align: middle;"/>编辑</a>
+					</td>
+				</tr>
+				<tr>
+					<td>姜涛</td>
+					<td>17865932956</td>
+					<td>1120349098@qq.com</td>
+					<td>522427199401170071</td>
+					<td>vip</td>
+					<td>未激活</td>
+					<td>2017-8-29</td>
+					<td class="operator3">
+						<a href="" class="delete1"><img src="img/delete.png" style="width:15px;height:15px;vertical-align: middle;"/>删除</a>
+					&nbsp;
+					<a href="userAlter.html" class="alert1"><img src="img/change.png" style="width:16px;height:18px;vertical-align: middle;"/>编辑</a>
+					</td>
+				</tr>
+				<tr>
+					<td>姜涛</td>
+					<td>17865932956</td>
+					<td>1120349098@qq.com</td>
+					<td>522427199401170071</td>
+					<td>vip</td>
+					<td>已激活</td>
+					<td>2017-8-29</td>
+					<td class="operator3">
+						<a href="" class="delete1"><img src="img/delete.png" style="width:15px;height:15px;vertical-align: middle;"/>删除</a>
+					&nbsp;
+					<a href="userAlter.html" class="alert1"><img src="img/change.png" style="width:16px;height:18px;vertical-align: middle;"/>编辑</a>
+					</td>
+				</tr>
+				<tr>
+					<td>姜涛</td>
+					<td>17865932956</td>
+					<td>1120349098@qq.com</td>
+					<td>522427199401170071</td>
+					<td>vip</td>
+					<td>已激活</td>
+					<td>2017-8-29</td>
+					<td class="operator3">
+						<a href="" class="delete1"><img src="img/delete.png" style="width:15px;height:15px;vertical-align: middle;"/>删除</a>
+					&nbsp;
+					<a href="userAlter.html" class="alert1"><img src="img/change.png" style="width:16px;height:18px;vertical-align: middle;"/>编辑</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<script src="js/exportSys.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/opertatorSys.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/userManager.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

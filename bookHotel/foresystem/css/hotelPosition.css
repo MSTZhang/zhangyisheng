@@ -1,0 +1,18 @@
+.positionBox{
+	width:712px;
+	height:583px;
+	background-color:#201b17;
+	border: #9b5702 1px solid;
+	margin-left:2px;
+	margin-top:10px;
+}
+.MapImg{
+	width:690;
+	height:437px;
+}
+.positionBox p{
+	line-height: 22px;
+	color:#cc9c66;
+	font-size:12px ;
+	margin-left:5px;
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/sys.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reservationRoom.css"/>
+	</head>
+	<body>
+		<div class="reservationBox">
+			<div class="sysTitle">在线预定</div>
+			<table width="100%" border="0" style="color: #999; background-color: #292522; font-size: 12px;width:694px;margin:0 auto;margin-top:10px;">
+                <tr>
+                    <td width="12%" style="text-align: right; height: 30px;">入住时间：</td>
+                    <td width="19%"><input type="text" name="checkIndate" id="checkIndate" class="input4"  value="2018-03-19"  onClick="WdatePicker({ dateFmt: 'yyyy-MM-dd', readOnly: true,onpicked:clickbegin(),minDate:'2018-03-18        ' })"  /></td>
+                    <td width="10%">退房时间：</td>
+                    <td width="19%"><input type="text" name="checkOutdate" id="checkOutdate" class="input4" value="2018-03-20"  onClick="WdatePicker({ dateFmt: 'yyyy-MM-dd', readOnly: true, minDate: '#F{$dp.$D(\'checkIndate\')}' })"  /></td>
+                    <td width="40%"><input id="setCheckDate" type="image" src="img/searchPrice.png" onclick="HotelSearchCheck()"/></td>
+                </tr>
+            </table>
+            <!--房间类型-->
+            <div class="roomBox">
+            	<table class="roomTitle" style="margin-left:20px;" >
+            		<tr>
+            			<td width="200px"> <span>房型名称</span> </td>
+            			<td width="112px"><span class="row1" style="color: #c87000;width: 85px;">床型</span>   </td>
+            			<td width="130px"><span class="row1">早餐</span> </td>
+            			<td width="70px"><span>宽带</span> </td>
+            			<td width="100px"><span>03月19日</span></td>
+            			<td><span>前台付款</span></td>
+            		</tr>
+            	</table>
+            	<table class="roomList" cellspacing="0">
+            		<tr>
+            			<td width="200px" class="roomName">
+            				<a href="JavaScript:void(0)" class="roomInfoContent">豪华江景房</a>
+            				<div class="roomIntroduce">
+            					<div class="room_arrow"></div>
+            					<p>
+            						<span style="word-spacing: 120px;">楼层:3-20  面积:</span>
+            						<br/>
+            						大/双床、3-20楼、50平米、收费宽带、可入住2人
+            						<br/>
+            						床型：双人床2米，1张或单人床1.2米，2张; 3-20;
+            					</p>
+            				</div>
+            			</td>
+            			<td width="100px">大/双床</td>
+            			<td width="100px"></td>
+            		    <td width="100px"></td>
+            		    <td width="60px"></td>
+            		    <td></td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含单早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="ynHome" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含双早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            	</table>
+            	<table class="roomList" cellspacing="0">
+            		<tr>
+            			<td width="200px" class="roomName">
+            				<a href="JavaScript:void(0)" class="roomInfoContent">豪华江景房</a>
+            				<div class="roomIntroduce">
+            					<div class="room_arrow"></div>
+            					<p>
+            						<span style="word-spacing: 120px;">楼层:3-20  面积:</span>
+            						<br/>
+            						大/双床、3-20楼、50平米、收费宽带、可入住2人
+            						<br/>
+            						床型：双人床2米，1张或单人床1.2米，2张; 3-20;
+            					</p>
+            				</div>
+            			</td>
+            			<td width="100px">大/双床</td>
+            			<td width="100px"></td>
+            		    <td width="100px"></td>
+            		    <td width="60px"></td>
+            		    <td></td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含单早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含双早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            	</table>
+            	<table class="roomList" cellspacing="0">
+            		<tr>
+            			<td width="200px" class="roomName">
+            				<a href="JavaScript:void(0)" class="roomInfoContent">豪华江景房</a>
+            				<div class="roomIntroduce">
+            					<div class="room_arrow"></div>
+            					<p>
+            						<span style="word-spacing: 120px;">楼层:3-20  面积:</span>
+            						<br/>
+            						大/双床、3-20楼、50平米、收费宽带、可入住2人
+            						<br/>
+            						床型：双人床2米，1张或单人床1.2米，2张; 3-20;
+            					</p>
+            				</div>
+            			</td>
+            			<td width="100px">大/双床</td>
+            			<td width="100px"></td>
+            		    <td width="100px"></td>
+            		    <td width="60px"></td>
+            		    <td></td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含单早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含双早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            	</table>
+            	<table class="roomList" cellspacing="0">
+            		<tr>
+            			<td width="200px" class="roomName">
+            				<a href="JavaScript:void(0)" class="roomInfoContent">豪华江景房</a>
+            				<div class="roomIntroduce">
+            					<div class="room_arrow"></div>
+            					<p>
+            						<span style="word-spacing: 120px;">楼层:3-20  面积:</span>
+            						<br/>
+            						大/双床、3-20楼、50平米、收费宽带、可入住2人
+            						<br/>
+            						床型：双人床2米，1张或单人床1.2米，2张; 3-20;
+            					</p>
+            				</div>
+            			</td>
+            			<td width="100px">大/双床</td>
+            			<td width="100px"></td>
+            		    <td width="100px"></td>
+            		    <td width="60px"></td>
+            		    <td></td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含单早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含双早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            	</table>
+            	<table class="roomList" cellspacing="0">
+            		<tr>
+            			<td width="200px" class="roomName">
+            				<a href="JavaScript:void(0)" class="roomInfoContent">豪华江景房</a>
+            				<div class="roomIntroduce">
+            					<div class="room_arrow"></div>
+            					<p>
+            						<span style="word-spacing: 120px;">楼层:3-20  面积:</span>
+            						<br/>
+            						大/双床、3-20楼、50平米、收费宽带、可入住2人
+            						<br/>
+            						床型：双人床2米，1张或单人床1.2米，2张; 3-20;
+            					</p>
+            				</div>
+            			</td>
+            			<td width="100px">大/双床</td>
+            			<td width="100px"></td>
+            		    <td width="100px"></td>
+            		    <td width="60px"></td>
+            		    <td></td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含单早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房"  onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含双早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            	</table>
+            	<table class="roomList" cellspacing="0">
+            		<tr>
+            			<td width="200px" class="roomName">
+            				<a href="JavaScript:void(0)" class="roomInfoContent">豪华江景房</a>
+            				<div class="roomIntroduce">
+            					<div class="room_arrow"></div>
+            					<p>
+            						<span style="word-spacing: 120px;">楼层:3-20  面积:</span>
+            						<br/>
+            						大/双床、3-20楼、50平米、收费宽带、可入住2人
+            						<br/>
+            						床型：双人床2米，1张或单人床1.2米，2张; 3-20;
+            					</p>
+            				</div>
+            			</td>
+            			<td width="100px">大/双床</td>
+            			<td width="100px"></td>
+            		    <td width="100px"></td>
+            		    <td width="60px"></td>
+            		    <td></td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含单早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            		<tr>
+            			<td width="200px" style="color: #a48b6f;">&nbsp;&nbsp;&nbsp;&nbsp;标准价</td>
+            			<td width="100px"></td>
+            			<td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;含双早</td>
+            		    <td width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收费宽带</td>
+            		    <td width="60px" style="color: #f60;font-family: Arial;">&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size:18px;">1982</span></td>
+            		    <td>
+            		    	<div class="assureBox"></div>
+            		    	<div class="assureText">
+            		    		<div class="room_arrow1"></div>
+            		    		<p style="width:290px;margin: 0 auto;">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</p>
+            		    	</div>
+            		    	<div class="priceBox"><input type="button" name="" id="" value="有房" onclick="ynHomeBtn('das')"/></div>
+            		    </td>
+            		</tr>
+            	</table>
+            </div>
+		</div>
+		<script type="text/javascript" src="jquery/jquery-1.8.2.js" ></script>
+		<script src="js/reservationRoom.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

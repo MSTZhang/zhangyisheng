@@ -1,0 +1,41 @@
+.messageBox1{
+	width:714px;
+	height:394px;
+	background-color:#201b17;
+	border: #9b5702 1px solid;
+	margin-left:-8px;
+	margin-top:10px;
+}
+.messageTitle1{
+	width:673px;
+	height:34px;
+	line-height: 34px;
+	text-align: center;
+	font-weight: bold;
+	color:#FFCC66;
+	font-size:12px;
+}
+.messageTitle2{
+	color:#a48b6f;
+	font-size:12px;
+	margin-left: 20px;
+}
+.msgTable{
+	margin-left: 70px;
+}
+.msgTable tr td span{
+	color:red;
+}
+.td1{
+	color:#a48b6f;
+	font-size:12px;
+	vertical-align:middle;
+}
+.subject{
+	width:406px;
+	height:23px;
+}
+.content{
+	width:406px;
+	height:106px;
+}

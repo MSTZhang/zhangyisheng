@@ -1,0 +1,166 @@
+.orderBox{
+	width:960px;
+	background-color: #fff;
+	border: 6px solid #eee;
+	border-width: 0 6px 0 6px;
+	padding: 8px 0;
+	overflow: auto;
+	font-size: 12px;
+	font-family: arial;
+	line-height: 1.5;
+	height:1200px;
+	margin-left:185px ;
+	margin-top:5px ;
+	padding-top:0px ;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+.orderTop{
+	width:960px;
+	height:40px;
+	background: #eee;
+	line-height: 40px;
+	color: #333;
+	padding: 5px 20px 0 20px;
+	font-size: 20px;
+	font-family: "微软雅黑","黑体","Verdana";
+}
+.orermainBox{
+	margin-top:10px;
+	width:100%;
+	height:1200px;
+}
+.leftMain{
+	width:278px;
+	height:1200px;
+	border-right:1px dashed #ddd;
+	float:left;
+}
+.leftOrderTop{
+	width:230px;
+	height:84px;
+	margin-top:20px;
+	margin-left:23px;
+}
+.orderLeftPhoto{
+	float: left;
+}
+.addressOrder{
+	float:left;
+	width:132px;
+	margin-left:10px;
+	color:#888;
+}
+#why_us dl{
+	padding: 10px 0 10px 46px;
+	background: url("../img/icon.gif") 0 12px no-repeat;
+}
+#why_us dl dt{
+	font-size: 14px;
+}
+#why_us dl dd{
+	color: #666;
+	font-size: 12px;
+	font-size: 12px;
+	font-family: arial;
+	line-height: 1.5;
+}
+.generousProblem{
+	color: #05a;
+	margin-left:70px;
+	margin-top:10px;
+}
+.generousProblem:hover{
+	cursor: pointer;
+}
+.gPbanser{
+	width:400px;
+	height:108px;
+	border: 1px solid gray;
+	margin-left:23px;
+	margin-top:5px;
+	position: absolute;
+	display: none;
+	background: white;
+}
+.room_arrow3{
+	margin-top: -7px;
+	margin-left: 70px;
+	width:13px;
+	height:7px;
+	background: url("../img/icon_room.gif") 0px -750px no-repeat;
+	overflow: hidden;
+}
+.conmanswer{
+	color: #666;
+}
+.gPbanser p{
+	margin-left:10px;
+	margin-top:10px;
+}
+#card_safe ul li{
+	padding: 13px 0 7px 46px;
+	color: #666;
+	background:url("../img/icon3.gif") 0 12px no-repeat;
+	list-style: none;
+	font-size: 12px;
+	font-family: arial;
+	line-height: 1.5;
+}
+.rightOrderMain{
+	width:619px;
+	height:1200px;
+	float: left;
+	margin-left:20px;
+}
+.roomInfoText{
+	width:619px;
+	height:32px;
+	font-size: 14px;
+	background: #EEF7FF;
+	padding: 5px 10px;
+	border-top: 1px solid #BBDFFF;
+	color: #444;
+	margin-top:20px;
+}
+.roomInfoBox{
+	width:619px;
+	height:223px;
+	margin-top:20px;
+}
+.roomType select{
+	width:552px;
+	height:30px;
+}
+.roomType{
+	width:630px;
+	height:30px;
+}
+.sysRfm{
+	margin-left:40px;
+}
+.keepTimeIntro{
+	width:508px;
+	height:58px;
+	border: 1px solid #ffca7f;
+	padding: 4px;
+	background: #fffedd;
+	line-height: 200%;
+}
+.guest{
+	margin-left:22px;
+}
+.carExplain{
+	width:100%;
+	line-height: 1.8;
+	padding:10px 12px;
+	background: #F7FBFF;
+	border: 1px dotted #BBDFFF;
+	margin-top:15px;
+}
+.formBtn{
+	width:100%;
+	border-top: 1px solid #ddd;
+	padding-top: 30px;
+	margin-top:15px;
+}

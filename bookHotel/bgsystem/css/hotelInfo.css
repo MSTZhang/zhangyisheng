@@ -1,0 +1,60 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.houseTitleBox{
+	width:100%;
+	height:35px;
+	line-height: 35px;
+	color:white;
+	font-size:15px;
+	background-color:#3e3e3e;
+}
+.titleBox{
+	width:100%;
+	height:25px;
+	line-height: 25px;
+	color:white;
+	font-size:15px;
+	background-color:#3e3e3e;
+}
+.titleBox .insideBox{
+	width:150px;
+	height: 100%;
+	background: white;
+	margin-left:50px;
+	color:black;
+	text-align: center;
+	line-height: 25px;
+}
+.titleBox1{
+	width:900px;
+	height: 35px;
+	border: 1px dashed gray;
+	margin: 0 auto;
+	margin-top: 15px;
+	font-size: 14px;
+}
+.personInfoBox{
+	width:600px;
+	height:25px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top:30px;
+	font-size: 20px;
+}
+table{
+	margin-left:330px;
+	margin-top:20px;
+}
+table tr td{
+	font-size: 15px;
+}
+table tr .tn{
+	font-weight: bold;
+	width:70px;
+}
+table tr td a{
+	color:#8a8a8a;
+	text-decoration: none;
+}

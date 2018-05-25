@@ -1,0 +1,99 @@
+.newListBox{
+	width:714px;
+	height:367px;
+	background-color:#201b17;
+	border: #9b5702 1px solid;
+	margin-left:-8px;
+	margin-top:10px;
+}
+.newListBox ul li{
+	color: #a48b6f;
+	line-height: 22px;
+	font-size:12px;
+	border-bottom: #383838 1px dashed;
+	list-style: disc;
+	height: 25px;
+	line-height: 25px;
+}
+.newListBox ul li a{
+	text-decoration: none;
+	color:#a48b6f;
+}
+.newListBox ul li a:hover{
+	color:white;
+}
+.pager{
+	margin: 0 auto;
+	width:450px;
+}
+.pager .jumpSys{
+	width:40px;
+	height:23px;
+	line-height: 23px;
+	text-align: center;
+	background-color: white;
+	margin-left:5px;
+	border: none;
+	list-style: none;
+}
+.pager ul li{
+	float: left;
+	list-style: none;
+}
+.pager .jumpSys a{
+	font-size: 12px;
+	height:23px;
+	line-height: 23px;
+	color:black;
+}
+.pager .jumpSys:hover{
+	background: #0F4466 none repeat scroll 0 0;
+	border: 1px solid #0F4466;
+   	color: #FFFFFF;
+}
+.pager .firstPage{
+	margin-left: 5px;
+	width:20px;
+	background:#0F4466;
+	color:#FFFFFF ;
+}
+.pager .firstPage a{
+	color:#FFFFFF ;
+}
+.pager .secondPage{
+	width:20px;
+	height: 23px;
+	line-height: 23px;
+}
+.pageNum{
+	width:40px;
+}
+.pager .jump{
+	width:150px;
+	background: none;
+}
+.hotelHistory{
+	width:714px;
+	height:230px;
+	background-color:#201b17;
+	border: #9b5702 1px solid;
+	margin-left:-8px;
+	margin-top:20px;
+}
+.hotelHistoryTitle{
+	width:678px;
+	height:30px;
+	line-height: 30px;
+	font-size: 12px;
+	margin:0 auto;
+	background-color: #733d01;
+	text-align: center;
+	color: #cc9c66;
+}
+.hotelHistory p{
+	width:670px;
+	font-size: 12px;
+	line-height: 22px;
+	color: #cc9c66;
+	margin-left:20px;
+}

@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #dfe1e0;
+}
+.houseTitleBox{
+	width:100%;
+	height:35px;
+	line-height: 35px;
+	color:white;
+	font-size:15px;
+	background-color: #3e3e3e;
+}
+.infoBox{
+	width:1033px;
+	height:400px;
+	border:1px solid gray;
+	border-radius:3px;
+	margin-top:5px;
+}
+.infoTitle{
+	margin-left:20px;
+}
+.infoTitle span,label{
+	font-size:14px;
+}
+.infoTitle label{
+	color:#e2c13f;
+}
+.infoBox table tr td{
+	font-size: 14px;
+}
+.freeHouse{
+	width:400px;
+	border: 1px solid #a6a48c;
+	height:220px;
+	margin-left:15px;
+	border-radius: 3px;
+	float: left;
+}
+.freeHouseBox{
+	width: 400px;
+	height:30px;
+	border-bottom: 1px solid #a6a48c;
+	background: #b6bcb6;
+	position: absolute;
+}
+.freeHouse .titleTable{
+	margin-top:35px;
+}
+.freeHouse .titleTable tr td{
+	width:140px;
+	height:30px;
+	border-top: 1px solid gray;
+	border-right: 1px solid #cdccbe;
+	border-bottom: 1px solid #bfbdae;
+	text-align: center;
+	background: #e3e2db;
+}
+.freeHouse .roomTable{
+	
+}
+.freeHouse .roomTable tr td{
+	width:140px;
+	text-align: center;
+	background: white;
+	height: 30px;
+}

@@ -1,0 +1,58 @@
+ul{
+	padding: 0;
+	margin: 0;
+}
+.headBox{
+	width:1134px;
+	height:130px;
+	margin-left:177px;
+}
+.headMain{
+	margin: 10px;
+	color: #fef5bc;
+	height: 100px;
+}
+.headMain ul{
+	float: left;
+}
+.ul{
+	width: 142px;
+	height:128px;
+	margin-top:-10px;
+	text-align: center;
+}
+.ul img{
+	border: 0;
+	vertical-align: bottom;
+}
+.bt{
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Microsoft YaHei;
+	margin-top: 20px;
+	line-height: 30px;
+	width:551px;
+	text-align: center;
+	list-style: none;
+}
+.xbt{
+	font-size: 15px;
+}
+.ul2{
+	list-style: none;
+	width:256px;
+}
+.tel i{
+	background: url(../img/yzco_01.png) 0 0 no-repeat;
+	background-size: auto auto;
+	padding: 5px 12px;
+    background-size: 200px
+}
+.adress{
+	font-size:12px;
+}
+.u{
+	font-family: Verdana, Geneva, sans-serif;
+	color: #ff6600;
+	font-size: 14px;
+}

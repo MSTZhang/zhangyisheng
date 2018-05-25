@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>在线预定</title>
+		<link rel="stylesheet" type="text/css" href="css/clear.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/order.css"/>
+	</head>
+	<body>
+		<div class="topBox">
+			<iframe src="top.html" width="100%" height="130px" frameborder="no" scrolling="no"></iframe>
+		</div>
+		
+		<!--标题导航-->
+		<div class="titleNav">
+			<ul>
+				<li class="navFirst">
+					<a href="JavaScript:void(0)" onclick="navClick('home.html')">
+						<div class="span1">首页</div><div class="span2">Home</div>
+					</a>
+				</li>
+				<li class="navSecond">
+					<a href="JavaScript:void(0)" onclick="navClick('reservationRoom.html')">
+						<div class="span1">在线预定</div><div class="span2">Rservations</div>
+					</a>
+				</li>
+				<li class="navSecond">
+					<a href="">
+						<div class="span1">设施服务</div><div class="span2">Facilities</div>
+					</a>
+				</li>
+				<li class="navSecond">
+					<a href="JavaScript:void(0)" onclick="navClick('hotelPhoto.html')">
+						<div class="span1">酒店图片</div><div class="span2">Photo</div>
+					</a>
+				</li>
+				<li class="navSecond">
+					<a href="JavaScript:void(0)" onclick="navClick('hotelPosition.html')">
+						<div class="span1">地图位置</div><div class="span2">Maps</div>
+					</a>
+				</li>
+				<li class="navSecond">
+					<a href="JavaScript:void(0)" onclick="navClick('meetingBook.html')">
+						<div class="span1">会议预定</div><div class="span2">MeetingRoom</div>
+					</a>
+				</li>
+				<li class="navSecond">
+					<a href="JavaScript:void(0)" onclick="navClick('guestMessage.html')">
+						<div class="span1">在线留言</div><div class="span2">MeetingRoom</div>
+					</a>
+				</li>
+				<li class="navSecond">
+					<a href="JavaScript:void(0)" onclick="navClick('newsList.html')">
+						<div class="span1">新闻资讯</div><div class="span2">News</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!--第三部分在线预定-->
+		<div class="bookIngInter clearfix">
+			<div class="bookIngInterLeft">
+				<div class="bookInput1">
+					入住时间：
+					<input type="date" placeholder="2018-3-17" value="2018-3-17">
+				</div>
+				<div class="bookInput2">
+					退房时间：
+					<input type="date" placeholder="2018-3-17" value="2018-3-17">
+				</div>
+				<div style="margin-left:133px;margin-top:5px;">
+					<a href="" style="font-size:15px;text-decoration: none;color:black;">查询房价</a>
+				</div>
+			</div>
+			<div class="bookIngInterRight">
+				<img src="img/yzco_04.jpg" width="730px" height="180px"/>
+			</div>
+		</div>
+		<!--订单页面-->
+		<div class="orderBox" >
+			<div class="orderTop">填写订单</div>
+			<div class="orermainBox">
+				<div class="leftMain">
+					<div class="leftOrderTop clearfix">
+						<div class="orderLeftPhoto clearfix">
+							<img src="img/01.jpg" style="padding: 2px;border: 1px solid #ccc;width:66px;height:66px;margin-left:6px;margin-top:1px;"/>
+						</div>
+						<div class="addressOrder clearfix">
+							上海浦东文华东方酒店<br/>上海市浦东新区浦东南路111号
+						</div>
+					</div>
+					<div style="border-bottom:1px solid #ddd;width:230px;margin-top:15px;margin-left:23px;"></div>
+					<!---->
+					<div style="width:230px;margin-left:23px;margin-top:15px;">
+						房 型：豪华江景房(标准价)<br/>
+						床 型：大/双床<br/>
+						早 餐：含单早<br/>
+						宽 带：收费宽带<br/>
+						描 述：大/双床、3-20楼、50平米、收费宽带、可入住2人
+					</div>
+					<div style="border-bottom:1px solid #ddd;width:230px;margin-top:45px;margin-left:23px;"></div>
+					<div id="why_us" style="margin-left:23px;margin-top:10px;width:230px;">
+				        <h3>为什么选择我们？</h3>
+				        <dl>
+				            <dt>低价承诺</dt>
+				            <dd>保证预订价绝不高于前台现付价，否则赔付您双倍奖金</dd>
+				        </dl>
+				        <dl>
+				            <dt>真实可靠</dt>
+				            <dd>真实点评，客人实拍的酒店照片，为您的选择提供可靠依据</dd>
+				        </dl>
+				        <dl>
+				            <dt>有房保证</dt>
+				            <dd>如预订成功到酒店出现无房，不能协调后赔付您首晚房费</dd>
+				        </dl>
+			        </div>
+					<!--常见问题解答-->
+					<div class="generousProblem" >预定过程常见问题?</div>
+					<div class="gPbanser">
+						<div class="room_arrow3"></div>
+						<p>
+							<span>问:我可以代别人预定酒店吗?</span>
+							<br/>
+							<span class="conmanswer">答: 可以的。请您注意在填写预订单时，填写实际入住的客人姓名。</span>
+						</p>
+						<p>
+							<span>问: 我有特殊需求（大床房）怎么办？</span>
+							<br/>
+							<span class="conmanswer">答: 请在提交订单后致电我们安排。</span>
+						</p>
+					</div>
+					<!---->
+					<div style="border-bottom:1px solid #ddd;width:230px;margin-top:45px;margin-left:23px;"></div>
+					<div id="card_safe" style="width:230px;margin-left:23px;margin-top:15px;">
+			          <h3>5种体系全面保障您的用卡安全</h3>
+			          <ul>
+			            <li>国内领先酒店预订服务商,每天为上万客人提供预订服务</li>
+			            <li>多家知名商业银行的授信，实名消费，安全消费</li>
+			            <li>完备的风险控制体系，遵从信用卡支付安全国际标准PCI </li>
+			            <li>先进的技术保障，采用安全的专线连接及加密方法</li>
+			            <li>专业的人员配备及角色分工，专业使用和监控</li>
+			          </ul>
+			        </div>
+			        <div class="generousProblem" >常见的担保问题?</div>
+					<!---->
+				</div>
+				<!--在线订单右边-->
+				<form action="">
+				<div class="rightOrderMain">
+					<div class="roomInfoText"><h4>客房信息</h4></div>
+					<div class="roomInfoBox">
+						<div style="width:635px;height:52px;overflow-x:scroll;">
+							<div class="roomType sysRfm">
+								房型名称：
+								<select name="">
+									<option value="">文华行政江景大床房((单人入住))[含单早，均价2915]</option>
+								</select>
+							</div>
+						</div>
+						<div class="roomNum sysRfm" style="margin-top:10px;">
+							房间数量：
+							<select name="" style="width:47px;height:24px;">
+								<option value="">1间</option>
+							</select>
+						</div>
+						<div class="roomNum sysRfm" style="margin-top:10px;">
+							入住时间：&nbsp;<input type="date" style="width:126px;height:25px;"/>入住
+							&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" style="width:126px;height:25px;"/>退房
+						</div>
+						<div class="roomNum sysRfm" style="margin-top:10px;">
+							<ul style="position: absolute;margin-left:63px;margin-top:7px;width: 80px;border: #b1d59d 1px solid;text-align: center;line-height: 25px;list-style: none;">
+								<li style="background-color: #eaf8d7;">03-09</li>
+								<li>1982</li>
+							</ul>
+							价格明细：
+						</div>
+					</div>
+					<!--应付金额-->
+					<div class="acccount" style="border-top: 1px solid #ddd;margin-bottom: 30px;padding-top: 10px;font-size: 12px;font-family: arial;line-height: 1.5;margin-left: 40px;">
+						<span style="font-size:13px;font-family: Arial;">应付金额：</span>
+						<span style="font-size:14px;font-weight: bold;color: #f60;font-family: Arial;">1982</span>
+						<span style="color: #777;">(预订免费，酒店前台付款 ， 如需发票，请从酒店前台索取)</span>
+					</div>
+					<div class="roomInfoText"><h4>入住信息</h4></div>
+					<table class="guest">
+						<tr>
+							<td>入住人姓名：</d>
+							<td><input type="text" name="" id="" placeholder="客人姓名" value="" style="width:126px;height:25px;"/></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="color: #777;">每个房间只填写一个入住人姓名即可</td>
+						</tr>
+						<tr><td> <div id="" style="height:10px;"></div></td><td></td></tr>
+						<tr style="margin-top:20px;">
+							<td>联系人：</d>
+							<td><input type="text" name="" id="" placeholder="" value="" style="width:126px;height:25px;"/><span style="color: #777;">（建议填写）</span></td>
+						</tr>
+						<tr><td> <div id="" style="height:10px;"></div></td><td></td></tr>
+						<tr>
+							<td>联系手机：</d>
+							<td><input type="text" name="" id="" placeholder="" value="" style="width:126px;height:25px;"/><span style="color: #777;">（用于接收订单确认短信）</span></td>
+						</tr>
+						<tr><td> <div id="" style="height:10px;"></div></td><td></td></tr>
+						<tr>
+							<td>Email：</d>
+							<td><input type="text" name="" id="" placeholder="" value="" style="width:186px;height:25px;"/><span style="color: #777;">（用于接收订单确认短信）</span></td>
+						</tr>
+						<tr><td> <div id="" style="height:10px;"></div></td><td></td></tr>
+						<tr>
+							<td valign="top">房间保留时间：</d>
+							<td>
+								<input type="radio" name="" id="" placeholder="" value="" style=""/>20:00&nbsp;&nbsp;
+								<input type="radio" name="" id="" placeholder="" value="" style=""/>24:00&nbsp;&nbsp;
+								<input type="radio" name="" id="" placeholder="" value="" style=""/>次日6:00
+								<!--保留时间说明-->
+								<div class="keepTimeIntro">
+    								房间保留至<span style="color:#FF6600;">3月19日18:00</span>，如不能在<span style="color:#FF6600;">18:00</span>前到酒店，请及时与酒店联系。
+    · 								通常14点办理入住，早到可能需要等待
+								</div>
+							</td>
+						</tr>
+					</table>
+					<!--信用卡担保-->
+					<div class="roomInfoText"><h4>信用卡担保</h4></div>
+					<div class="carExplain">担保条件：在“2018年03月19日”至“2018年03月20日”入住需要您提供信用卡担保。预订成功后，无法变更取消，如未入住，将扣除第一晚房费作为违约金。</div>
+					<table class="guest" style="margin-top:15px;">
+						<tr>
+							<td>信用卡卡种：</d>
+							<td>
+								<select name="" style="width:108px;height:24px;">
+									<option value="">工商银行</option>
+									<option value="">招商银行</option>
+									<option value="">农业银行</option>
+									<option value="">建设银行</option>
+								</select>
+							</td>
+						</tr>
+						<tr><td> <div id="" style="height:10px;"></div></td><td></td></tr>
+						<tr style="margin-top:20px;">
+							<td>信用卡号：</d>
+							<td><input type="text" name="" id="" placeholder="" value="" style="width:186px;height:25px;border-top-color: #999;padding: 0 1px 2px 3px;font-size: 12px;font-family: Tahoma;background: url('img/icon_lock.gif') right 0 no-repeat;"/></td>
+						</tr>
+						<tr><td> <div id="" style="height:10px;"></div></td><td></td></tr>
+						<tr>
+							<td>持卡人姓名：</d>
+							<td><input type="text" name="" id="" placeholder="" value="" style="width:147px;height:25px;"/></td>
+						</tr>
+						<tr><td> <div id="" style="height:10px;"></div></td><td></td></tr>
+						<tr>
+							<td>证件类型：</td>
+							<td>
+								<select name="" style="width:120px;">
+									<option value="">请选择证件类型</option>
+									<option value="">身份证</option>
+									<option value="">护照</option>
+									<option value="">其他</option>
+								</select>
+								<span style="color: #777;"> (信用卡开卡使用的证件类型)</span>
+							</td>
+						</tr>
+						<tr><td> <div id="" style="height:10px;"></div></td><td></td></tr>
+						<tr>
+							<td>证件号码：</d>
+							<td><input type="text" name="" id="" placeholder="" value="" style="width:147px;height:25px;"/></td>
+						</tr>
+					</table>
+					<!--提交-->
+					<div class="formBtn">
+						<input type="button" name="" id="" value="提交订单" style="width:133px;height:36px;border:none;background:url('img/btn.gif') 0 0 no-repeat;font-size: 20px;color: #fff;cursor: pointer;margin-left:100px;"/>
+					</div>
+				</div>
+				</form>
+				<!----->
+			</div>
+		</div>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="jquery/jquery-1.8.2.js" ></script>
+		<script type="text/javascript" src="js/order.js" ></script>
+	</body>
+</html>

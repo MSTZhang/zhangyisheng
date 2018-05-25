@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reserveManager.css"/>
+		<script src="js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="houseTitleBox">
+			<span style="margin-left:10px;"><b>当前位置>></b></span>
+			<span style="font-size:13px;">预定管理</span>
+		</div>
+		<!--条件过滤-->
+		<div class="houseFilter">
+			<form action="" method="">
+				<div class="submit">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span>预约状态:
+						<select name="">
+							<option value="">全部</option>
+							<option value="">待确认</option>
+							<option value="">已确认</option>
+						</select>
+					</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span>预约编号:
+						<input type="" name="" id="" value="" style="width:120px;border: 1px solid white;background: rgba(1,1,1,0);"/>
+					</span>
+					<input type="submit" name="" id="" value="查询" style="background: #669900;color: white;height:22px;border: none;width:80px;cursor: pointer;"/>
+				</div>
+			</form>
+		</div>
+		<!--预约具体内容-->
+		<table cellpadding="0" cellspacing="0">
+			<tr class="head1">
+				<td>预约编号</td>
+				<td>房间编号</td>
+				<td>房客姓名</td>
+				<td>预约时间</td>
+				<td>入住日期</td>
+				<td>离店日期</td>
+				<td>是否待确认</td>
+				<td>操作</td>
+			</tr>
+			<tr class="tbody1">
+				<td>1411120</td>
+				<td>101</td>
+				<td><a href="">张先生</a></td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td class="waitSure">待确认</td>
+				<td class="operator2"><a href=""><img src="img/waitSure1.png"/>确认</a></td>
+			</tr>
+			<tr class="tbody1">
+				<td>1411120</td>
+				<td>101</td>
+				<td><a href="">张先生</a></td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td class="waitSure">待确认</td>
+				<td class="operator2"><a href=""><img src="img/waitSure1.png"/>确认</a></td>
+			</tr>
+			<tr class="tbody1">
+				<td>1411120</td>
+				<td>101</td>
+				<td><a href="">张先生</a></td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>已确认</td>
+				<td class="operator2"><a href=""><img src="img/waitSure1.png"/>确认</a></td>
+			</tr>
+			<tr class="tbody1">
+				<td>1411120</td>
+				<td>101</td>
+				<td><a href="">张先生</a></td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td class="waitSure">待确认</td>
+				<td class="operator2"><a href=""><img src="img/waitSure1.png"/>确认</a></td>
+			</tr>
+			<tr class="tbody1">
+				<td>1411120</td>
+				<td>101</td>
+				<td><a href="">张先生</a></td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>2018-03-29&nbsp;13:10</td>
+				<td>已确认</td>
+				<td class="operator2"><a href=""><img src="img/waitSure1.png"/>确认</a></td>
+			</tr>
+		</table>
+		<script type="text/javascript" charset="utf-8">
+			$(".operator2").mouseenter(
+				function(){
+					var obj = $(this).children("a");
+					obj.children("img").attr("src","img/waitSure2.png");
+					obj.css("color","#d81e06");
+				}
+			);
+			$(".operator2").mouseleave(
+				function(){
+					var obj = $(this).children("a");
+					obj.children("img").attr("src","img/waitSure1.png");
+					obj.css("color","#515151");
+				}
+			);
+		</script>
+	</body>
+</html>

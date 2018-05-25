@@ -1,0 +1,64 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.homeTopMain{
+	margin-top:10px;
+}
+.hotelPhoto{
+	width:350px;
+	height:350px;
+	float: left;
+}
+.lastNews{
+	width:350px;
+	height:350px;
+	float: left;
+	margin-left:14px;
+	border: #9b5702 1px solid;
+	color: #cc9c66;
+	background-color: #201b17;
+}
+.newsTitle{
+	background: url("../img/yzco_03.png") 0 0 no-repeat;
+	color: #f3b347;
+	width: 150px;
+	height: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 35px;
+	margin-top: -8px;
+	margin-left: 20px;
+}
+.lastNews ul{
+	margin-left:25px;
+	margin-top:10px;
+}
+.lastNews ul li{
+	border-bottom: #383838 1px dashed;
+	list-style: disc;
+	height:26px;
+	line-height: 26px;
+}
+.lastNews ul li a{
+	color:#a48b6f;
+	text-decoration: none;
+	font-size:12px;
+}
+.lastNews ul li a:hover{
+	color:white;
+}
+.companyProfile{
+	width:716px;
+	height:286px;
+	background-color: #201b17;
+	border: #9b5702 1px solid;
+	margin-top:20px;
+}
+.companyProfile p{
+	color: #a48b6f;
+	font-size:12px;
+	line-height: 22px;
+	margin-left:10px;
+}
