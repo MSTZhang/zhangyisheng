@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.headBox{
+	margin-left:70px;
+	margin-top:0px;
+}
+.useInfo{
+	margin-top:20px;
+	margin-left:160px;
+	float:left;
+}
+.useInfo tr td{
+	height:60px;
+	line-height: 60px;
+}
+.thead1{
+	width: 122px;
+    padding-right: 17px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #535353;
+    font-weight: normal;
+    text-align: right;
+}
+.inputsBox{
+	height:40px;
+	border:1px solid #ca1019;
+	border-radius:4px ;
+	line-height: 40px;
+}
+.inputsBox input{
+	height:23px;
+	border: none;
+}
+#registerBtn{
+	width: 300px;
+    background: #C0191F;
+    border-radius: 4px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    font-size: 22px;
+    color:#fff;
+}
+#errorMessage{
+	font-size: 14px;
+	color:#ca1019;
+}
+.tbody1 div{
+	float: left;
+}
+.errorBox{
+	margin-top:-10px;
+}
+.otherLogin{
+	height:300px;
+	float: left;
+	border-left:1px solid grey;
+	margin-left:120px;
+	margin-top:10px;
+}
+.otherLogin a{
+	width:126px;
+	background: #C0191F;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    display: block;
+    margin-left: 50px;
+    margin-top:20px;
+}

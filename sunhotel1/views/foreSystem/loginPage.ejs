@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/loginPage.css"/>
+		<script src="javascripts/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/foreJs/sysJs.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="loadingBox" style="position: absolute;width:100%;height:710px;background: rgba(1,1,1,.8);display: none;">
+			<img src="images/foreImg/loading45.gif" style="margin-left:650px;margin-top:300px;"/>
+		</div>
+		<div class="headBox">
+			<img src="images/foreImg/brand_logo1.PNG"/>
+		</div>
+		<div class="box1">
+			<div class="loginBox">
+				<div class="loginTitle">欢迎登录</div>
+				<div class="userInput sysInput">
+					<img src="images/foreImg/login_user_icon.png"/>
+					<input type="text" name="userName" id="userName" value="18685738027" placeholder="请输入手机号码/会员账号/邮箱"/>
+				</div>
+				<span class="userMsg" style="font-size:12px;color:red;margin-left:95px;"></span>
+				<div class="pwdInput sysInput">
+					<img src="images/foreImg/userLogin_pwd.png"/>
+					<input type="text" name="userName" id="pwd" value="123456" placeholder="输入登录密码"/>
+				</div>
+				<span class="pwdMsg" style="font-size:12px;color:red;margin-left:95px;"></span>
+				<div class="checkCode">
+					<input type="text" name="userName" id="rePwd" value="" placeholder="请输入验证码"/>
+				</div>
+				<div class="autoLogin">
+					<input type="radio" name="userName" id="autoLoginRd" value="" placeholder="请输入验证码"/>
+					<label>30天内自动登录</label>
+					<a href="">忘记密码？</a>
+				</div>
+				<div>
+					<input type="button" name="smtBtn" id="smtBtn" value="登录" />
+				</div>
+				<span class="loginFail"></span>
+				<div class="register">
+					<span>您还没有帐号，</span>
+					<a href="register">免费注册</a>
+				</div>
+			</div>
+		</div>
+		<script src="javascripts/foreJs/loginPage.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

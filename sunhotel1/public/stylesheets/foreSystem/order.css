@@ -1,0 +1,122 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+ul li{
+	list-style: none;
+}
+.headBox span{
+	font-size: 20px;
+    color: #2F2E2E;
+    font-weight: normal;
+}
+.headBox{
+	margin-top:40px;
+}
+.evaBtn{
+	margin-top:25px;
+}
+.evaBtn li{
+	width:131px;
+	float: left;
+	font-size: 16px;
+	line-height: 32px;
+    border: 1px solid #90704D;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    cursor: pointer;
+}
+.evaBtn .uneva{
+	
+	background: #90704D;
+    color: #fff;
+    margin-right: -1px;
+    
+    
+}
+.evaBtn .evaed{
+    margin-right: -1px;
+    color: #90704D;
+    margin-left:1px;
+}
+.orderTable{
+	border-top: 1px solid #979797;
+}
+.orderListBox{
+	width:1000px;
+	margin-top:20px;
+}
+.orderBox{
+	width:990;
+	height:141px;
+	border: 1px solid #D4D4D4;
+	border-radius: 5px;
+	margin-top:20px;
+	margin-bottom: 30px;
+	padding: 28px 28px 13px 24px;
+}
+.orderColor1 {
+	color: #535353;
+}
+.orderFont1{
+	font-size: 15px;
+}
+.orderBoxSys{
+	width:95%;
+	padding-bottom: 25px;
+	font-size: 14px;
+	padding-left: 10px;
+	border-bottom: 1px dashed #D4D4D4;
+}
+.thead1{
+	height:40px;
+	font-size: 14px;
+    color: #535353;
+    line-height: 40px;
+    text-align: center;
+    background: #f9f8f6;
+}
+.thead1 .orderNum{
+	width:200px;
+}
+.thead1 .roomId{
+	width:100px;
+}
+.thead1 .rmType{
+	width:170px;
+}
+.thead1 .arriveTime{
+	width:150px;
+}
+.thead1 .leavTime{
+	width:150px;
+}
+.thead1 .bookTime{
+	width:150px;
+}
+.thead1 .forgift{
+	width:50px;
+}
+.thead1 .operator{
+	width:140px;
+}
+.tbody1 td{
+	height: 40px;
+	line-height: 40px;
+	color:#979797;
+	font-size: 12px;
+	text-align: center;
+}
+.tbody1 .opt a{
+	text-decoration: none;
+	color:#fff;
+	background: #c0191f;
+	display: block;
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	margin-left:30px;
+}

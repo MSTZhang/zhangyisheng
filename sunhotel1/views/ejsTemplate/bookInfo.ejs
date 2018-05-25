@@ -1,0 +1,103 @@
+<div class="bookMessage">
+<h3>预订信息</h3>
+<table class="roomTable">
+	<tr class="rmt">
+		<td class="rmty">房型信息</td>
+		<td class="rmtyName"><span style="margin-left: 50px;color: #535353;"><%= roomType %></span> </td>
+	</tr>
+	<tr class="rmt">
+		<td class="rmty">入住时间</td>
+		<td class="rmtyName">
+			<div class="inputCkBox sysInput"><input type="text" name="" class="checkInTime" id="arriveDate1" value="<%= checkTime %>" /><span>周日</span>入住</div> 
+			<hr/>
+			<div class="inputlvBox sysInput">
+				<input type="text" class="leaveTime" name="" id="arriveDate1" value="<%= endTime %>" /><span>周日</span>离店
+			</div>
+			<div class="chDays">
+				共<%= days %>晚
+			</div>
+			<div class="alterBtn">
+				<a href="" class="alterTime">修改日期</span></a>
+				<a href="" class="isSure">确认修改</a>
+			</div>
+		</td>
+	</tr>
+	<tr class="rmt">
+		<td class="rmty">房间数量</td>
+		<td class="rmtyName"><input type="text" value="1" readonly="readonly" style="background: none;border: none;margin-left: 70px;font-size: 18px;"/></tbody>></td>
+	</tr>
+</table>
+</div>
+<!--入住信息-->
+<div class="bookMessage checkMessage">
+	<h3>入住信息</h3>
+	<table class="reserTable">
+		<tr>
+			<td class="thead11">姓名</td>
+			<td><input class="usersysInput" type="" name="" id="customName" value="<%= customName %>" />&nbsp;&nbsp;&nbsp;<span style="font-size: 15px;color: #979797">填写姓名必须与入住时所持有效证件姓名保持一致</span></td>
+		</tr>
+		<tr>
+			<td class="thead11">联系电话</td>
+			<td><input class="usersysInput" type="" name="" id="tel" value="<%= customTel %>" />&nbsp;&nbsp;&nbsp;<span style="font-size: 15px;color: #979797">订单提交后，我们会将预订信息发送至您的手机</span></td>
+		</tr>
+		<tr>
+			<td class="thead11">备注</td>
+			<td><input class="adress usersysInput" type="" name="" id="remark" value="" /></td>
+		</tr>
+		<tr>
+			<td class="thead11">人数</td>
+			<td><input class="usersysInput" type="" name="" id="pnum" value="1" style="width:50px;"/></td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	//两个日期相减，返回天数,传入字符串
+	function dateOperator(day1,day2){
+		var s1 = day1.split("-");
+		var t1 =parseInt(s1[0])*365+parseInt(s1[1])*30+parseInt(s1[2])
+		var s2 = day2.split("-");
+		var t2 =parseInt(s2[0])*365+parseInt(s2[1])*30+parseInt(s2[2])
+		return t2-t1;
+	}
+	//修改日期
+	$(".alterTime").click(function(){
+		//获取入住日期
+		var chTime = $(".checkInTime").val();
+		var lvTime = $(".leaveTime").val();
+		//将日期放入session中
+		var days = dateOperator(chTime,lvTime)
+		if(days<0){
+			alert("日期异常，请重新选择");
+		}else{
+			//ajax请求开始行
+			$.ajax({
+				type:"post",
+				contentType: "application/json;charset=utf-8",
+				url:"http://localhost:8081/alterOdTm",
+				data:{"chTime":chTime,"lvTime":lvTime,"days":days},
+				async:false,
+				xhrFields: {
+				    withCredentials:true // 携带跨域cookie
+				},
+		        crossDomain:true,
+				success:function(result,status){
+					$(".chDays").html("共"+days+"晚");
+					alert("修改成功");
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown) {
+				 //var html =ejs.render(loginInfoTemplate,{member:null});
+				 //$(".headNav2_nav12").html(html);
+				 alert("修改失败");
+				}
+			});
+			//ajax结束末尾
+		}
+		return false;
+	});
+	laydate.render({
+		  elem: '.checkInTime'//指定元素
+	});
+	laydate.render({
+		  elem: '.leaveTime'//指定元素
+	});
+</script>

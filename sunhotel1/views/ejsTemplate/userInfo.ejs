@@ -1,0 +1,101 @@
+	<div id="shadowBox" style="z-index:3;position: absolute;display:none;width:100%;height:700px;background: rgba(1,1,1,.5);">
+		<!--修改密码盒子-->
+		<div class="alterPwdBox" style="z-index:2;position:absolute;width:762px;height:450px;background:#fff;border-radius: 5px;margin-left:300px;margin-top:100px;padding: 0 38px 35px 49px;">
+			<div style="margin-top:40px;padding-bottom: 0px;border-bottom: 1px solid #979797;color:#535353;font-size: 22px;">
+				<img src="images/foreImg/lock_icon.PNG" style="vertical-align: middle;"/>密码修改
+			</div>
+			<ul class="clearfix" style="color:#535353;margin-top:30px;margin-left:20px;">
+				<li style="float:left;line-height: 42px;">当前密码：</li>
+				<li style="float:left;line-height: 42px;"><input type="" name="" style="width:220px;height:42px;border: 1px solid #BCBCBC;border-radius: 5px;" id="currenPwd" value="" /><span id="pwdTip1" style="color:red;"></span></li>
+			</ul>
+			<ul class="clearfix" style="color:#535353;margin-top:30px;margin-left:20px;">
+				<li style="float:left;line-height: 42px;margin-left:14px;">新密码：</li>
+				<li style="float:left;line-height: 42px;"><input type="" name="" style="width:220px;height:42px;border: 1px solid #BCBCBC;border-radius: 5px;" id="newPwd" value="" /></li>
+			</ul>
+			<ul class="clearfix" style="color:#535353;margin-top:30px;margin-left:20px;">
+				<li style="float:left;line-height: 42px;">确认密码：</li>
+				<li style="float:left;line-height: 42px;"><input type="" name="" style="width:220px;height:42px;border: 1px solid #BCBCBC;border-radius: 5px;" id="rePwd" value="" /></li>
+			</ul>
+			<a class="alertPwdBtn" style="float:left;display:block;font-size:22px;cursor:pointer;border-radius:5px;width:157px;height:45px;background: #C0191F;color:#fff;text-align: center;line-height: 45px;margin-left:180px;margin-top:40px;">确定</a>
+			<a class="cancelBtn" style="float:left;color: #979797;cursor:pointer;display:block;font-size:22px;width:157px;height:45px;border: 1px solid #D4D4D4;margin-top:40px;margin-left:20px;border-radius: 5px;text-align: center;line-height: 45px;">取消</a>
+		</div>
+	</div>
+	<div class="headBox">
+			<ul class="headNav1">
+				<li class="hotel_brand"></li>
+				<li class="headNav1Sys"><a href="">酒店预订</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">优惠促销</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">嘉宾会</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">积分商城</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">精彩商旅</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">关于我们</a></li>
+			</ul>
+			<ul class="headNav2">
+				<li class="headNav2_nav11">
+					<ul>
+						<li class="headTips"></li>
+						<li class="headgame"></li>
+						<li class="onlineService"></li>
+						<li class="ChangeLanguage">
+							English
+						</li>
+					</ul>
+				</li>
+				<li class="headNav2_nav12">
+					<a href=""><img src="images/foreImg/login_icon.png" style="width:18px;height:18px;vertical-align: middle;"/>&nbsp;<% if(data.tel==null){ %><%=data.email %><% }else{ %>
+						<%=data.tel%>	
+						<%}%>
+					</a>
+					&nbsp;&nbsp;<span style="font-size: 12px;">|</span>&nbsp;
+					<a href="register" style="font-size:14px;color:#535353;">注册</a>
+				</li>
+			</ul>
+		</div>
+		<!--当前位置-->
+		<div class="currentPosition">
+			<span>当前位置：&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<span>首页&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+			<span>我的嘉宾会&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+			<span style="color:#535353;">我的信息</span>
+		</div>
+		<!--我的信息及导航栏-->
+		<div class="nav_Info_Box">
+			<div class="left_nav">
+				<!--订单中心-->
+				<ul>
+					<li class="nav_topical">订单中心<img src="images/foreImg/arrow_point.png"/></li>
+					<li class="nav_text"><a href="javascript:void(0);" onclick="leftNavClick('order');">酒店订单</a></li>
+				</ul>
+				<!--订单中心-->
+				<ul>
+					<li class="nav_topical">我的账户<img src="images/foreImg/arrow_point.png"/></li>
+					<li class="nav_text"><a href="javascript:void(0);">我的积分</a></li>
+					<li class="nav_text"><a href="javascript:void(0);" onclick="leftNavClick('wallet');">我的钱包</a></li>
+				</ul>
+				<!--订单中心-->
+				<ul>
+					<li class="nav_topical">我的券<img src="images/foreImg/arrow_point.png"/></li>
+					<li class="nav_text"><a href="">酒店优惠券</a></li>
+				</ul>
+				<!--订单中心-->
+				<ul>
+					<li class="nav_topical">个人中心<img src="images/foreImg/arrow_point.png"/></li>
+					<li class="nav_text"><a href="javascript:void(0);" onclick="leftNavClick('personInfo');">我的信息</a></li>
+					<li class="nav_text"><a href="javascript:void(0);" onclick="leftNavClick('evaluate');">我的点评</a></li>
+				</ul>
+				<!--订单中心-->
+				<ul>
+					<li class="nav_topical">常用信息<img src="images/foreImg/arrow_point.png"/></li>
+					<li class="nav_text"><a href="">常用入住人</a></li>
+					<li class="nav_text"><a href="">收藏酒店</a></li>
+					<li class="nav_text"><a href="">常用地址</a></li>
+				</ul>
+			</div>
+			<!--右边信息展示-->
+			<div class="showInfoBox">
+				<iframe src="personInfo" id="showFrame" width="1000px" height="600px" frameborder="0">
+					
+				</iframe>
+			</div>
+		</div>
+		<script src="javascripts/foreJs/userInfo.js" type="text/javascript" charset="utf-8"></script>

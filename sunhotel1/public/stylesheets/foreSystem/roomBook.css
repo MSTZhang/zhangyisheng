@@ -1,0 +1,293 @@
+.currentPosition{
+	font-size: 12px;
+    color: #979797;
+    padding-top: 15px;
+    margin-left:75px;
+}
+.middleNav{
+	width:1200px;
+	height:61px;
+	border-bottom: 1px solid #E6E6E6;
+	margin-left: 75px;
+	line-height: 58px;
+	background: #fff;
+}
+.middleNav a{
+	text-decoration: none;
+	color:;
+	font-size: 18px;
+}
+.roomInfo{
+	margin-left:25px;
+	font-weight: bold;
+	color:#C0191F;
+}
+.hotelInfo,.userEvaluate{
+	color:#535353;
+	font-size: 18px;
+	margin-left:45px;
+}
+.roomTable{
+	margin-left: 75px;
+	width:1200px;
+}
+.roomTable .thead1 td{
+	height:35px;
+	font-size: 12px;
+    color: #535353;
+    line-height: 35px;
+    background-color: #f9f8f6;
+}
+.roomTypeTable{
+	width:331px;
+	
+}
+.tbodyRP{
+	color:#808080;
+	font-size: 14px;
+	width:60px;
+}
+.activity .acNm{
+	width:400px;
+	color:#535353;
+	font-size: 14px;
+}
+.activity .acPc{
+	color: #8d602f;
+	font-size: 20px;
+	width:150px;
+}
+.activity .acPc span{
+	font-size: 12px;
+}
+.activity .rmNum{
+	font-size:12px ;
+	width:150px;
+}
+.activity .bookBtn{
+	width:105px;
+}
+.activity .bookBtn a{
+	background-color: #c0191f;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 68px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+.activity tr td{
+	border-bottom: 1px solid #E6E6E6;
+	height: 70px;
+}
+.tbody2 td{
+	border-bottom:1px solid #E6E6E6;
+}
+.activity .lastAc td{
+	border-bottom:none;
+}
+.hotelInfoShow{
+	width:865px;
+	height:45px;
+	background: #f9f8f6;
+	margin-left: 75px;
+}
+.hotelInfoShow .hotel_img_box{
+	width:45px;
+	height:45px;
+	background: #90704D;
+	text-align: center;
+	line-height: 45px;
+	border-bottom-left-radius:5px;
+	border-top-left-radius: 5px;
+	float: left;
+}
+.hotelInfoShow .hfText{
+	font-size: 18px;
+    color: #535353;
+    height: 45px;
+    float: left;
+    line-height: 45px;
+    margin-left: 15px;
+}
+.hotelDetail{
+	margin-left: 75px;
+	margin-top:30px;
+}
+.hotelDetail .ttd1{
+	width:150px;
+	margin-left: 8px;
+    font-size: 16px;
+    color: #535353;
+    vertical-align: top;
+}
+.hotelDetail .ttd2{
+	width:742px;
+	font-size: 14px;
+	color:#808080;
+	vertical-align: top;
+	line-height: 27px;
+}
+.userAccessTitle{
+	width:865px;
+	height:45px;
+	background: #f9f8f6;
+	margin-left: 75px;
+	margin-top:30px;
+}
+.userAccessTitle .accessTitle_img_box{
+	width:45px;
+	height:45px;
+	background: #90704D;
+	text-align: center;
+	line-height: 45px;
+	border-bottom-left-radius:5px;
+	border-top-left-radius: 5px;
+	float: left;
+}
+.userAccessTitle .acText{
+	font-size: 18px;
+    color: #535353;
+    height: 45px;
+    float: left;
+    line-height: 45px;
+    margin-left: 15px;
+}
+.comprehensiveBox{
+	width:865px;
+	height: 800px;
+	margin-left:75px;
+	margin-top:90px;
+	border:1px solid #E0E0DF;
+}
+.ct1{
+    width: 215px;
+    line-height: 45px;
+    text-align: center;
+    background: #F9F9F9;
+    border: 1px solid #E0E0E0;
+    border-bottom:none; 
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+    color: #888888;
+    margin-top: -48px;
+}
+.ct1 span{
+	font-size: 20px;
+	color:#90704D;
+}
+.hotelSv ul{
+	margin-left:26px;
+	margin-top: 20px;
+}
+.hotelSv ul .percent1{
+	width:80px;
+	color:#CA1019;
+	font-size: 12px;
+	text-align: center;
+	list-style: none;
+	border-right:1px solid #E0E0E0;
+	float: left;
+}
+.hotelSv ul .percent1 span{
+	font-size: 24px;
+}
+.hotelSv ul .percent2{
+	width:180px;
+	float:left;
+	list-style: none;
+	font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+    text-align: center;
+}
+.hotelSv ul .percent2 .span1{
+	font-size: 14px;
+    color: #90704D;
+}
+.hotelSv ul .percent2 .span2{
+	color:yellow;
+	font-size:23px ;
+}
+.hotelSv ul .percent3{
+	width:400px;
+	float: left;
+	list-style: none;
+	font-size:12px ;
+}
+.hotelSv ul .percent3 .percent11{
+	float: left;
+	margin-left: 20px;
+}
+.hotelSv ul .percent3 .percent11 div{
+	float: left;
+	margin-top:10px;
+}
+.hotelSv ul .percent3 .percent11 .percentBox{
+	padding: 0;
+	height:10px;
+	width:100px;
+	margin-top:13px;
+	margin-left:10px;
+}
+.hotelSv ul .percent3 .percent11 .percentBox div{
+	margin: 0;
+	background: red;
+	height:10px;
+	border-radius:5px;
+}
+.hotelSv ul .percent5{
+	list-style: none;
+	float: left;
+	width:140px;
+}
+.hotelSv ul .percent5 a{
+	width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #C0191F;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top:10px;
+    margin-left:20px;
+    display: block;
+}
+.hotelSv ul li{
+	height:70px;
+	border-bottom: 1px solid #E0E0E0;
+}.userAccessBox .userAcImg{
+	text-align: center;
+	width:100px;
+	line-height: 10px;
+	color:#535353;
+	font-size: 12px;
+}
+.userAccessBox .userAcImg img{
+	margin-top:10px;
+	margin-left:15px;
+	
+}
+.userAccessBox .userAcContent table{
+	margin-left:20px;
+}
+.userAccessBox .userAcContent table .accTime td{
+	height:40px;
+	line-height: 40px;
+	color:#90704D;
+	vertical-align: top;
+	font-size: 12px;
+}
+.userAccessBox .userAcContent table .accTime .userScore{
+	width:120px;
+	
+}
+.userAccessBox .userAcContent table .contentText td{
+	font-size: 14px;
+    color: #535353;
+}

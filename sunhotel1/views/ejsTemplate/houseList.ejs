@@ -1,0 +1,102 @@
+<tr class="thead1">
+	<td class="roomTypeTable"><span style="margin-left:40px;">房型</span></td>
+	<td class="roomPrice">门市价</td>
+	<td class="acivityPrice">房价</td>
+</tr>
+<% if(datas!=null){ for(var i=0;i<datas.length;i++){ %>
+<tr class="tbody2">
+	<td valign="top">
+		<div class="roomImg" style="width:90px;height:70px;float:left;background:url('images/foreImg/roomTypeImg/rmTp1.jpg');border-radius:3px;margin-top:30px;"></div>
+		<div style="float:left;margin-top: 30px;margin-left: 10px;">
+			<span style="font-size:14px;font-weight: bold;color:#535353;"><%=datas[i].roomTypeName%></roomTypeName></span>
+			<br>
+			<span style="color:#979797;font-size: 12px;"><%=datas[i].bedType%></span>
+			<br>
+			<span style="color:#979797;font-size: 12px;"><%=datas[i].area%></span>
+		</div>
+	</td>
+	<td class="tbodyRP" valign="top">
+		<div style="margin-top:30px;">￥<%=datas[i].price%></div>
+	</td>
+	<% if(datas[i]!=null){ %>
+	<td>
+		<table class="activity" cellpadding="0" cellspacing="0">
+			<% for(var j=0;j<datas[i].flexibles.length;j++){%>
+			<%if(j<(datas[i].flexibles.length-1)){ %>
+			<tr>
+				<td class="acNm"><%= datas[i].flexibles[j].acName %></td>
+				<td class="acPc"><span>￥</span><%= datas[i].flexibles[j].acPrice %></td>
+				<td class="rmNum">仅剩<%= datas[i].flexibles[j].rooms.length %>间</td>
+				<td class="bookBtn">
+					<a acId="<%= datas[i].flexibles[j].acId%>" rtyName="<%=datas[i].roomTypeName%>" rtyId="<%=datas[i].roomTypeId%>" class="bookBtn1">预订</a>
+				</td>
+			</tr>
+			<%}else{%>
+			<tr class="lastAc">
+				<td class="acNm"><%= datas[i].flexibles[j].acName %></td>
+				<td class="acPc"><span>￥</span><%= datas[i].flexibles[j].acPrice %></td>
+				<td class="rmNum">仅剩<%= datas[i].flexibles[j].rooms.length %>间</td>
+				<td class="bookBtn">
+					<a acId="<%= datas[i].flexibles[j].acId%>" rtyName="<%=datas[i].roomTypeName%>" rtyId="<%=datas[i].roomTypeId%>">预订</a>
+				</td>
+			</tr>
+			<%}}%>
+		</table>
+	</td>
+	<%}%>
+</tr>
+<%}}%>
+<tr>
+	<td colspan="3" style="height:60px;"></td>
+</tr>
+<script type="text/javascript">
+	//时间操作函数
+	function dateOperator(date,days,operator)  {  
+	    date = date.replace(/-/g,"/"); //更改日期格式  
+	    var nd = new Date(date);  
+	    nd = nd.valueOf();  
+	    if(operator=="+"){  
+	     nd = nd + days * 24 * 60 * 60 * 1000;  
+	    }else if(operator=="-"){  
+	        nd = nd - days * 24 * 60 * 60 * 1000;  
+	    }else{  
+	        return false;  
+	    }  
+	    nd = new Date(nd);
+	  
+	    var y = nd.getFullYear();  
+	    var m = nd.getMonth()+1;  
+	    var d = nd.getDate();  
+	    if(m <= 9) m = "0"+m;  
+	    if(d <= 9) d = "0"+d;   
+	    var cdate = y+"-"+m+"-"+d;  
+	    return cdate;  
+	} 
+	$(".bookBtn1").click(function(){
+		//获取登录信息
+		alert("预定");
+		var obj = $(this);
+		var url1="http://localhost:8080/springmvcDemo1/loginInfo";
+		var response = ajaxGet(url1,false);
+		if(response!=null){
+			var status = response.meta.success;
+			if(status){
+				var data = response.data;
+				var rtyId=$(this).attr("rtyId");
+				var rtyIdName=$(this).attr("rtyName");
+				var acId=$(this).attr("acId");
+				var date =new Date();
+			 	var dt =date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate(); 
+			 	var dd= dateOperator(dt,1,"+");
+			 	var checkTable={"orderId":null,"customName":data.customName,"customTel":data.tel,"roomType":rtyIdName,"roomTypeId":rtyId,"acId":acId,"rm_id":null,"checkTime":dt,"endTime":dd,"days":1,"bookTime":null,"odStatus":1,"remark":null,"forgift":null};
+			 	window.location.href="bookPage?bookInfo="+JSON.stringify(checkTable);
+			}else{
+				window.location.href="login";
+			}
+		}else{
+			window.location.href="error";
+		}
+		//最外层
+		return false;
+	});
+</script>

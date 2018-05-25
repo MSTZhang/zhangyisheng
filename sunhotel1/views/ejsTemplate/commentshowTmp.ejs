@@ -1,0 +1,24 @@
+<% if(datas!=null&&datas.accessExclus!=null&&datas.accessExclus.length>0){ for(var i=0;i<datas.accessExclus.length;i++){ %>
+<tr>
+	<td class="userAcImg">
+		<img src="images/foreImg/userImg/userHeadImg.PNG"/>
+		<br>
+		<%=datas.accessExclus[i].customTel.substring(0,4)%>...<%=datas.accessExclus[i].customTel.substring(datas.accessExclus[i].customTel.length-3,datas.accessExclus[i].customTel.length)%>
+	</td>
+	<td class="userAcContent" valign="top">
+		<table>
+			<tr class="accTime">
+				<td class="userScore">综合评分：<%=datas.accessExclus[i].totalScore%> 分</td>
+				<td><%=datas.accessExclus[i].accTime%></td>
+			</tr>
+			<tr class="contentText">
+				<td colspan="2"><%=datas.accessExclus[i].content%></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<% }}else{ %>
+<tr>
+	<td width="200px">还没有任何评价</td>
+</tr>
+<% } %>

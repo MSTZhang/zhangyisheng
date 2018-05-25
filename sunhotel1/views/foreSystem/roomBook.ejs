@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>房间预防</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/topSys.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/roomBook.css"/>
+		<script src="javascripts/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery/ejs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/foreJs/sysJs.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="headBox">
+			<ul class="headNav1">
+				<li class="hotel_brand"></li>
+				<li class="headNav1Sys"><a href="">酒店预订</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">优惠促销</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">嘉宾会</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">积分商城</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">精彩商旅</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">关于我们</a></li>
+			</ul>
+			<ul class="headNav2">
+				<li class="headNav2_nav11">
+					<ul>
+						<li class="headTips"></li>
+						<li class="headgame"></li>
+						<li class="onlineService"></li>
+						<li class="ChangeLanguage">
+							English
+						</li>
+					</ul>
+				</li>
+				<li class="headNav2_nav12">
+					<a href=""><img src="images/foreImg/login_icon.png" style="width:18px;height:18px;vertical-align: middle;"/>&nbsp;17865932980</a>
+					&nbsp;&nbsp;<span style="font-size: 12px;">|</span>&nbsp;
+					<a href="register" style="font-size:14px;color:#535353;">注册</a>
+				</li>
+			</ul>
+		</div>
+		<!--当前位置-->
+		<div class="currentPosition">
+			<span>当前位置：&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<span>首页&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+			<span>我的嘉宾会&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+			<span style="color:#535353;">房间信息</span>
+		</div>
+		<!--房间信息，用户点评，酒店信息导航栏-->
+		<div class="middleNav">
+			<a href="#roomTable" class="roomInfo">房间信息</a>
+			<a href="#hotelInfoShow" class="hotelInfo">酒店信息</a>
+			<a href="#userAccessTitle" class="userEvaluate">用户评价</a>
+		</div>
+		<!--房间信息展示-->
+		<!--标题-->
+		<table class="roomTable" id="roomTable" cellpadding="0" cellspacing="0">
+			<tr class="thead1">
+				<td class="roomTypeTable"><span style="margin-left:40px;">房型</span></td>
+				<td class="roomPrice">门市价</td>
+				<td class="activityPrice">房价</td>
+			</tr>
+			<tr class="tbody2">
+				<td valign="top">
+					<div class="roomImg" style="width:90px;height:70px;float:left;background:url('images/foreImg/roomTypeImg/rmTp1.jpg');border-radius:3px;margin-top:30px;"></div>
+					<div style="float:left;margin-top: 30px;margin-left: 10px;">
+						<span style="font-size:14px;font-weight: bold;color:#535353;">标准双床房B</span>
+						<br>
+						<span style="color:#979797;font-size: 12px;">2张1.2米单人床</span>
+						<br>
+						<span style="color:#979797;font-size: 12px;">12-15平方米</span>
+					</div>
+				</td>
+				<td class="tbodyRP" valign="top">
+					<div style="margin-top:30px;">￥159</div>
+				</td>
+				<td>
+					<table class="activity" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="acNm">约惠春天</td>
+							<td class="acPc"><span>￥</span>130</td>
+							<td class="rmNum">仅剩2间</td>
+							<td class="bookBtn">
+								<a href="bookPage">预订</a>
+							</td>
+						</tr>
+						<tr class="lastAc">
+							<td class="acNm">约惠春天</td>
+							<td class="acPc"><span>￥</span>130</td>
+							<td class="rmNum">仅剩2间</td>
+							<td class="bookBtn">
+								<a href="">预订</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr class="tbody2">
+				<td valign="top">
+					<div class="roomImg" style="width:90px;height:70px;float:left;background:url('images/foreImg/roomTypeImg/rmTp1.jpg');border-radius:3px;margin-top:30px;"></div>
+					<div style="float:left;margin-top: 30px;margin-left: 10px;">
+						<span style="font-size:14px;font-weight: bold;color:#535353;">标准双床房B</span>
+						<br>
+						<span style="color:#979797;font-size: 12px;">2张1.2米单人床</span>
+						<br>
+						<span style="color:#979797;font-size: 12px;">12-15平方米</span>
+					</div>
+				</td>
+				<td class="tbodyRP" valign="top">
+					<div style="margin-top:30px;">￥159</div>
+				</td>
+				<td>
+					<table class="activity" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="acNm">约惠春天</td>
+							<td class="acPc"><span>￥</span>130</td>
+							<td class="rmNum">仅剩2间</td>
+							<td class="bookBtn">
+								<a href="">预订</a>
+							</td>
+						</tr>
+						<tr class="lastAc">
+							<td class="acNm">约惠春天</td>
+							<td class="acPc"><span>￥</span>130</td>
+							<td class="rmNum">仅剩2间</td>
+							<td class="bookBtn">
+								<a href="">预订</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr class="tbody2">
+				<td valign="top">
+					<div class="roomImg" style="width:90px;height:70px;float:left;background:url('images/foreImg/roomTypeImg/rmTp1.jpg');border-radius:3px;margin-top:30px;"></div>
+					<div style="float:left;margin-top: 30px;margin-left: 10px;">
+						<span style="font-size:14px;font-weight: bold;color:#535353;">标准双床房B</span>
+						<br>
+						<span style="color:#979797;font-size: 12px;">2张1.2米单人床</span>
+						<br>
+						<span style="color:#979797;font-size: 12px;">12-15平方米</span>
+					</div>
+				</td>
+				<td class="tbodyRP" valign="top">
+					<div style="margin-top:30px;">￥159</div>
+				</td>
+				<td>
+					<table class="activity" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="acNm">约惠春天</td>
+							<td class="acPc"><span>￥</span>130</td>
+							<td class="rmNum">仅剩2间</td>
+							<td class="bookBtn">
+								<a href="">预订</a>
+							</td>
+						</tr>
+						<tr class="lastAc">
+							<td class="acNm">约惠春天</td>
+							<td class="acPc"><span>￥</span>130</td>
+							<td class="rmNum">仅剩2间</td>
+							<td class="bookBtn">
+								<a href="">预订</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<!--酒店信息-->
+		<div style="width:865px;">
+			<div class="hotelInfoShow" id="hotelInfoShow">
+				<div class="hotel_img_box">
+					<img src="images/foreImg/hotel_icon.png" style="width:40px;height:40px;margin-top: 7px;"/>
+				</div>
+				<div class="hfText">酒店信息</div>
+			</div>
+			<!--酒店具体信息-->
+			<table class="hotelDetail">
+				<tr>
+					<td class="ttd1" height="60px">
+						<img src="images/foreImg/tel_icon.png" style="width:27px;height:27px;vertical-align: middle;"/>&nbsp;&nbsp;酒店电话
+					</td>
+					<td class="ttd2">
+						0533-2280999转9
+					</td>
+				</tr>
+				<tr>
+					<td class="ttd1" height="160px">
+						<img src="images/foreImg/hotelIntroduce.PNG" style="width:27px;height:27px;vertical-align: middle;"/>&nbsp;&nbsp;酒店介绍
+					</td>
+					<td class="ttd2">
+						酒店位于火车站正北方前行500米，市第八医院中西医结合医院对面。酒店周边餐饮、娱乐、购物、医院、银行等配套设施齐全，步行10分钟即到淄博商厦、华润万
+						象汇、利群购物广场、王府井等大型购物广场，南邻火车站、三院，北邻张店区医院、美食街。马路对面设直达周村、桓台站点，门口设有停车场，停车方便快捷。酒
+						店简约设计、完善设施、贴心的服务为您提供专业、舒适、温馨、安全的住宿环境，是您出行住宿的理想“家”园！
+					</td>
+				</tr>
+				<tr>
+					<td class="ttd1">
+						<img src="images/foreImg/frend_tip.PNG" style="width:22px;height:22px;vertical-align: middle;"/>&nbsp;&nbsp;温馨提示
+					</td>
+					<td class="ttd2">
+						不接待外宾(包括港澳台)<br>
+						酒店覆盖wifi
+						<br>
+						该酒店可以使用如家钱包充值和消费
+					</td>
+				</tr>
+			</table>
+			<!--用户点评-->
+			<!--点评标题-->
+			<div class="userAccessTitle" id="userAccessTitle">
+				<div class="accessTitle_img_box">
+					<img src="images/foreImg/evaluateIcon1.png" style="width:40px;height:40px;margin-top: 7px;"/>
+				</div>
+				<div class="acText">用户点评</div>
+			</div>
+			<!--综合评分-->
+			<div class="comprehensiveBox">
+				<!---->
+				<div class="ct1">来自<span>首&nbsp;旅&nbsp;如&nbsp;家</span>点评</div>
+				<!--酒店好评率-->
+				<div class="hotelSv">
+					<ul>
+						<li class="percent1">
+							<span class=goodRate"">100%</span><br>
+							好评率
+						</li>
+						<li class="percent2">
+							<span class="span1 compositeSocre">综合评分</span><span class="span2 cpsiteSoreStart">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
+							共计&nbsp;<span class="accPerons">11906</span>人点评
+						</li>
+						<li class="percent3">
+							<div class="percent11">
+								<div>环境美观</div>
+								<div class="percentBox"><div class="evtScore"></div></div>
+								<div style="margin-left:5px;" class="evtNum">5.0</div>
+							</div>
+							<div class="percent11">
+								<div>整洁干净</div>
+								<div class="percentBox"><div class="cleanScore"></div></div>
+								<div style="margin-left:5px;" class="cleanNum">5.0</div>
+							</div>
+							<div class="percent11">
+								<div>服务设施</div>
+								<div class="percentBox"><div class="ftScore"></div></div>
+								<div style="margin-left:5px;" class="ftNum">5.0</div>
+							</div>
+							<div class="percent11">
+								<div>服务温馨</div>
+								<div class="percentBox"><div class="serverScore"></div></div>
+								<div style="margin-left:5px;" class="serverNum">5.0</div>
+							</div>
+						</li>
+						<!--我要点评-->
+						<li class="percent5">
+							<a href="">我要点评</a>
+						</li>
+					</ul>
+				</div>
+				<!--用户评价-->
+				<table class="userAccessBox">
+					<!--一条评价-->
+					<tr>
+						<td class="userAcImg">
+							<img src="images/foreImg/userImg/userHeadImg.PNG"/>
+							<br>
+							1819...405
+						</td>
+						<td class="userAcContent" valign="top">
+							<table>
+								<tr class="accTime">
+									<td class="userScore">综合评分：5.0 分</td>
+									<td>2018-04-14</td>
+								</tr>
+								<tr class="contentText">
+									<td colspan="2">很好。。。很满意。。</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<!--一条评价-->
+					<tr>
+						<td class="userAcImg">
+							<img src="images/foreImg/userImg/userHeadImg.PNG"/>
+							<br>
+							1819...405
+						</td>
+						<td class="userAcContent" valign="top">
+							<table>
+								<tr class="accTime">
+									<td class="userScore">综合评分：5.0 分</td>
+									<td>2018-04-14</td>
+								</tr>
+								<tr class="contentText">
+									<td colspan="2">很喜欢住在这里，真的又回到家一样</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<!--一条评价-->
+					<tr>
+						<td class="userAcImg">
+							<img src="images/foreImg/userImg/userHeadImg.PNG"/>
+							<br>
+							1819...405
+						</td>
+						<td class="userAcContent" valign="top">
+							<table>
+								<tr class="accTime">
+									<td class="userScore">综合评分：5.0 分</td>
+									<td>2018-04-14</td>
+								</tr>
+								<tr class="contentText">
+									<td colspan="2">早餐很好，有煎蛋还有牛奶，营养丰富！</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="javascripts/foreJs/roomBook.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

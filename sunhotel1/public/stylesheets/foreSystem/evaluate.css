@@ -1,0 +1,82 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.headBox span{
+	font-size: 20px;
+    color: #2F2E2E;
+    font-weight: normal;
+}
+.headBox{
+	margin-top:40px;
+}
+.evaBtn{
+	margin-top:25px;
+}
+.evaBtn li{
+	width:131px;
+	float: left;
+	font-size: 16px;
+	line-height: 32px;
+    border: 1px solid #90704D;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    cursor: pointer;
+}
+.evaBtn .uneva{
+	
+	background: #90704D;
+    color: #fff;
+    margin-right: -1px;
+    
+    
+}
+.evaBtn .evaed{
+    margin-right: -1px;
+    color: #90704D;
+    margin-left:1px;
+}
+.thead1{
+	height:40px;
+	font-size: 14px;
+    color: #535353;
+    line-height: 40px;
+    text-align: center;
+    background: #f9f8f6;
+}
+.tHtlNm{
+	width:359px;
+	
+}
+.tChIn{
+	width:230px;
+}
+.totalPrice{
+	width:133px;
+}
+.status{
+	width:111px;
+}
+.operator{
+	width:164px;
+}
+.tbody1 td{
+	height: 40px;
+	line-height: 40px;
+	color:#979797;
+	font-size: 12px;
+	text-align: center;
+}
+ .opt{
+	text-decoration: none;
+	color:#fff;
+	background: #c0191f;
+	display: block;
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	margin-left:30px;
+}

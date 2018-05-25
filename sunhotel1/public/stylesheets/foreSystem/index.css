@@ -1,0 +1,142 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.headBox{
+	width:100%;
+	height:70px;
+	vertical-align: baseline;
+	line-height: 1;
+	border-bottom: 1px solid #d4d4d4;
+	background: #fff;
+}
+.headNav1{
+	float: left;
+}
+.headNav1 li{
+	float: left;
+}
+.headNav1 li a{
+	color: #535353;
+	text-decoration: none;
+}
+.headNav1 .headNav1Sys{
+	margin-top:30px;
+	list-style: none;
+	margin-left:50px;
+	font-size:13px;
+}
+.hotel_brand{
+	width:203px;
+	height:55px;
+	background-image: url("../../images/foreImg/brand_logo1.png");
+	background-repeat: no-repeat;
+	margin-left:60px;
+	list-style: none;
+}
+.headNav2{
+	float: right;
+	margin-right: 100px;
+}
+.headNav2 li{
+	list-style: none;
+}
+.headNav2 .headNav2_nav11{
+	height:40px;
+}
+.headNav2 .headNav2_nav11 li{
+	list-style: none;
+	margin-top:4px;
+	margin-left:15px;
+}
+.headNav2 .headNav2_nav11 .headTips{
+	width:24px;
+	height:24px;
+	float: left;
+	background: url("../../images/foreImg/topIconSprite.png") no-repeat -35px 0px;
+}
+.headNav2 .headNav2_nav11 .headgame{
+	width: 29px;
+    height: 24px;
+    float: left;
+    background: url("../../images/foreImg/topIconSprite.png") no-repeat -35px -25px;
+}
+.headNav2 .headNav2_nav11 .onlineService{
+	width: 29px;
+    height: 24px;
+    float: left;
+    background: url("../../images/foreImg/topIconSprite.png") no-repeat -35px -48px;;
+}
+.headNav2 .headNav2_nav11 .ChangeLanguage{
+	width: 60px;
+    height: 32px;
+    text-align: center;
+    float: left;
+    background: #c0191f;;
+    color: #fff;
+    font-size:14px;
+    border-radius: 5px;
+    margin-top:-4px;
+    line-height: 32px;
+}
+.headNav2 .headNav2_nav12{
+	height:30px;
+	margin-left:40px;
+	
+}
+.headNav2 .headNav2_nav12 a{
+	color:#90704D;
+	text-decoration: none;
+	font-size:14px ;
+}
+.middleBox{
+	width:100%;
+	height: 572px;
+	background: url("../../images/foreImg/bg1.jpg") center center no-repeat;
+}
+.imgControlBtn{
+	margin-left:84px;
+	margin-top: 180px;
+}
+.imgControlBtn .lastBtn{
+	width:70px;
+	height:70px;
+	line-height:70px;
+	float: left;
+	list-style: none;
+	background:rgba(1,1,1,.1);
+}
+.imgControlBtn .nextBtn{
+	width:70px;
+	height:70px;
+	float: right;
+	list-style: none;
+	margin-right: 100px;
+	background: #fff;
+	background:rgba(1,1,1,.2);
+}
+.imgControlBtn li img{
+	width:45px;
+	height:47px;
+	font-size:50px;
+	font-weight: lighter;
+	margin-left:15px;
+	margin-top:10px;
+}
+.checkRadio{
+	margin-left:577px;
+	margin-top:540px;
+}
+.checkRadio li{
+	width:10px;
+	height:10px;
+    border: 2px solid #fff;
+	background: #fff;
+	border-radius:7px;
+	list-style: none;
+	float: left;
+	margin-left:20px;
+}
+.checkRadio li:hover{
+	cursor: pointer;
+}

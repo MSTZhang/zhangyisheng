@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户注册</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/register.css"/>
+		<script src="javascripts/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="tipInf" style="position: absolute;text-align: center;line-height: 40px;font-size:25px;color: red;margin-left:788px;margin-top:450px;">
+			
+		</div>
+		<!--注册时过渡效果--->
+		<div class="slidBox" style="position: absolute;width: 100%;height:700px;background: rgba(1,1,1,.8);display: none;">
+			<img src="images/foreImg/loading45.gif" style="margin-top:300px;margin-left:600px;"/>
+		</div>
+		<div class="headBox">
+			<img src="images/foreImg/brand_logo1.PNG"/>
+		</div>
+		<table class="useInfo">
+			<tr>
+				<td class="thead1">姓名</td>
+				<td class="tbody1">
+					<div class="inputsBox">
+						<input type="text" name="userName" id="userName" value="" placeholder="请输入1到20为中英文或数字" style="width:300px;"/>
+					</div>
+					<div class="errorBox">
+						&nbsp;
+						<span id="errorMessage">用户名不能为空</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="thead1">手机号码</td>
+				<td class="tbody1">
+					<div class="inputsBox">
+						<input type="text" name="tel" id="tel" value="" placeholder="可做登录名使用" style="width:300px;"/>
+					</div>
+					<div class="errorBox">
+						&nbsp;
+						<span id="errorMessage">必须填写手机号码</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="thead1" >登录密码</td>
+				<td class="tbody1">
+					<div class="inputsBox">
+						<input type="password" name="pwd" id="pwd" value="" placeholder="6-20为字母、数字、符号，不能含空格" style="width:300px;"/>
+					</div>
+					<div class="errorBox">
+						&nbsp;
+						<span id="errorMessage">登陆密码不能为空</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="thead1">确认密码</td>
+				<td class="tbody1">
+					<div class="inputsBox">
+						<input type="password" name="rePwd" id="rePwd" value="" placeholder="请在次填写密码" style="width:300px;"/>
+					</div>
+					<div class="errorBox">
+						&nbsp;
+						<span id="errorMessage">确认密码不能为空</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="thead1" >验证码</td>
+				<td style="height:60px;line-height: 60px;" class="tbody1">
+					<div style="width:140px;height: 40px;border:1px solid #d8d8d8;line-height: 40px;border-radius: 5px;">
+						<input type="text" name="idCode" id="idCode" value="" placeholder="请输入验证码" style="width:133px;height:22px;border: none;"/>
+					</div>
+					<div class="errorBox">
+						&nbsp;
+						<span id="errorMessage">请填写验证码</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="thead1">Email</td>
+				<td class="tbody1">
+					<div class="inputsBox">
+						<input type="email" name="email" id="email" value="" placeholder="用于接收订单通知" style="width:300px;"/>
+					</div>
+					<div class="errorBox">
+						&nbsp;
+						<span id="errorMessage">邮箱不能为空</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="checkbox" checked="checked" name="registerBtn" id="" style="vertical-align: middle;margin-left:140px;"/>
+					<label style="font-size: 12px;vertical-align: middle;">同意</label>
+					<a href="" style="text-decoration: none;color:#ba9765;font-size: 12px;">《首旅如家网络会员注册服务条款》</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" name="registerBtn" id="registerBtn" value="注册" style="margin-left:140px;cursor: pointer;"/>
+				</td>
+			</tr>
+		</table>
+		<!--其他方式登录-->
+		<div class="otherLogin">
+			<div style="margin-left:50px;">
+				<img src="images/foreImg/loginMethod.PNG"/>
+			</div>
+			<div style="font-size:18px ;color:#535353;margin-left:50px;">已有账号</div>
+			<a href="login" style="text-decoration: none;">直接登录</a>
+		</div>
+		<script src="javascripts/foreJs/register.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

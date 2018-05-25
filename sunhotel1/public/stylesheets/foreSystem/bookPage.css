@@ -1,0 +1,231 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.currentPosition{
+	font-size: 12px;
+    color: #979797;
+    padding-top: 15px;
+    margin-left:75px;
+}
+.message_box{
+	margin-left:75px;
+	margin-top:40px;
+	float:left;
+}
+.bookMessage{
+	width:815px;
+	height:300px;
+	background: #FFFFFF;
+	border: 1px solid #E3E3E3;
+	border-radius: 10px;
+}
+.bookMessage h3{
+	width:735px;
+	font-size: 18px;
+	color: #535353;
+	letter-spacing: 0;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #979797;
+	margin-bottom: 15px;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 20px;
+	font-family: inherit;
+	vertical-align: baseline;
+	margin-left:40px;
+	margin-top:40px;
+}
+.roomTable{
+	margin-left:35px;
+}
+.roomTable .rmt td{
+	height:60px;
+	line-height: 60px;
+}
+.roomTable .rmt .rmty{
+	font-size: 16px;
+	color: #979797;
+	letter-spacing: 0;
+	width: 84px;
+	text-align: right;
+	margin-right: 40px;
+	text-align: right;
+	width:100px;
+}
+input[type="date"]::-webkit-clear-button{display:none;}
+input[type="date"]::-webkit-inner-spin-button{display: none;}
+input[type="date"]::-webkit-calendar-picker-indicator{display: none;}
+.rmtyName div,hr{
+	float:left;
+}
+.rmtyName hr{
+	margin-top:17px;
+	margin-left:10px;
+	width:10px;
+	color:#343434;
+}
+.rmtyName .inputlvBox{
+	margin-left: 10px;
+}
+.inputCkBox{
+	margin-left:50px ;
+}
+.sysInput{
+	width: 144px;
+	height: 35px;
+	color: #979797;
+	border: 1px solid #ffffff;
+	border-color:rgb(187, 152, 97);
+	background: rgb(252, 245, 234) none repeat scroll 0% 0%;
+	border-radius: 5px;
+	line-height: 35px;
+	font-size: 12px;
+}
+.sysInput span{
+	color:#979797;
+	font-size: 15px;
+	
+}
+.sysInput #arriveDate1{
+	height:20px;
+	width:85px;
+	font-size: 15px;
+	color:#343434;
+	border: none;
+	background: none;
+}
+.rmtyName .chDays{
+	height: 35px;
+	line-height: 35px;
+	margin-left: 40px;
+	font-size: 14px;
+	color: #535353;
+	letter-spacing: 0;
+}
+.rmtyName .alterBtn{
+	height: 35px;
+	line-height: 35px;
+	margin-left: 40px;
+}
+.rmtyName .alterBtn .alterTime{
+	
+	text-decoration: none;
+	font-size: 14px;
+	color: #90704D;
+}
+.rmtyName .alterBtn .isSure{
+	text-decoration: none;
+	display: block;
+	height:30px;
+	background: #90704D;
+	width: 84px;
+	font-size: 14px;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	display: none;
+}
+.checkMessage{
+	margin-top:20px;
+}
+.reserTable{
+	margin-left:40px;
+}
+.thead11{
+	width:80px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	color: #979797;
+	letter-spacing: 0;
+	width: 84px;
+	text-align: right;
+}
+.usersysInput{
+	height: 31px;
+	background: #FFFFFF;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	line-height: 31px;
+	margin-right: 25px;
+	border: 1px solid #D4D4D4;
+	padding-left: 18px;
+	width: 155px;
+	font-size: 14px;
+	margin-left: 30px;
+}
+.adress{
+	width:230px;
+}
+.rg_roomBox{
+	float:left;
+	margin-left:50px;
+	width:349px;
+}
+.rg_roomBox11{
+	font-size: 20px;
+	color: #4A4A4A;
+	letter-spacing: 0;
+	padding-bottom: 7px;
+	margin-top: 30px;
+	border-bottom: 1px dashed #979797;
+}
+.rg_roomBox .p11{
+	line-height: 26px;
+	font-size: 14px;
+	color: #808080;
+}
+.rg_roomBox .p11 .span2{
+	margin-left:120px;
+}
+.rg_rule{
+	font-size: 20px;
+	color: #4A4A4A;
+	letter-spacing: 0;
+	padding-bottom: 7px;
+	margin-top: 30px;
+	border-bottom: 1px dashed #979797;
+}
+.p12{
+	margin-top: 12px;
+	display: block;
+	line-height: 26px;
+	font-size: 14px;
+	color: #808080;
+	letter-spacing: 0;
+}
+.smtBtn li{
+	list-style: none;
+	float: left;
+}
+.smtBtn .odTotalPrice{
+	width:100px;
+	font-size: 16px;
+	text-align: right;
+	color: #535353;
+	letter-spacing: 0;
+	margin-top: 34px;
+	margin-bottom: 12px;
+	margin-left: 0px;
+}
+.btn{
+	margin-top:25px;
+	margin-left:20px;
+}
+.btn a{
+	width:200px;
+	color: #ffffff;
+	display: block;
+	font-size: 30px;
+	letter-spacing: 0;
+	background: #c01914;
+	border-radius: 15px;
+	height: 100%;
+	cursor: pointer;
+	text-align: center;
+	line-height: 78px;
+	text-decoration: none;
+	
+}

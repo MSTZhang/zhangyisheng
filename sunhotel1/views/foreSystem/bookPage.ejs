@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/bookPage.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/topSys.css"/>
+		<script src="javascripts/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery/ejs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/layDate-v5.0.9/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/foreJs/sysJs.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="headBox">
+			<ul class="headNav1">
+				<li class="hotel_brand"></li>
+				<li class="headNav1Sys"><a href="">酒店预订</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">优惠促销</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">嘉宾会</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">积分商城</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">精彩商旅</a></li>
+				<li class="headNav1Sys"><a href="headNav1Sys">关于我们</a></li>
+			</ul>
+			<ul class="headNav2">
+				<li class="headNav2_nav11">
+					<ul>
+						<li class="headTips"></li>
+						<li class="headgame"></li>
+						<li class="onlineService"></li>
+						<li class="ChangeLanguage">
+							English
+						</li>
+					</ul>
+				</li>
+				<li class="headNav2_nav12">
+					<a href=""><img src="images/foreImg/login_icon.png" style="width:18px;height:18px;vertical-align: middle;"/>&nbsp;17865932980</a>
+					&nbsp;&nbsp;<span style="font-size: 12px;">|</span>&nbsp;
+					<a href="register" style="font-size:14px;color:#535353;">注册</a>
+				</li>
+			</ul>
+		</div>
+		<!--当前位置-->
+		<div class="currentPosition">
+			<span>当前位置：&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<span>首页&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+			<span>我的嘉宾会&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+			<span style="color:#535353;">房间信息</span>
+		</div>
+		<!--预定信息-->
+		<div class="message_box">
+			<!--预订信息-->
+			<div class="bookMessage">
+				<h3>预订信息</h3>
+				<table class="roomTable">
+					<tr class="rmt">
+						<td class="rmty">房型信息</td>
+						<td class="rmtyName"><span style="margin-left: 50px;color: #535353;">标准双床房</span> </td>
+					</tr>
+					<tr class="rmt">
+						<td class="rmty">入住时间</td>
+						<td class="rmtyName">
+							<div class="inputCkBox sysInput"><input type="text" name="" id="arriveDate1" value="" /><span>周日</span>入住</div> 
+							<hr/>
+							<div class="inputlvBox sysInput">
+								<input type="text" name="" id="arriveDate1" value="" /><span>周日</span>离店
+							</div>
+							<div class="chDays">
+								共2晚
+							</div>
+							<div class="alterBtn">
+								<a href="" class="alterTime">修改日期</span></a>
+								<a href="" class="isSure">确认修改</a>
+							</div>
+						</td>
+					</tr>
+					<tr class="rmt">
+						<td class="rmty">房间数量</td>
+						<td class="rmtyName"><input type="text" value="1" readonly="readonly" style="background: none;border: none;margin-left: 70px;font-size: 18px;"/></tbody>></td>
+					</tr>
+				</table>
+			</div>
+			<!--入住信息-->
+			<div class="bookMessage checkMessage">
+				<h3>入住信息</h3>
+				<table class="reserTable">
+					<tr>
+						<td class="thead11">入住人</td>
+						<td><input class="usersysInput" type="" name="" id="" value="张先生" />&nbsp;&nbsp;&nbsp;<span style="font-size: 15px;color: #979797">填写姓名必须与入住时所持有效证件姓名保持一致</span></td>
+					</tr>
+					<tr>
+						<td class="thead11">手机号</td>
+						<td><input class="usersysInput" type="" name="" id="" value="17865932980" />&nbsp;&nbsp;&nbsp;<span style="font-size: 15px;color: #979797">订单提交后，我们会将预订信息发送至您的手机</span></td>
+					</tr>
+					<tr>
+						<td class="thead11">人数</td>
+						<td><input class="usersysInput" type="" name="" id="" value="" />人</td>
+					</tr>
+					<tr>
+						<td class="thead11">备注</td>
+						<td><input class="adress usersysInput" type="" name="" id="" value="" /></td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+		<!--酒店信息-->
+		<div class="rg_roomBox">
+			<div class="rg_roomBox11">大床房B</div>
+			<p class="p11"><span class="span1">1张1.5米宽的单人床</span><span class="span2">有窗</span></p>
+			<p class="p11"><span class="span1">可入住1人</p>
+			<p class="p11"><span class="span1">8-10平方米</span></p>
+			<div class="rg_rule">入住规则</div>
+			<p class="p12">
+				1、请于14:00后办理入住，如提前到达酒店，视酒店客房情况决定是否给予提前入住。
+			</p>
+			<p class="p12">
+				2、酒店退房时间为离店日中午12点，高等级会员可根据相应权益延迟退房。
+			</p>
+			<!--提交订单-->
+			<ul class="smtBtn">
+				<li class="odTotalPrice">
+					<span style="font-size: 20px;">订单总价</span>
+					<br>
+					<span style="color: #CA1019;font-size: 30px;">￥</span>
+					<span style="color: #CA1019;font-size: 30px;font-weight: bold;">151</span>
+				</li>
+				<li class="btn">
+					<a class="smtBtn1" href="javascript:void(0)">提交订单</a>
+				</li>
+			</ul>
+		</div>
+		<script src="javascripts/foreJs/bookPage.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

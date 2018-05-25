@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+.headBox{
+	width:997px;
+	height:95px;
+	border-bottom: 1px solid #979797;
+    border-top: 1px solid #979797;
+    margin-top:40px;
+}
+.accountInfo{
+	margin-top:5px;
+}
+.myAccount{
+	border-right: 1px solid gainsboro;
+	width:250px;
+}
+.accountInfo li{
+	height:85px;
+	line-height: 80px;
+	float:left;
+}
+.walletText{
+    color: #2F2E2E;
+    font-size: 14px;
+}
+.alterBox div{
+	float: left;
+	margin-left:50px ;
+}
+.alterBox div:hover{
+	cursor: pointer;
+	background: red;
+	color: #fff;
+}
+.recharge{
+	width: 82px;
+    height: 24px;
+    border: 1px solid #c0191f;
+    border-radius: 100px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #c0191f;
+    text-align: center;
+    margin-top: 30px;
+}
+.alterPayPwd{
+	width: 120px;
+    height: 24px;
+    border: 1px solid #c0191f;
+    border-radius: 100px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #c0191f;
+    text-align: center;
+    margin-top: 30px;
+}

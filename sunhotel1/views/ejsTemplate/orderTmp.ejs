@@ -1,0 +1,70 @@
+<!--订单盒子-->
+<% if(datas!=null&&datas.length>0){ for(var i=0;i<datas.length;i++){ if(datas[i].odStatus==1){%>
+<div class="orderBox">
+	<!--订单编号和预定时间-->
+	<div class="orderColor1 orderBoxSys">
+		<ul>
+			<li class="orderColor1 orderFont1" style="float:left;">订单编号：<%=datas[i].orderId%></li>
+			<li style="float:left;margin-left: 100px;">预定时间：<%=datas[i].bookTime%></li>
+		</ul>
+	</div>
+	<!---->
+	<div style="padding-top: 10px;">
+		<span style="color: #90704D;font-size: 18px;font-weight: bold;">火车站阳光酒店</span>
+		<img src="images/foreImg/collect_icon.PNG" style="vertical-align: middle;cursor: pointer;"/>
+	</div>
+	<!--房型，支付状态，房间价格,-->
+	<ul class="clearfix">
+		<li class="orderColor1 orderFont1" style="float:left;"><%=datas[i].roomType.roomTypeName%>&nbsp;&nbsp;&nbsp;<%if(datas[i].isApply==2){%><%=datas[i].rmId%><%}%></li>
+		<li class="" style="float:right;width:120px;font-size: 16px;color: #90704D;"><%if(datas[i].isApply==1){%><a href="applyPage?orderId=<%=datas[i].orderId%>" target="blank" style="display: block;height:25px;width:80px;text-align:center;border-radius:5px;background: red;color: #fff;text-decoration: none;">立即支付</a>&nbsp;&nbsp;&nbsp;<%}%>未入住<a class="cancelBtn" style="display: block;height:25px;width:80px;text-align:center;border-radius:5px;background: red;color: #fff;text-decoration: none;" orderId="<%=datas[i].orderId%">>取消订单</a></li>
+		<li style="float:right;margin-right: 20px;width:100px;color:red;">￥<%=datas[i].totalPrice%></li>
+		<li style="float:right;margin-right: 20px;width:120px;font-size: 18px;"><% if(datas[i].isApply==1){%>未支付<%}else if(datas[i].isApply==2){%>已付款<%}%></li>
+	</ul>
+	<!--入住/离店日期,预定天数,-->
+	<div class="orderColor1 orderFont1">
+		<span><%=datas[i].checkTime%>/<%=datas[i].leaveTime%></span>&nbsp;&nbsp;&nbsp;<span><%=datas[i].days%></span>天&nbsp;&nbsp;&nbsp;<span>1</span>间
+	</div>
+</div>
+<%}else{%>
+<div class="orderBox">
+	<!--订单编号和预定时间-->
+	<div class="orderColor1 orderBoxSys">
+		<ul>
+			<li class="orderColor1 orderFont1" style="float:left;">订单编号：<%=datas[i].orderId%></li>
+			<li style="float:left;margin-left: 100px;">预定时间：<%=datas[i].bookTime%></li>
+		</ul>
+	</div>
+	<!---->
+	<div style="padding-top: 10px;">
+		<span style="color: #90704D;font-size: 18px;font-weight: bold;">火车站阳光酒店</span>
+		<img src="images/foreImg/collect_icon.PNG" style="vertical-align: middle;cursor: pointer;"/>
+	</div>
+	<!--房型，支付状态，房间价格,-->
+	<ul class="clearfix">
+		<li class="orderColor1 orderFont1" style="float:left;"><%=datas[i].roomType.roomTypeName%>&nbsp;&nbsp;&nbsp;<%if(datas[i].isApply==2){%><%=datas[i].rmId%><%}%></li>
+		<li class="" style="float:right;width:120px;font-size: 16px;color: #90704D;"><%if(datas[i].odStatus==3){%>取消<%}else if(datas[i].odStatus==2){%>已入住<%}%></li>
+		<li style="float:right;margin-right: 20px;width:100px;color:red;">￥<%=datas[i].totalPrice%></li>
+		<li style="float:right;margin-right: 20px;width:100px;font-size: 18px;"><%if(datas[i].isApply==1){%>未支付<%}else if(datas[i].isApply==2){%>已付款<%}%></li>
+	</ul>
+	<!--入住/离店日期,预定天数,-->
+	<div class="orderColor1 orderFont1">
+		<span><%=datas[i].checkTime%>/<%=datas[i].leaveTime%></span>&nbsp;&nbsp;&nbsp;<span><%=datas[i].days%></span>天&nbsp;&nbsp;&nbsp;<span>1</span>间
+	</div>
+</div>
+<%}}%>
+<%}else{%>
+<div>你还没有任何历史订单</div>
+<%}%>
+<script type="text/javascript">
+	$(".cancelBtn").click(function(){
+		var orderId = $(this).attr("orderId");
+		var url1="http://localhost:8080/springmvcDemo1/order/cancelOrder?orderId="+orderId;
+		var response = ajaxGet(url1,false);
+		if(response!=null){
+			if(response.meta.success){
+				var url2="http://localhost:8080/springmvcDemo1/order/findUnCheck";
+			    findUnCheck(url2);
+			}else{
+				alert("取消失败，稍后再试");
+		}
+</script>

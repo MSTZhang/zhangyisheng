@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户订单查询</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/clear.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/order.css"/>
+		<script src="javascripts/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery/ejs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/foreJs/sysJs.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="headBox">
+			<img src="images/foreImg/order_Icon.PNG" style="vertical-align: bottom;"/>
+			<span>我的订单</span>
+		</div>
+		<ul class="evaBtn clearfix">
+			<li class="uneva">未入住的订单</li>
+			<li class="evaed">历史订单</li>
+		</ul>
+		<!--订单列表盒子-->
+		<div class="orderListBox">
+			<!--订单盒子-->
+			<div class="orderBox">
+				<!--订单编号和预定时间-->
+				<div class="orderColor1 orderBoxSys">
+					<ul>
+						<li class="orderColor1 orderFont1" style="float:left;">订单编号：225922087</li>
+						<li style="float:left;margin-left: 100px;">预定时间：2018/4/15 21:25:12</li>
+					</ul>
+				</div>
+				<!---->
+				<div style="padding-top: 10px;">
+					<span style="color: #90704D;font-size: 18px;font-weight: bold;">火车站阳光酒店</span>
+					<img src="images/foreImg/collect_icon.PNG" style="vertical-align: middle;cursor: pointer;"/>
+				</div>
+				<!--房型，支付状态，房间价格,-->
+				<ul class="clearfix">
+					<li class="orderColor1 orderFont1" style="float:left;">标准大床房</li>
+					<li class="" style="float:right;width:120px;font-size: 16px;color: #90704D;">取消</li>
+					<li style="float:right;margin-right: 20px;width:100px;color:red;">￥150</li>
+					<li style="float:right;margin-right: 20px;width:100px;font-size: 18px;">未支付</li>
+				</ul>
+				<!--入住/离店日期,预定天数,-->
+				<div class="orderColor1 orderFont1">
+					<span>2018-05-6/2018-05-07</span>&nbsp;&nbsp;&nbsp;<span>1</span>天&nbsp;&nbsp;&nbsp;<span>1</span>间
+				</div>
+			</div>
+			<!--订单盒子-->
+			<div class="orderBox">
+				<!--订单编号和预定时间-->
+				<div class="orderColor1 orderBoxSys">
+					<ul>
+						<li class="orderColor1 orderFont1" style="float:left;">订单编号：225922087</li>
+						<li style="float:left;margin-left: 100px;">预定时间：2018/4/15 21:25:12</li>
+					</ul>
+				</div>
+				<!---->
+				<div style="padding-top: 10px;">
+					<span style="color: #90704D;font-size: 18px;font-weight: bold;">火车站阳光酒店</span>
+					<img src="images/foreImg/collect_icon.PNG" style="vertical-align: middle;cursor: pointer;"/>
+				</div>
+				<!--房型，支付状态，房间价格,-->
+				<ul class="clearfix">
+					<li class="orderColor1 orderFont1" style="float:left;">标准大床房</li>
+					<li class="" style="float:right;width:120px;font-size: 16px;color: #90704D;">未入住</li>
+					<li style="float:right;margin-right: 20px;width:100px;color:red;">￥150</li>
+					<li style="float:right;margin-right: 20px;width:100px;font-size: 18px;">已支付</li>
+				</ul>
+				<!--入住/离店日期,预定天数,-->
+				<div class="orderColor1 orderFont1">
+					<span>2018-05-6/2018-05-07</span>&nbsp;&nbsp;&nbsp;<span>1</span>天&nbsp;&nbsp;&nbsp;<span>1</span>间
+				</div>
+			</div>
+			<!--订单盒子-->
+			<div class="orderBox">
+				<!--订单编号和预定时间-->
+				<div class="orderColor1 orderBoxSys">
+					<ul>
+						<li class="orderColor1 orderFont1" style="float:left;">订单编号：225922087</li>
+						<li style="float:left;margin-left: 100px;">预定时间：2018/4/15 21:25:12</li>
+					</ul>
+				</div>
+				<!---->
+				<div style="padding-top: 10px;">
+					<span style="color: #90704D;font-size: 18px;font-weight: bold;">火车站阳光酒店</span>
+					<img src="images/foreImg/collect_icon.PNG" style="vertical-align: middle;cursor: pointer;"/>
+				</div>
+				<!--房型，支付状态，房间价格,-->
+				<ul class="clearfix">
+					<li class="orderColor1 orderFont1" style="float:left;">标准大床房</li>
+					<li class="" style="float:right;width:120px;font-size: 16px;color: #90704D;">未入住&nbsp;|&nbsp;<a href="" style="text-decoration: none;color:red;">去支付</a></li>
+					<li style="float:right;margin-right: 20px;width:100px;color:red;">￥150</li>
+					<li style="float:right;margin-right: 20px;width:100px;font-size: 18px;">未支付</li>
+				</ul>
+				<!--入住/离店日期,预定天数,-->
+				<div class="orderColor1 orderFont1">
+					<span>2018-05-6/2018-05-07</span>&nbsp;&nbsp;&nbsp;<span>1</span>天&nbsp;&nbsp;&nbsp;<span>1</span>间
+				</div>
+			</div>
+		</div>
+		<script src="javascripts/foreJs/order.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

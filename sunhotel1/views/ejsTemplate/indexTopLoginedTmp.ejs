@@ -1,0 +1,31 @@
+<% if(member==null){ %>
+	<a href="login"><img src="images/foreImg/login_icon.png" style="width:18px;height:18px;vertical-align: middle;"/>&nbsp;<span class="userInfo">嘉宾会登录</span></a>
+	&nbsp;&nbsp;<span style="font-size: 12px;">|</span>&nbsp;
+	<a href="register" style="font-size:14px;color:#535353;">注册</a>
+<% } %>
+<% if(member!=null){ %>
+	<ul class="menuBox" style="position: absolute;display:none;background: #fff;width:120px;margin-top:30px;margin-left:13px;">
+		<li style="height:40px;line-height: 40px;"><a href="home?account=<%=member.tel%>">&nbsp;&nbsp;&nbsp;&nbsp;我的信息中心</a></li>
+		<li style="height:40px;line-height: 40px;"><a id="exitBtn" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;&nbsp;退出登录</a></li>
+	</ul>
+	<a id="menuInfo" href="javascript:void(0);"><img src="images/foreImg/login_icon.png" style="width:18px;height:18px;vertical-align: middle;"/>&nbsp;<span class="userInfo"><%= member.tel %></span></a>
+	&nbsp;&nbsp;<span style="font-size: 12px;">|</span>&nbsp;
+	<a href="register" style="font-size:14px;color:#535353;">注册</a>
+	<script type="text/javascript">
+		$("#menuInfo").mouseenter(function(){
+			$(".menuBox").slideDown();
+			//$(".menuBox").show();
+		});
+		$("#menuInfo").mouseleave(function(){
+			//$(".menuBox").hide();
+		});
+		$(".menuBox").mouseleave(function(){
+			$(this).hide();
+		})
+		$("#exitBtn").click(function(){
+			var url1 = "http://localhost:8080/springmvcDemo1/member/exitLogin";
+			var response = ajaxGet(url1,false);
+			window.location.href="index";
+		});
+	</script>
+<%}%>

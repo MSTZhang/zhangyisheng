@@ -1,0 +1,30 @@
+<tr>
+	<td class="tHtlNm thead1">酒店名称</td>
+	<td class="tChIn thead1">入住/退房日期</td>
+	<td class="totalPrice thead1">总房价</td>
+	<td class="status thead1">状态</td>
+	<td class="operator thead1">操作</td>
+</tr>
+<% if(datas!=null&&datas.length>0){ for(var i=0;i<datas.length;i++){%>
+<tr class="tbody1">
+	<td><%= datas[i].hotelName%></td>
+	<td><%= datas[i].date%></td>
+	<td><%= datas[i].totalPrice%></td>
+	<% if(datas[i].status==1 ){%>
+	<td>未评价</td>
+	<%}else{%>
+	<td>已评价</td>
+	<%}%>
+	<td><a href="javascript:void(0)" class="opt" value="<%= datas[i].accNumber%>">去评价</a></td>
+</tr>
+<% }}else{ %>
+<tr>
+	<td colspan="4" style="font-size:18px;color: #535353;text-align: center;height: 60px;line-height: 60px;">你目前没有任何待点平的酒店</td>
+</tr>
+<%}%>
+<script type="text/javascript">
+	$(".opt").click(function(){
+		var accNum=$(this).attr("value");
+		window.location.href="appraise?accNum="+accNum;
+	});
+</script>

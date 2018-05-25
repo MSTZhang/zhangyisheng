@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/clear.css"/>
+		<script src="javascripts/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery/ejs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/foreJs/sysJs.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.applyBox{
+				position: absolute;
+				width:100%;
+				height:700px;
+				background: rgba(1,1,1,.5);
+				display: none;
+			}
+			.applyBox1{
+				width:359px;
+				height: 382px;
+				background: #ffffff;margin: 0 auto;
+				margin-top:200px;
+			}
+			.applyBox1 .closeBtn{
+				color:;
+				font-weight: bold;
+				float: right;
+				margin-right: 20px;
+				margin-top: 15px;
+			}
+			.applyBox1 .closeBtn:hover{
+				cursor: pointer;
+			}
+			.content{
+				width:100%;
+				height:700px;
+				background-color:#FAF8F5;
+			}
+			.orderDetail{
+				width:1200px;
+				height:153px;
+				border: 1px solid #d4d4d4;
+				border-radius: 10px;
+				padding: 30px 37px 30px 40px;
+				background-color: #ffffff;
+			}
+			.applyType{
+				width:1280px;
+				height:169px;
+				border: 1px solid #d4d4d4;
+				border-radius: 0 10px 10px 10px;
+				background-color: #ffffff;
+				margin-top:-2px;
+			}
+			.selectBox{
+				width:100%;
+				margin-top:-51px;
+				margin-top:20px;
+			}
+			.selectBox li{
+				list-style: none;
+				float: left;
+				width:185px;
+				height:50px;
+				background-color: #fff;
+				font-size: 20px;
+				color: #90704D;
+				cursor: pointer;
+				line-height: 50px;
+				text-align: center;
+				border-right: 1px solid #d4d4d4;
+				border-top: 1px solid #d4d4d4;
+			}
+			.selectBox .li1{
+				border-left: 1px solid #d4d4d4;
+				border-top-left-radius: 10px;
+			}
+			.selectBox .li2{
+				border-bottom:1px solid #d4d4d4 ;
+			}
+			.selectBox .applyMoney{
+				width:250px;
+				float: right;
+				font-size: 26px;
+				color: #2F2E2E;
+				border: none;
+				margin-right:160px;
+				background: none;
+			}
+			.applyBtn{
+				display: block;
+				text-align: center;
+				width: 176px;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 5px;
+				background-color:#c0191f;
+				color:white;
+				text-decoration: none;
+				margin: 0 auto;
+				margin-top:20px;
+				font-size: 20px;
+			}
+			.applyBtn:hover{
+				background-color:#CD474C ;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--支付框-->
+		<div class="applyBox">
+			<div class="applyBox1">
+				<!--关闭按钮--->
+				<div class="clearfix"><a class="closeBtn clearfix">X</a></div>
+				<!--二维码图片-->
+				<div style="height:200px;width:359px;margin-top:50px;margin-left:80px;">
+					<img src="images/foreImg/twoCode.PNG" width="200px" height="200px"/>
+				</div>
+				<div style="margin-top:50px;">
+					<img src="images/foreImg/tip_icon1.PNG"/>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div style="height:30px;"></div>
+			<div style="margin-left:100px;">
+				<div><img src="images/foreImg/orderSuccess.PNG"/></div>
+				<!--订单详情页面-->
+				<div class="orderDetail">
+					<ul class="clearfix">
+						<li style="list-style: none;float: left;color: #535353;font-size: 18px;"><span>订单号：</span><span id="orderId">229032303</span></li>
+						<li style="list-style: none;float: left;margin-left:100px;color: #90704d;font-size: 18px;">淄博阳光酒店</li>
+					</ul>
+					<div style="border-bottom: 1px dashed #d4d4d4;height:15px;"></div>
+					<ul class="clearfix" style="margin-top:20px;">
+						<li style="list-style:none;color: #535353;font-size: 18px;float: left;"><span id="checkTime">2018-05-08</span><span id="checkWeek">星期二</span>&nbsp;&nbsp;&nbsp;&nbsp;入住 &nbsp;&nbsp; 至&nbsp;&nbsp;<span id="leaveTime">2018-05-09</span> <span id="leaveWeek">星期三</span>   离店  共<span id="days"> 1</span>晚</li>
+						<li style="list-style:none;color: #535353;font-size: 18px;float: left;margin-left:100px;"><span id="roomTypeName">标准双床房</span>  &nbsp;1 间</li>
+					</ul>
+					<div style="color: #535353;font-size:20px;float: right;"><span style="">房费：</span><span style="color: #c0191f;font-weight: bolder;">￥<span id="totalPrice">190</span></span></div>
+				</div>
+				<div style="color: #535353;font-size: 20px;line-height: 18px;margin-top:20px;">
+					<img src="images/foreImg/icon1.PNG" style="vertical-align: middle;"/>预付<span style="color:red;" class="payMoney">￥189</span>元房费，房间保留到离店日中午<span style="color:red;">12:00</span>
+				</div>
+				<!--支付方式选择-->
+				<ul class="clearfix selectBox">
+					<li class="li1">支付宝</li>
+					<li class="li2">网上银行</li>
+					<li class="li2">银联支付</li>
+					<li class="li2">我的钱包</li>
+					<li class="applyMoney"><span>支付金额：</span><span style="color: #c0191f;font-weight: bolder;" class="payMoney">￥189</span></li>
+				</ul>
+				<div class="applyType clearfix">
+					
+					<!--支付宝-->
+					<div style="line-height: 150px;padding-left: 60px;">
+						<input id="rd1_icon1" type="radio" name="rd1"/>
+						<label for="rd1_icon1"><img src="images/foreImg/icon2.PNG" style="vertical-align: middle;"/></label>
+						<input id="rd1_icon2" type="radio" name="rd1" style="margin-left:60px;"/>
+						<label for="rd1_icon2"><img src="images/foreImg/icon3.PNG" style="vertical-align: middle;"/></label>
+					</div>
+					<!--网上银行-->
+					<div></div>
+					<!--银联支付-->
+					<div></div>
+					<!--我的钱包-->
+					<div></div>
+				</div>
+				<a class="applyBtn" href="javascript:void(0);">立即支付</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var t1;
+			$(document).ready(function(){
+				var url1=window.location.href;
+				var paras =getParameters(url1);
+				orderNum=paras["orderId"];
+				//向后台请求订单数据
+				var url2="http://localhost:8080/springmvcDemo1/order/findByOrderNum?orderId="+orderNum;
+				var response = ajaxGet(url2,false);
+				if(response!=null){
+					if(response.meta.success){
+						var data = response.data;
+						fillData(data);
+						var checkWeek=findWeekByDate(data.checkTime);
+						var leaveWeek = findWeekByDate(data.leaveTime);
+						$("#checkWeek").html(checkWeek);
+						$("#leaveWeek").html(leaveWeek);
+						$("#roomTypeName").html(data.roomType.roomTypeName);
+						$(".payMoney").html("￥"+data.totalPrice);
+					}else{
+						
+					}
+				}else{
+					window.location.href="error";
+				}
+			});
+			function fillData(jsonData){
+				for(var keys in jsonData){
+					$("#"+keys).html(jsonData[keys]);
+				}
+			}
+			$(".closeBtn").click(function(){
+				$(".applyBox").hide();
+				if(t1!=null){
+					clearInterval(t1);
+				}
+			});
+			$(".applyBtn").click(function(){
+				$(".applyBox").show();
+				var url2="http://localhost:8080/springmvcDemo1/order/updateIsApply";
+				var url1=window.location.href;
+				var paras =getParameters(url1);
+				orderNum=paras["orderId"];
+				var order = {"orderId":orderNum,"isApply":2};
+				var response = ajaxPost(url2,JSON.stringify(order),false);
+				if(response!=null){
+					if(response.meta.success){
+						var i=0;
+						t1 = setInterval(function(){
+							i++;
+							if(i==5){
+								clearInterval(t1);
+								$(".applyBox").hide();
+								window.location.href="applySuccess";
+							}
+						},1000);
+					}else{
+						var i=0;
+						t1 = setInterval(function(){
+							i++;
+							if(i==5){
+								clearInterval(t1);
+								$(".applyBox").hide();
+								alert("支付失败，请稍后再试");
+							}
+						},1000);
+					}
+				}
+				
+			});
+			//输入一个日期返回星期
+			function findWeekByDate(date1){
+				var b = new Date(Date.parse(date1.replace(/\-/g,"/")));
+				var week;
+				if(b==0){
+					week="周日";
+				}else if(b==1){
+					week="星期一";
+				}else if(b==2){
+					week="星期二";
+				}else if(b==3){
+					week="星期三";
+				}else if(b==4){
+					week="星期四";
+				}else if(b==5){
+					week="星期五";
+				}else if(b==6){
+					week="";
+				}else if(b==6){
+					week="星期六";
+				}
+				return week;
+			}
+		</script>
+	</body>
+</html>

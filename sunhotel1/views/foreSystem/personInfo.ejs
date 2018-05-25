@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="javascripts/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery/ejs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/foreJs/sysJs.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/clear.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/foreSystem/personInfo.css"/>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="headBox clearfix">
+				<div class="headBrand">
+					<img src="images/foreImg/brand_logo2.PNG"/>
+				</div>
+				<div class="countLevel">
+					<span style="font-size:20px;color:#2F2E2E;">17865932980</span>
+					<p class="p1">E会员</p>
+				</div>
+				<div class="tipBox">
+					请完善您的个人信息，以便获得更好的服务。</br>
+					妥善保管您的登录密码，以保障您的账户安全。
+				</div>
+				<div class="alertPassword">
+					修改密码
+				</div>
+			</div>
+			<table class="personInfoBox">
+				<tr>
+					<td class="td1">姓名：</td>
+					<td><span>17865932980</span></td>
+				</tr>
+				<tr>
+					<td class="td1">证件类型：</td>
+					<td><span>身份证</span></td>
+				</tr>
+				<tr>
+					<td class="td1">证件号码：</td>
+					<td><span>522427***********0071</span></td>
+				</tr>
+				<tr>
+					<td class="td1">手机号码：</td>
+					<td><span>178*****980</span></td>
+				</tr>
+				<tr>
+					<td class="td1">电子邮箱：</td>
+				</tr>
+				<tr>
+					<td class="td1">性别：</td>
+					<td><span>男</span></td>
+				</tr>
+				<tr>
+					<td class="td1">联系地址：</td>
+				</tr>
+			</table>
+			<a href="" class="alterBtn">编辑</a>
+		</div>
+		<script type="text/javascript">
+			$(".alertPassword").click(function(){
+				//$(".alterPwdBox").show();
+				window.parent.show1("alterPwdBox");
+				
+			});
+		</script>
+	</body>
+</html>
