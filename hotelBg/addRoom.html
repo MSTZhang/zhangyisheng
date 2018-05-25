@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box1{
+				width:400px;
+				height:230px;
+				background: #F1F5F5;
+				margin: 0 auto;
+				padding-top: 20px;
+				border-bottom-left-radius: 30px;
+				border-bottom-right-radius: 30px;
+			}
+			.box1 table{
+				font-size: 12px;
+				margin: 0 auto;
+			}
+			.box1 table input{
+				height:12px;
+			}
+			.box1 table td{
+				height:30px;
+				line-height: 30px;
+			}
+			.box1 table .houseType{
+				width:147px;
+				height:19px;
+				font-size: 12px;
+				
+			}
+			.box1 table .houseFloor,.houseStatus{
+				width:60px;
+				font-size: 12px;
+			}
+			.box1 table .houseAc{
+				width:100px;
+				font-size: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<table>
+				<tr>
+					<td>房间号：</td>
+					<td><input type="text" name="" id="" value="" /></td>
+				</tr>
+				<tr>
+					<td>房间类型：</td>
+					<td>
+						<select class="houseType">
+							<option value="101">标准双人房A</option>
+							<option value="102">单人间</option>
+							<option value="103">豪华间</option>
+							<option value="104">商务间</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>房间楼层：</td>
+					<td>
+						<select class ="houseFloor">
+							<option value="1">1楼</option>
+							<option value="2">2楼</option>
+							<option value="3">3楼</option>
+							<option value="4">4楼</option>
+							<option value="5">5楼</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>房间状态：</td>
+					<td>
+						<select class="houseStatus">
+							<option value="1">空闲</option>
+							<option value="2">预定</option>
+							<option value="3">登记</option>
+							<option value="4">脏房</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>活动：</td>
+					<td>
+						<select class ="houseAc">
+							<option value="1">约会春天</option>
+							<option value="2">春季大促销</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<input type="button" name="" id="" value="添加" style="width:60px;font-size: 13px;margin-left:157px;margin-top:10px;border-radius: 3px;cursor: pointer;"/>
+		</div>
+	</body>
+</html>

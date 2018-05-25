@@ -1,0 +1,103 @@
+<!---->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="6%" height="19" valign="bottom"><div align="center"><img src="images/tb.gif" width="14" height="14" /></div></td>
+                <td width="94%" valign="bottom"><span class="STYLE1"> 入住基本信息列表</span></td>
+              </tr>
+            </table></td>
+            <td><div align="right"><span class="STYLE1">
+              <input type="checkbox" name="checkbox11" id="checkbox11" />
+              全选      &nbsp;&nbsp;<img src="images/add.gif" width="10" height="10" /> 添加   &nbsp; <a class="save"><img src="images/del.gif" width="10" height="10" /> 保存 </a>   &nbsp;&nbsp;<a class="edit"><img src="images/edit.gif" width="10" height="10" /> 编辑</a>   &nbsp;</span><span class="STYLE1"> &nbsp;</span></div></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+      <tr>
+        <td width="4%" height="20" bgcolor="d3eaef" class="STYLE10"><div align="center">
+          <input type="checkbox" name="checkbox" class="checkbox" />
+        </div></td>
+        <td class="thead1" width="5%" id="customName" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">房客姓名</span></div></td>
+        <td class="thead1" width="5%" id="rmId" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">房间号</span></div></td>
+        <td class="thead1" width="5%" id="sex" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">性别</span></div></td>
+        <td class="thead1" width="8%" id="sex" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">入住时间</span></div></td>
+        <td class="thead1" width="8%" id="leaveTime" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">离店时间</span></div></td>
+        <td class="thead1" width="4%" id="status" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">状态</span></div></td>
+        <td class="thead1" width="4%" id="forgift" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">押金</span></div></td>
+        <td class="thead1" width="4%" id="num" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">人数</span></div></td>
+        <td class="thead1" width="15%"id="adress" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">地址</span></div></td>
+        <td class="thead1" width="4%" id="adress" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">天数</span></div></td>
+        <td width="10%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">基本操作</span></div></td>
+      </tr>
+      <%if(datas!=null&&datas.length>0){ for(var i=0;i<datas.length;i++){ %>
+	<!--sd-->
+	<tr>
+		<td height="20" bgcolor="#FFFFFF"><div align="center">
+		  <input type="checkbox" name="checkbox2" id="checkbox2" />
+		  <input type="hidden" id="checkNum" value="<%=datas[i].checkNumber%>" />
+		</div></td>
+		<td height="20" bgcolor="#FFFFFF" class="STYLE6"><div align="center"><span class="STYLE19"><%=datas[i].customName%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center"><span class="STYLE22"><%=datas[i].rmId%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center"><span class="STYLE22"><%=datas[i].sex%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center" class="STYLE22"><span><%=datas[i].checkTime%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21" class="STYLE22"><span><%=datas[i].leaveTime%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%if(datas[i].status==1){%>未结账<%}else if(datas[i].status==2){%>已结账<%}%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas[i].forgift%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas[i].num%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas[i].adress%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas[i].days%></span></div></td>
+		<td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><a href="javascript:void(0)" style="text-decoration: none;color:green;">删除</a> | <%if(datas[i].status==1){%><a href="javascript:void(0)" class="checkBtn" style="text-decoration: none;color:green;">结账</a><%}else if(datas[i].status==2){%><a style="text-decoration: none;color:grey;">结账</a><%}%></div></td>
+	</tr>
+	<%}%>
+	<script type="text/javascript">
+		$(".edit").click(function(){
+			alert("编辑");
+			editText();
+		});
+		$(".save").click(function(){
+			
+		});
+		$(".checkBtn").click(function(){
+			alert("确认结账吗");
+			var checkNum = $(this).parent().parent().parent().first().children().children().children("#checkNum").val();
+			var url1 = "houseList.html?method=balance&value="+checkNum;
+			window.location.href=url1;
+		});
+	</script>
+	<%}else{%>
+	<tr>
+		<td colspan="13">没有任何数据</td>
+	</tr>
+	<%}%>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="33%"><div align="left"><span class="STYLE22">&nbsp;&nbsp;&nbsp;&nbsp;共有<strong> 243</strong> 条记录，当前第<strong> 1</strong> 页，共 <strong>10</strong> 页</span></div></td>
+        <td width="67%"><table width="312" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="49"><div align="center"><img src="images/main_54.gif" width="40" height="15" /></div></td>
+            <td width="49"><div align="center"><img src="images/main_56.gif" width="45" height="15" /></div></td>
+            <td width="49"><div align="center"><img src="images/main_58.gif" width="45" height="15" /></div></td>
+            <td width="49"><div align="center"><img src="images/main_60.gif" width="40" height="15" /></div></td>
+            <td width="37" class="STYLE22"><div align="center">转到</div></td>
+            <td width="22"><div align="center">
+              <input type="text" name="textfield" id="textfield"  style="width:20px; height:12px; font-size:12px; border:solid 1px #7aaebd;"/>
+            </div></td>
+            <td width="22" class="STYLE22"><div align="center">页</div></td>
+            <td width="35"><img src="images/main_62.gif" width="26" height="15" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>

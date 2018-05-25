@@ -1,0 +1,517 @@
+*{
+	margin:0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+.rgHsBx{
+	float:left;
+}
+.colorMarkBox{
+	width:873px;
+	height:30px;
+	font-size: 13px;
+	background: #d9ecff;
+	line-height: 30px;
+}
+.houseListBox div{
+	float:left;
+}
+.colorMarkBox div{
+	float: left;
+}
+.colorMarkBox .roomType{
+	font-size: 12px;
+	margin-left:20px;
+}
+.colorMarkBox .roomType select{
+	height:18px;
+	width:110px;
+	font-size: 11px;
+	margin-left:3px;
+}
+.colorMarkBox .roomNum{
+	font-size: 12px;
+	margin-left:30px;
+}
+.colorMarkBox .roomNum input{
+	height:15px;
+	width:50px;
+	font-size: 12px;
+	margin-left: 3px;
+}
+.colorMarkBox .roomNum button{
+	font-size: 10px;
+	background:#5f97b8 ;
+	width:40px;
+	height: 18px;
+	color:white;
+	border: none;
+	margin-top:-2px;
+}
+.houseListBox{
+	width:873px;
+	height:560px;
+	overflow: auto;
+}
+.houseBox{
+	width:100px;
+	height:100px;
+	margin-left:2px;
+	margin-top:2px;
+	border: 1px solid gainsboro;
+	background: #eaefef;
+}
+.hrmInf{
+	padding-left: 2px;
+	position: absolute;
+	width:130px;
+	background: orangered;
+	font-size: 12px;
+	color:#fff;
+	display: none;
+	border-radius: 2px;
+}
+.houseMenu{
+	position: absolute;
+	background: #EFF6FB;
+	display: none;
+}
+.houseMenu ul{
+	margin-top:10px;
+}
+.houseMenu ul li{
+	font-size: 12px;
+	width:125px;
+	height:25px;
+}
+.houseMenu ul .unforbid:hover{
+	cursor: pointer;
+}
+.houseMenu ul .forbid{
+	color:gainsboro;
+}
+.houseMenu ul li div{
+	float:left;
+}
+.houseMenu ul li .menu_img{
+	margin-left:10px;
+}
+.altstuScd{
+	position: absolute;
+	width:100px;
+	margin-left:120px;
+	background: #EFF6FB;
+	display: none;
+}
+.altstuScd li{
+	height:25px;
+	line-height: 25px;
+}
+.altstuScd li:hover{
+	cursor: pointer;
+	background: gainsboro;
+}
+.freeHouse .houseTitle{
+	height:20px;
+	width:100%;
+	background:#66ff00;
+	font-size: 12px;
+	font-weight: bold;
+	color:#fff;
+}
+.freeHouse .houseType{
+	font-size: 12px;
+	font-weight: bold;
+	margin-top:3px;
+	color:#cc9933;
+}
+.freeHouse .housePrice{
+	color:#990033;
+	font-size: 10px;
+	margin-top:2px;
+}
+.freeHouse .houseFloor{
+	width:100%;
+	color:#cc9933;
+	font-size: 10px;
+	margin-left:8px;
+	margin-top:8px;
+}
+.bookHouse .houseTitle{
+	width:100%;
+	height:20px;
+	font-size: 12px;
+	font-weight: bold;
+	background: #ffcc33;
+	color: #fff;
+}
+.bookHouse .houseTitle .bookMark{
+	font-size: 10px;
+	border: 1px solid #fff;
+	margin-left:50%;
+	height:12px;
+	width:12px;
+	text-align: center;
+	margin-top:3px;
+}
+.bookHouse .houseType{
+	font-size: 12px;
+	font-weight: bold;
+	color:#339999;
+	margin-top: 3px;
+}
+.bookHouse .housePrice{
+	font-size: 10px;
+	margin-top:2px;
+	color:#990033;
+}
+.bookHouse .houseFloor{
+	font-size: 10px;
+	width:80px;
+	margin-left:8px;
+	margin-top:8px;
+	color:#339999;
+}
+.checkHouse .houseTitle{
+	width:100%;
+	height:20px;
+	font-size: 12px;
+	font-weight: bold;
+	background: #ff6633;
+	color: #fff;
+}
+.checkHouse .houseTitle .bookMark{
+	font-size: 10px;
+	border: 1px solid #fff;
+	margin-left:50%;
+	height:12px;
+	width:12px;
+	text-align: center;
+	margin-top:2px;
+}
+.checkHouse .houseType{
+	font-size: 12px;
+	font-weight: bold;
+	color:#ff99cc;
+	margin-top: 3px;
+}
+.checkHouse .housePrice{
+	font-size: 10px;
+	margin-top:2px;
+	color:#990033;
+}
+.checkHouse .houseFloor{
+	font-size: 10px;
+	width:80px;
+	margin-left:8px;
+	margin-top:8px;
+	color:#ff99cc;
+}
+.cleanHouse .houseTitle{
+	width:100%;
+	height:20px;
+	font-size: 12px;
+	font-weight: bold;
+	background: #52a8d6;
+	color: #fff;
+}
+.cleanHouse .houseTitle .bookMark{
+	font-size: 10px;
+	border: 1px solid #fff;
+	margin-left:50%;
+	height:12px;
+	width:12px;
+	text-align: center;
+	margin-top:2px;
+}
+.cleanHouse .houseType{
+	font-size: 12px;
+	font-weight: bold;
+	color:#9999cc;
+	margin-top: 3px;
+}
+.cleanHouse .housePrice{
+	font-size: 10px;
+	margin-top:2px;
+	color:#990033;
+}
+.cleanHouse .houseFloor{
+	font-size: 10px;
+	width:80px;
+	margin-left:8px;
+	margin-top:8px;
+	color:#9999cc;
+}
+.registerBox{
+	width:400px;
+	height:560px;
+	float:left;
+	background: #d9ecff;
+}
+.rgInfTl{
+	width:350px;
+	height:30px;
+	line-height: 30px;
+	font-size: 13px;
+	font-weight: bold;
+	margin-left:30px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.checkInfo{
+	font-size: 12px;
+	margin-left:30px;
+	margin-top:10px;
+}
+.tm{
+	margin-left: 30px;
+	margin-top: 5px;
+}
+.tm li{
+	float: left;
+	font-size: 12px;
+}
+.tm .ckTime{
+	font-size: 12px;
+}
+.tm .ckDays{
+	margin-left:30px;
+}
+.tm .ckDays input{
+	width:50px;
+}
+.tm .cstmType{
+	margin-left:30px;
+}
+.tm .cstmType select{
+	width:90px;
+}
+.rgInfTl1{
+	margin-top:20px;
+}
+.pInf{
+	margin-left:30px;
+	margin-top:5px;
+}
+.pInf li{
+	float: left;
+	font-size: 12px;
+}
+.pInf .sex_box{
+	margin-left: 30px;
+}
+.pInf .ctm_nm input{
+	width:180px;
+}
+.pInf .sex_box select{
+	width:80px;
+}
+.pInf .IDBox input{
+	width:180px;
+}
+.pInf .IDTpBx{
+	margin-left:30px;
+}
+.pInf .IDTpBx select{
+	width:80px;
+}
+.adress{
+	margin-left:30px;
+	margin-top:5px;
+}
+.adress .adressli{
+	font-size: 12px;
+}
+.adress .adressli input{
+	width:290px;
+}
+.rmInf{
+	margin-left:30px;
+	
+}
+.rmInf li{
+	float: left;
+}
+.rmInf .rm_num{
+	font-size: 12px;
+}
+.rmInf .rm_num input{
+	width:80px;
+}
+.rmInf .rm_type{
+	font-size: 12px;
+	margin-left:20px;
+}
+.rmInf .rm_type select{
+	width:120px;
+	font-size: 12px;
+}
+.rmInf .rm_price{
+	font-size: 12px;
+	margin-left:20px;
+}
+.rmInf .rm_price input{
+	width:80px;
+}
+.totalPrice{
+	margin-top:10px;
+}
+.totalPrice .tpli{
+	font-size: 12px;
+	margin-left:30px;
+}
+.registerBtn{
+	font-size: 13px;
+	width:70px;
+	text-align: center;
+	border: 1px solid gainsboro;
+	margin-left:30px;
+	margin-top:15px;
+	border-radius: 3px;
+    background: linear-gradient(#6c656d, #e0dce2); /* 标准的语法 */
+   	
+}
+.checkoutBtn{
+	font-size: 13px;
+	width:70px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid gainsboro;
+	margin-left:30px;
+	margin-top:15px;
+	border-radius: 3px;
+	color:#fff;
+	display: none;
+    background: linear-gradient(#6c656d, #e0dce2); /* 标准的语法 */
+}
+.checkoutBtn,.registerBtn:hover{
+	cursor: pointer;
+}
+.freeColor{
+	float:left;
+	margin-left: 23%;
+}
+.freeColor li{
+	float:left;
+	font-size: 12px;
+}
+.freeColor .frcl{
+	color:;
+	background: #66ff00;
+	width: 40px;
+	height:13px;
+	margin-top:9px;
+	margin-left:2px;
+}
+.bookColor{
+	float:left;
+	margin-left: 10px;
+}
+.bookColor li{
+	float:left;
+	font-size: 12px;
+}
+.bookColor .frcl{
+	color:;
+	background: #ffcc33;
+	width: 40px;
+	height:13px;
+	margin-top:9px;
+	margin-left:2px;
+}
+.checkColor{
+	float:left;
+	margin-left: 10px;
+}
+.checkColor li{
+	float:left;
+	font-size: 12px;
+}
+.checkColor .frcl{
+	color:;
+	background: #ff6633;
+	width: 40px;
+	height:13px;
+	margin-top:9px;
+	margin-left:2px;
+}
+.cleanColor{
+	float:left;
+	margin-left: 10px;
+}
+.cleanColor li{
+	float:left;
+	font-size: 12px;
+}
+.cleanColor .frcl{
+	color:;
+	background: #52a8d6;
+	width: 40px;
+	height:13px;
+	margin-top:9px;
+	margin-left:2px;
+}
+.bookInfoTable{
+	font-size: 12px;
+	margin-left:30px;
+}
+.bookInfoTable .thead1{
+	font-size: 15px;
+	font-weight:bold ;
+}
+.bookInfoTable .thead1 td{
+	height:30px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.bookInfoTable .tbody1 td{
+	height:50px;
+	line-height: 20px;
+}
+.bookInfoTable tr td select{
+	font-size: 12px;
+}
+.reserBtn{
+	width:70px;
+	height:20px;
+	font-size: 15px;
+	background: #828282;
+	color: #fff;
+	border: 1px solid #F3F8FC;
+	border-radius:7px ;
+	margin-left:30px;
+	margin-top:10px;
+	text-align: center;
+}
+.reserBtn:hover{
+	cursor: pointer;
+}
+.registerBtn,.checkoutBtn{
+	display: none;
+}
+.reBtn{
+	margin-left:30px;
+	font-size: 15px;
+	height:20px;
+	line-height: 20px;
+	width:100px;
+	text-align: center;
+	background: #828282;
+	color: #fff;
+	margin-top:10px;
+	border: 1px solid #F3F8FC;
+	float: left;
+	border-radius: 5px;
+}
+.settleBtn{
+	display: none;
+}
+.reBtn:hover{
+	cursor: pointer;
+}
+.moneyBox{
+	float: left;
+	margin-left:160px;
+	font-size: 15px;
+}

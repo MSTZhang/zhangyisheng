@@ -1,0 +1,361 @@
+<% if(rooms!=null){ for(var i=0;i<rooms.length;i++){ %>
+<% if(rooms[i].rmStatus==1){ %>
+<!--空闲房间-->
+<div class="houseBox freeHouse">
+	<div class="hrmInf">
+		床型:<%=rooms[i].roomType.bedType%>&nbsp;&nbsp;&nbsp;数量:<%=rooms[i].roomType.bedNum%>&nbsp;&nbsp;&nbsp;面积:<%=rooms[i].roomType.area%>m
+	</div>
+	<!--菜单-->
+	<div class="houseMenu">
+		<ul>
+			<li>
+				<div class="menu_img"><img src="images/checkin.ico"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="rgRm unforbid" value="<%=rooms[i].roomId%>">登记该房间</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/checkin.ico"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="unforbid bookBtn" value="<%=rooms[i].roomId%>">预定房间</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/checkrvinfo.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">查看登记信息</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/reservin.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">查看预定信息</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/switch.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<ul class="altstuScd">
+					<li class="setStatusBtn" rmstatu="1" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为空闲房</li>
+					<li class="setStatusBtn" rmstatu="2" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为预订房</li>
+					<li class="setStatusBtn" rmstatu="3" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;职位登记房</li>
+					<li class="setStatusBtn" rmstatu="4" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为清洁房</li>
+				</ul>
+				<div class="alterStu unforbid">修改房间状态<img class="next_menuBtn" src="images/next_menu.png" style="width:15px;height:13px;vertical-align: middle;"/></div>
+			</li>
+		</ul>
+	</div>
+	<!--房间信息-->
+	<div class="houseTitle">&nbsp;&nbsp;<%=rooms[i].roomId%></div>
+	<div class="houseType">&nbsp;&nbsp;<%=rooms[i].roomType.roomTypeName%></div>
+	<div class="housePrice">&nbsp;&nbsp;单价：<%=rooms[i].roomType.price%>￥</div>
+	<div class="houseFloor">&nbsp;&nbsp;<%=rooms[i].floor%>楼</div>
+</div>
+<%}
+	else if(rooms[i].rmStatus==2){ %>
+<!--预定房间-->
+<div class="houseBox bookHouse">
+	<div class="hrmInf">
+		床型:<%=rooms[i].roomType.bedType%>&nbsp;&nbsp;&nbsp;数量:<%=rooms[i].roomType.bedNum%>&nbsp;&nbsp;&nbsp;面积:<%=rooms[i].roomType.area%>m
+	</div>
+	<!--菜单-->
+	<div class="houseMenu">
+		<ul>
+			<li>
+				<div class="menu_img"><img src="images/checkin.ico"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">登记该房间</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/checkin.ico"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">预定房间</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/checkrvinfo.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">查看登记信息</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/reservin.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="bkInf unforbid" value="<%=rooms[i].roomId%>">查看预定信息</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/switch.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<ul class="altstuScd">
+					<li class="setStatusBtn" rmstatu="1" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为空闲房</li>
+					<li class="setStatusBtn" rmstatu="2" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为预订房</li>
+					<li class="setStatusBtn" rmstatu="3" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;职位登记房</li>
+					<li class="setStatusBtn" rmstatu="4" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为清洁房</li>
+				</ul>
+				<div class="alterStu unforbid">修改房间状态<img class="next_menuBtn" src="images/next_menu.png" style="width:15px;height:13px;vertical-align: middle;"/></div>
+			</li>
+		</ul>
+	</div>
+	<!--房间信息-->
+	<div class="houseTitle">
+		<div class="">&nbsp;&nbsp;<%=rooms[i].roomId%></div>
+	   <div class="bookMark">预</div>
+	</div>
+	<div class="houseType">&nbsp;&nbsp;<%=rooms[i].roomType.roomTypeName%></div>
+	<div class="housePrice">&nbsp;&nbsp;单价：<%=rooms[i].roomType.price%>￥</div>
+	<div class="houseFloor">&nbsp;&nbsp;<%=rooms[i].floor%>楼</div>
+</div>
+<% }
+	else if(rooms[i].rmStatus==3){ %>
+<!--已登记房间-->
+<div class="houseBox checkHouse">
+	<div class="hrmInf">
+		床型:<%=rooms[i].roomType.bedType%>&nbsp;&nbsp;&nbsp;数量:<%=rooms[i].roomType.bedNum%>&nbsp;&nbsp;&nbsp;面积:<%=rooms[i].roomType.area%>m
+	</div>
+	<!--菜单-->
+	<div class="houseMenu">
+		<ul>
+			<li>
+				<div class="menu_img"><img src="images/checkin.ico"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">登记该房间</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/checkin.ico"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">预定房间</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/checkrvinfo.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="rgInf unforbid" value="<%=rooms[i].roomId%>">查看登记信息</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/reservin.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">查看预定信息</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/switch.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<ul class="altstuScd">
+					<li class="setStatusBtn" rmstatu="1" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为空闲房</li>
+					<li class="setStatusBtn" rmstatu="2" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为预订房</li>
+					<li class="setStatusBtn" rmstatu="3" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;职位登记房</li>
+					<li class="setStatusBtn" rmstatu="4" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为清洁房</li>
+				</ul>
+				<div class="alterStu unforbid">修改房间状态<img class="next_menuBtn" src="images/next_menu.png" style="width:15px;height:13px;vertical-align: middle;"/></div>
+			</li>
+		</ul>
+	</div>
+	<!--房间信息-->
+	<div class="houseTitle">
+		<div class="">&nbsp;&nbsp;<%=rooms[i].roomId%></div>
+	   <div class="bookMark">住</div>
+	</div>
+	<div class="houseType">&nbsp;&nbsp;<%=rooms[i].roomType.roomTypeName%></div>
+	<div class="housePrice">&nbsp;&nbsp;单价：<%=rooms[i].roomType.price%>￥</div>
+	<div class="houseFloor">&nbsp;&nbsp;<%=rooms[i].floor%>楼</div>
+</div>
+<% }
+	else if(rooms[i].rmStatus==4){ %>
+<!--清洁房间-->
+<div class="houseBox cleanHouse">
+	<div class="hrmInf">
+		床型:<%=rooms[i].roomType.bedType%>&nbsp;&nbsp;&nbsp;数量:<%=rooms[i].roomType.bedNum%>&nbsp;&nbsp;&nbsp;面积:<%=rooms[i].roomType.area%>m
+	</div>
+	<!--菜单-->
+	<div class="houseMenu">
+		<ul>
+			<li>
+				<div class="menu_img"><img src="images/checkin.ico"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">登记该房间</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/checkin.ico"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">预定房间</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/checkrvinfo.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">查看登记信息</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/reservin.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<div class="forbid">查看预定信息</div>
+			</li>
+			<li>
+				<div class="menu_img"><img src="images/switch.png"/></div>
+				<div style="width:5px;margin-left:5px;height:100%;border-left:1px solid gainsboro;"></div>
+				<ul class="altstuScd">
+					<li class="setStatusBtn" rmstatu="1" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为空闲房</li>
+					<li class="setStatusBtn" rmstatu="2" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为预订房</li>
+					<li class="setStatusBtn" rmstatu="3" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;职位登记房</li>
+					<li class="setStatusBtn" rmstatu="4" rmid="<%=rooms[i].roomId%>">&nbsp;&nbsp;&nbsp;置为清洁房</li>
+				</ul>
+				<div class="alterStu unforbid">修改房间状态<img class="next_menuBtn" src="images/next_menu.png" style="width:15px;height:13px;vertical-align: middle;"/></div>
+			</li>
+		</ul>
+	</div>
+	<div class="houseTitle">
+		<div class="">&nbsp;&nbsp;<%=rooms[i].roomId%></div>
+	   <div class="bookMark">脏</div>
+	</div>
+	<div class="houseType">&nbsp;&nbsp;<%=rooms[i].roomType.roomTypeName%></div>
+	<div class="housePrice">&nbsp;&nbsp;单价：<%=rooms[i].roomType.price%>￥</div>
+	<div class="houseFloor">&nbsp;&nbsp;<%=rooms[i].floor%>楼</div>
+</div>
+<%}}} else{%>
+	<div>没有请求 数据</div>
+<%}%>
+<script type="text/javascript">
+	$(".houseBox").mouseenter(function(e){
+		var hsInf = $(this).children(".hrmInf");
+		//获取鼠标坐标
+		var x = e.screenX-200;
+		var y = e.screenY-220;
+		hsInf.css("left",x);
+		hsInf.css("top",y);
+		hsInf.css("display","block");
+	});
+	$(".houseBox").mouseleave(function(e){
+		var hsInf = $(this).children(".hrmInf");
+		$(this).children(".houseMenu").hide();
+		$(this).children(".houseMenu").children("ul").children().last().children("ul").hide();
+		hsInf.css("display","none");
+	});
+	$(".houseBox").bind("contextmenu",function(e){
+	    var sv = $(this).children(".houseMenu");
+	    $(this).children(".hrmInf").hide();
+        sv.css({"top":e.pageY,"left":e.pageX,"display":"block"})
+        return false;
+	});
+	//登记房间
+	$(".rgRm").click(function(){
+		//请求房间信息
+		var rd = $(this).attr("value");
+		var url1 ="http://localhost:8080/springmvcDemo1/room/findById?roomId="+rd;
+		var jsonData = {"roomId":rd}
+		var data1 = JSON.stringify(jsonData);
+		var response = ajaxGet(url1,false);
+		if(response!=null){
+			var success = response.meta.success;
+			if(success){
+				$(".registerBtn").show();
+				$(".reserBtn").hide();
+				$(".settleBtn").hide();
+				$(".checkoutBtn").hide();
+				var result = response.data;
+				$("#rmId").val(result.roomId);
+				//设置房间类型
+				var rmtp=$("#rtyId").val(result.roomTypeId);
+				//设置房间价格
+				$("#price").val(result.roomType.price);
+				//设置订单总价
+				$("#totalPrice").val(result.roomType.price);
+			}else{
+				window.parent.frames.location.href="login.html"
+			}
+		}else{
+			alert("服务器内部错误");
+		}
+	});
+	//查看预定信息
+	$(".bkInf").click(function(){
+		var rd = $(this).attr("value");
+		var url1 ="http://localhost:8080/springmvcDemo1/order/findByRmId?roomId="+rd;
+		var response = ajaxGet(url1,false);
+		if(response!=null){
+			cleanRgInf();
+			var stu = response.meta.success;
+			if(stu){
+				$(".registerBtn").show();
+				$(".reserBtn").hide();
+				$(".settleBtn").hide();
+				$(".checkoutBtn").hide();
+				var jsonData = response.data;
+				//console.log(jsonData);
+				fillCheckInfo(jsonData);
+				$("#price").val(jsonData.roomType.price);
+				if(jsonData.member!=null){
+					$("#cmLevel").val(jsonData.member.cmLevel);
+				}
+			}
+		}else{
+			
+		}
+	});
+	//查看登记信息
+	$(".rgInf").click(function(){
+		var rd = $(this).attr("value");
+		var url1 ="http://localhost:8080/springmvcDemo1/checkIn/findByRmId?roomId="+rd;
+		var response = ajaxGet(url1,false);
+		if(response!=null){
+			cleanRgInf();
+			var success = response.meta.success;
+			if(success){
+				$(".registerBtn").hide();
+				$(".reserBtn").hide();
+				$(".settleBtn").hide();
+				$(".checkoutBtn").show();
+				console.log(response);
+				var jsonData = response.data;
+				fillCheckInfo(jsonData);
+				//$("#price").val(jsonData.roomType.price);
+			}else{
+				alert("服务器内部错误");
+			}
+		}else{
+			alert("操作失败");
+		}
+	});
+	$(".next_menuBtn").click(function(){
+		$(this).parent("div").prev("ul").show();
+	});
+	//修改房间状态
+	$(".setStatusBtn").click(function(){
+		$(this).parent().hide();
+		$(this).parent().parent().parent().parent().hide();
+		var stu = $(this).attr("rmstatu");
+		var rmId= $(this).attr("rmid");
+		var url1 ="http://localhost:8080/springmvcDemo1/room/alterRmstus?roomId="+rmId+"&rmStatus="+stu;
+		var response = ajaxGet(url1,false);
+		if(response!=null){
+			var success = response.meta.success;
+			if(success){
+				loadRoomInfo();
+			}else{
+				alert("修改失败");
+			}
+		}else{
+			alert("无法连接服务器");
+		}
+	});
+	//预定房间
+	$(".bookBtn").click(function(){
+		//请求房间信息
+		var rd = $(this).attr("value");
+		var url1 ="http://localhost:8080/springmvcDemo1/room/findById?roomId="+rd;
+		var jsonData = {"roomId":rd}
+		var data1 = JSON.stringify(jsonData);
+		var response = ajaxGet(url1,false);
+		if(response!=null){
+			var success = response.meta.success;
+			if(success){
+				$(".registerBtn").hide();
+				$(".reserBtn").show();
+				$(".settleBtn").hide();
+				$(".checkoutBtn").hide();
+				var result = response.data;
+				$("#rmId").val(result.roomId);
+				//设置房间类型
+				var rmtp=$("#rtyId").val(result.roomTypeId);
+				//设置房间价格
+				$("#price").val(result.roomType.price);
+				//设置订单总价
+				$("#totalPrice").val(result.roomType.price);
+			}else{
+				window.parent.frames.location.href="login.html"
+			}
+		}else{
+			alert("服务器内部错误");
+		}
+	});
+</script>

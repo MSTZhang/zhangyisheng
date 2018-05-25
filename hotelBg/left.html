@@ -1,0 +1,109 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/chili-1.7.pack.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript" src="js/jquery.dimensions.js"></script>
+<script type="text/javascript" src="js/jquery.accordion.js"></script>
+<script language="javascript">
+	jQuery().ready(function(){
+		jQuery('#navigation').accordion({
+			header: '.head',
+			navigation1: true, 
+			event: 'click',
+			fillSpace: true,
+			animated: 'bounceslide'
+		});
+	});
+</script>
+<style type="text/css">
+<!--
+body {
+	margin:0px;
+	padding:0px;
+	font-size: 12px;
+}
+#navigation {
+	margin:0px;
+	padding:0px;
+	width:187px;
+}
+#navigation a.head {
+	cursor:pointer;
+	background-image:url('images/main_34.gif');
+	background-size:cover;
+	overflow: hidden;
+	display:block;
+	font-weight:bold;
+	margin:0px;
+	padding:5px 0 5px;
+	text-align:center;
+	font-size:12px;
+	text-decoration:none;
+}
+#navigation ul {
+	border-width:0px;
+	margin:0px;
+	padding:0px;
+	text-indent:0px;
+}
+#navigation li {
+	width:200px;
+	list-style:none;
+	display:inline;
+}
+#navigation li li a {
+	display:block;
+	font-size:12px;
+	text-decoration: none;
+	text-align:center;
+	padding:3px;
+}
+#navigation li li a:hover {
+	background:url(images/tab_bg.gif) repeat-x;
+	border:solid 1px #adb9c2;
+}
+-->
+</style>
+</head>
+<body>
+<div  style="height:100%;">
+  <ul id="navigation">
+    <li> <a class="head">客房管理</a>
+      <ul>
+        <li><a href="houseList.html" target="rightFrame">客房信息</a></li>
+        <li><a href="addRoom.html" target="rightFrame">新增客房</a></li>
+        <li><a href="roomType.html" target="rightFrame">房间类型</a></li>
+        <li><a href="addRoom.html" target="rightFrame">活动管理</a></li>
+      </ul>
+    </li>
+    <li> <a class="head">入住管理</a>
+      <ul>
+        <li><a href="checkInManager.html" target="rightFrame">入住信息</a></li>
+        <li><a href="Kinds.php" target="rightFrame">客房预订</a></li>
+        <li><a href="orderManager.html" target="rightFrame">预约信息</a></li>
+      </ul>
+    </li>
+    <li> <a class="head">客户管理</a>
+      <ul>
+        <li><a href="messages.php" target="rightFrame">查看/删除客户</a></li>
+        <li><a href="comments.php" target="rightFrame">增加客户</a></li>
+      </ul>
+    </li>
+    <li> <a class="head">用户评论</a>
+      <ul>
+        <li><a href="AddLink.php" target="rightFrame">添加友情链接</a></li>
+        <li><a href="Links.php" target="rightFrame">查看/修改友情链接</a></li>
+      </ul>
+    </li>
+    <li> <a class="head">版本信息</a>
+      <ul>
+        <li><a href="http://Www.865171.cn" target="_blank">by Jessica(865171.cn)</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

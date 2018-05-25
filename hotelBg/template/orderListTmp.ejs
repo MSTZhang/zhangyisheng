@@ -1,0 +1,103 @@
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="24" bgcolor="#353c44"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="6%" height="19" valign="bottom"><div align="center"><img src="images/tb.gif" width="14" height="14" /></div></td>
+                <td width="94%" valign="bottom"><span class="STYLE1"> 入住基本信息列表</span></td>
+              </tr>
+            </table></td>
+            <td><div align="right"><span class="STYLE1">
+              <input type="checkbox" name="checkbox11" id="checkbox11" />
+              全选      &nbsp;&nbsp;<img src="images/add.gif" width="10" height="10" /> 添加   &nbsp; <a class="save"><img src="images/del.gif" width="10" height="10" /> 保存</a>    &nbsp;&nbsp;<a class="edit"><img src="images/edit.gif" width="10" height="10" /> 编辑 </a>  &nbsp;</span><span class="STYLE1"> &nbsp;</span></div></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+      <tr>
+        <td width="4%" height="20" bgcolor="d3eaef" class="STYLE10"><div align="center">
+          <input type="checkbox" name="checkbox" id="checkbox" />
+        </div></td>
+        <td class="thead1" id="orderId" width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">订单ID</span></div></td>
+        <td class="thead1" id="custName" width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">房客姓名</span></div></td>
+        <td class="thead1" id="customTel" width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">联系电话</span></div></td>
+        <td class="thead1" id="roomType" width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">房间类型</span></div></td>
+        <td class="thead1" id="rmId" width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">房间编号</span></div></td>
+        <td class="thead1" id="checkTime" width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">入住时间</span></div></td>
+        <td class="thead1" id="endTime" width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">离店时间</span></div></td>
+        <td class="thead1" id="pnum" width="4%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">人数</span></div></td>
+        <td class="thead1" id="days" width="4%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">天数</span></div></td>
+        <td class="thead1" id="bookTime" width="15%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">预定时间</span></div></td>
+        <td class="thead1" id="odStatus" width="5%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">状态</span></div></td>
+        <td class="thead1" id="remark" width="4%" height="10" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">备注</span></div></td>
+        <td class="thead1" id="forgift" width="4%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">总房价</span></div></td>
+        <td width="10%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">基本操作</span></div></td>
+      </tr>
+      <%if(datas!=null&&datas.orders!=null&&datas.orders.length>0){for(var i =0;i<datas.orders.length;i++){%>
+      <tr>
+        <td height="20" bgcolor="#FFFFFF"><div align="center">
+          <input type="checkbox" name="checkbox2" class="checkbox2" />
+        </div></td>
+        <td height="20" bgcolor="#FFFFFF" class="STYLE6"><div align="center"><span class="STYLE19"><%=datas.orders[i].orderId%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center"><span><%=datas.orders[i].customName%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center"><span><%=datas.orders[i].customTel%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center"><span><%=datas.orders[i].roomType.roomTypeName%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center"><span><%=datas.orders[i].rmId%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas.orders[i].checkTime%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas.orders[i].leaveTime%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas.orders[i].num%></span>人</div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas.orders[i].days%></span>天</div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas.orders[i].bookTime%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%if(datas.orders[i].odStatus==1){%>未入住<%}else{%>已入住<%}%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%if(datas.orders[i].remark==null){%>无<%}else{%><%=datas.orders[i].remark%><%}%></span></div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21"><span><%=datas.orders[i].totalPrice%></span>￥</div></td>
+        <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE21">删除 | 入住</div></td>
+      </tr>
+      <%}}else{%>
+      <tr>
+      	<td colspan="15">没有检索到数据</td>
+      </tr>
+      <%}%>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="33%"><div align="left"><span class="STYLE22">&nbsp;&nbsp;&nbsp;&nbsp;共有<strong> <%=datas.totalCount%></strong> 条记录，当前第<strong> <%=datas.currentPage%></strong> 页，共 <strong><%=datas.totalPage%></strong> 页</span></div></td>
+        <td width="67%"><table width="312" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="49"><div align="center"><img src="images/main_54.gif" width="40" height="15" onclick="selectOrder(1);"/></div></td>
+            <td width="49"><div align="center"><img src="images/main_56.gif" width="45" height="15" onclick="selectOrder(<%=datas.currentPage-1%>);"/></div></td>
+            <td width="49"><div align="center"><img src="images/main_58.gif" width="45" height="15" onclick="selectOrder(<%=datas.currentPage+1%>);"/></div></td>
+            <td width="49"><div align="center"><img src="images/main_60.gif" width="40" height="15" onclick="selectOrder(<%=datas.totalPage%>);"/></div></td>
+            <td width="37" class="STYLE22"><div align="center">转到</div></td>
+            <td width="22"><div align="center">
+              <input type="text" name="textfield" id="textfield"  style="width:20px; height:12px; font-size:12px; border:solid 1px #7aaebd;"/>
+            </div></td>
+            <td width="22" class="STYLE22"><div align="center">页</div></td>
+            <td width="35"><img src="images/main_62.gif" width="26" height="15" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+	$(".edit").click(function(){
+		alert("编辑");
+		editText();
+	});
+	$(".save").click(function(){
+		var jsonData = getCheckedRm();
+		console.log(jsonData);
+	});
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>865171.cn后台管理工作平台</title>
+<script src="js/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/sysJs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.alterPwd{
+		position: absolute;
+		height:630px;
+		width:100%;
+		background: rgba(1,1,1,.9);
+		display: none;
+	}
+</style>
+<body>
+	<div class="alterPwd">
+		<div style="width:210px;height:120px;background: white;margin:0 auto;margin-top:300px;">
+			<div style="height:20px;"></div>
+			<p style="font-size: 12px;margin-left:10px;">请输入旧密码:&nbsp;<input type="password" name="" id="oldPwd" value="" style="width:100px;height: 15px;"/></p>
+			<p style="font-size: 12px;margin-top:10px;margin-left:10px;">请输入新密码:&nbsp;<input type="password" name="" id="newPwd" value="" style="width:100px;height: 15px;"/></p>
+			<p><button onclick="submitBtn()" style="width:80px;font-size: 12px;margin-left:20px;margin-top:20px;cursor: pointer;">确认修改</button><button  onclick="canelBtn();" style="width:60px;font-size: 12px;margin-left:20px;margin-top:20px;cursor: pointer;">取消</button></p>
+		</div>
+	</div>
+	<div class="top">
+		<iframe src="top.html" frameborder="0" framespacing="0" width="100%" height=""></iframe>
+	</div>
+	<div class="center" style="margin-top: -23px;">
+		<iframe src="center.html" frameborder="0" framespacing="0" width="100%" height="560px"></iframe>
+		
+	</div>
+	<div class="bottom">
+		<iframe src="down.html" frameborder="0" framespacing="0" width="100%" height="10px"></iframe>
+	</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sysJs.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box1{
+				width:500px;
+				height:230px;
+				background:  #f4f7f7;
+				margin: 0 auto;
+				padding-top: 20px;
+				border-bottom-left-radius: 30px;
+				border-bottom-right-radius: 30px;
+				margin-top:60px;
+			}
+			.box1 ul li{
+				float: left;
+				height:35px;
+				line-height: 35px;
+				list-style: none;
+			}
+			.box1 ul li div{
+				float: left;
+				font-size: 12px;
+			}
+			.box1 ul li .div1{
+				width:100px;
+				text-align: right;
+			}
+			.box1 ul li div input{
+				height:15px;
+				width:80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<ul>
+				<li id="roomTypeId"><div class="div1">房间类型ID：</div><div><input type="text" name="" id="rtyId" value="" /></div></li>
+				<li id=""><div class="div1">床型：</div><div><input type="text" name="" id="bedType" value="" /></div></li>
+			</ul>
+			<ul>
+				<li><div class="div1">房间类型名称：</div><div><input type="text" name="" id="rtyName" value="" /></div></li>
+				<li id="roomTypeId"><div class="div1">价格：</div><div><input type="text" name="" id="price" value="" /></div></li>
+			</ul>
+			<ul>
+				<li><div class="div1">床数量：</div><div><input type="text" name="" id="bedNum" value="" /></div></li>
+				<li><div class="div1">面积：</div><div><input type="text" name="" id="area" value="" /></div></li>
+			</ul>
+			<ul>
+				<li id="roomTypeId"><div class="div1">图片路径：</div><div><input type="text" name="" id="imgUrl" value="" style="width:260px;"/></div></li>
+			</ul>
+			<input type="button" name="" id="addBtn" value="添加" style="width:60px;font-size: 13px;margin-left:157px;margin-top:10px;border-radius: 3px;cursor: pointer;"/>
+		</div>
+		<script type="text/javascript">
+			$("#addBtn").click(function(){
+				var rtyId=$("#rtyId").val().trim();
+				var bedType=$("#bedType").val().trim();
+				var rtyName=$("#rtyName").val().trim();
+				var price=$("#price").val().trim();
+				var area1=$("#area").val();
+				var bedNum=$("#bedNum").val().trim();
+				var imgUrl=$("#imgUrl").val().trim();
+				if(rtyId!=""&&bedNum!=""&&rtyName!=""&&price!=""&&bedType!=""&&imgUrl!=""){
+					var jsonData = {"roomTypeId":rtyId,"roomTypeName":rtyName,"bedType":bedType,"bedNum":bedNum,"area":area1,"imgUrl":imgUrl,"price":price};
+					var str = JSON.stringify(jsonData);
+					var url1="http://localhost:8080/springmvcDemo1/roomType/add";
+					var response = ajaxPost(url1,str,false);
+					if(response!=null){
+						var success = response.meta.success;
+						if(success){
+							window.location.href="roomType.html";
+						}else{
+							alert(response.meta.message);
+						}
+					}else{
+						window.parent.location="error.html";
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
