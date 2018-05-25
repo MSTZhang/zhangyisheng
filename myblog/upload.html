@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+    <!--精选文章-->
+    <div class="article" width="637px">
+	   <div>
+	     <b style="color:#30867f;">>资源上传</b>
+		 <hr style="border:1px solid #30867f;"/>
+	   </div>
+	   <form>
+	     <input type="submit" value="上传" style="position:absolute;margin-left:350px;margin-top:100px;background:#999999;">
+	     <input type="file" style="margin-left:200px;margin-top:100px;">
+	     <img src="image/4.jpg" style="margin-left:130px;margin-top:20px;width:310px;"/>
+	   </form>
+	</div>
+	<div style="color:#999999;font-size:15px;width:230px;height:100px;margin-left:190px;margin-top:4px;">
+	  *上传说明
+	  <br/>
+	  1.上传不得大于2MB
+	  <br/>
+	  2.上传仅限于pdf，doc，chm
+	</div>
+	<script type="text/javascript">
+	  //设置iframe的高度
+     function setHeight(){
+	    //alert(this.document.body.scrollHeight); //弹出当前页面的高度
+		var obj =parent.document.getElementById("middleText"); //取得父页面IFrame对象
+		//alert(obj.height); //弹出父页面中IFrame中设置的高度
+		var height=this.document.body.scrollHeight;
+		if(height<670){
+			obj.height=670;
+		}else{
+			obj.height=height; //调整父页面中IFrame的高度为此页面的高度 
+		}
+		
+	 }
+	 setHeight();
+	</script>
+ </body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+    .table1 span{
+	  font-size:13px;
+	  color:#999999;
+	}
+	.reply{
+	  color:#cc00cc;
+	}
+	.reply:hover{
+	  color:#0066ff;
+	  cursor: pointer;
+	}
+  </style>
+ </head>
+ <body>
+   <div style="width:635;#666666">
+     <span>话题：</span>【浩气民族】◇原创◇《狼与鹰之—同行》长安三怪探YY文
+     <hr/>
+   </div>
+   <table class="table1">
+     <tr>
+	   <td style="width:637px;border:1px solid #cccccc;">
+	      <table id="hr">
+		    <tr>
+			  <td valign="top" style="width:140px;">
+			    <span style="font-size:18;color:#996633;">楼主:会飞的刀</span>
+				<br/>
+				<span>1楼</span>
+				</br>
+				<span>2017-08-12&nbsp;12:46:32<span/>
+				<br/>
+				<span class="reply" style="color:#996633;">回复</span>
+			  </td>
+			  <td valign="top">第一章.贾门案
+						1.
+						书接前文～
+						李秀一看到昏迷三年的独孤仲平居然手指动了一下！两下！三下！他真的醒了！
+						韦若昭的喜极而泣是他预料到的，而他自己的喜极而泣却是他没有料到的！
+						也许是在洛阳的那一年时光，已经把他和他从一对别扭的挚友变成了真正的生死兄弟！
+						外人无法想象这两个性格迥异，习惯迥异，脾气十分迥异的一狼一鹰是如何“和平共处”的，想着想着，李秀一提
+						  着酒壶边饮边看着微微醒转却还不认人的独孤仲平，微笑着回忆起那一年的一点一滴……
+			 </td>
+			</tr>
+			<tr>
+			  <td colspan="2">
+			      <table style="margin-left:140px;margin-top:30px;font-size:13px;">
+				    <tr>
+					  <td valign="top" width="280px"><span style="font-size:13px;color:#996633;">烟雨朦胧</span>回复:<span style="font-size:13px;color:#999999;">哈哈哈哈哈哈</span></td>
+					  <td valign="top"><span style="font-size:13px;color:#999999;text-align:right;">2017-08-13&nbsp;13:10:56</span></td>
+					</tr>
+					<tr>
+					  <td valign="top" width="280px"><span style="font-size:13px;color:#996633;">烟雨朦胧</span>回复:<span style="font-size:13px;color:#999999;">哈哈哈哈哈哈</span></td>
+					  <td valign="top"><span style="font-size:13px;color:#999999;text-align:right;">2017-08-13&nbsp;13:10:56</span></td>
+					</tr>
+					<tr>
+					  <td valign="top" width="280px"><span style="font-size:13px;color:#996633;">烟雨朦胧</span>回复:<span style="font-size:13px;color:#999999;">哈哈哈哈哈哈</span></td>
+					  <td valign="top"><span style="font-size:13px;color:#999999;text-align:right;">2017-08-13&nbsp;13:10:56</span></td>
+					</tr>
+					<tr>
+					  <td valign="top" width="280px"><span style="font-size:13px;color:#996633;">烟雨朦胧</span>回复:<span style="font-size:13px;color:#999999;">哈哈哈哈哈哈</span></td>
+					  <td valign="top"><span style="font-size:13px;color:#999999;text-align:right;">2017-08-13&nbsp;13:10:56</span></td>
+					</tr>
+					<tr>
+					  <td colspan='2' >
+					   <div class="editors">
+						  <form action="">
+						   <textarea id="editor_id" name="content" style="width:600px;height:50px;" >
+						   </textarea>
+						  <button type="button">发表留言</button>
+						  </form>
+					  </div>
+					  </td>
+					</tr>
+				  </table>
+
+			  </td>
+			</tr>
+		  </table>
+	   </td>
+	 </tr>
+	 <!--一个回复结束-->
+   </table>
+   <!--脚本代码-->
+    <script charset="utf-8" src="js/jquery-1.8.2.js"></script>
+    <script charset="utf-8" src="kindeditor/kindeditor-all.js"></script>
+    <script charset="utf-8" src="kindeditor/lang/zh-CN.js"></script>
+   <script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });
+		KindEditor.create('#editor_id',{allowImageUpload:false,resizeType : 1,width:"99%",height:"50px"});
+   </script>
+   <script type="text/javascript">
+     $(".reply").click(
+	    function(){
+			/*var $edit=$(".editors");
+			var visible=$edit.css("visibility");
+		    if("visible"==visible){
+                $edit.hide();
+                $edit.css("visibility","hidden");
+			}else{
+				$(".editors").show();
+			   $edit.css("visibility","visible");
+			}*/
+			var $input=$(this).parent().parent().parent().parent().next().children().children().children().children().siblings().last().children().children();
+			alert($input.html());
+			alert($input.attr("id"));
+			var visible=$input.css("visibility");
+		    if("visible"==visible){
+                $input.hide();
+                $input.css("visibility","hidden");
+			}else{
+				$input.show();
+			   $input.css("visibility","visible");
+			}
+			setHeight();
+		}
+	 );
+	 //设置iframe的高度
+     function setHeight(){
+	    //alert(this.document.body.scrollHeight); //弹出当前页面的高度
+		var obj =parent.document.getElementById("middleText"); //取得父页面IFrame对象
+		//alert(obj.height); //弹出父页面中IFrame中设置的高度
+		var height=this.document.body.scrollHeight;
+		if(height<670){
+			obj.height=670;
+		}else{
+			obj.height=height; //调整父页面中IFrame的高度为此页面的高度 
+		}
+		
+	 }
+	 setHeight();
+   </script>
+ </body>
+</html>
